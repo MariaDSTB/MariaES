@@ -1,0 +1,8 @@
+allprojects {
+    group = 'io.hansan'
+    version = '1.0-SNAPSHOT'
+    repositories {
+        maven {url 'https://maven.aliyun.com/nexus/content/groups/public'}
+        mavenCentral()
+    }
+}
