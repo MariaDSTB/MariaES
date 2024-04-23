@@ -4,77 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/GitCommitMessageStorage.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/com/alibaba/cloud/demo/sentinel/api/FooService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/demos/nacosdiscoveryconsumer/EchoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/demos/nacosdiscoveryconsumer/NacosDiscoveryConsumerConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/demos/nacosdiscoveryconsumer/OpenFeignController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/demos/nacosdiscoveryconsumer/RestTemplateController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/demos/nacosdiscoveryprovider/EchoServiceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/demos/sentinel/DemoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/demos/sentinel/DemoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/demos/sentinel/SentinelWebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/demos/web/BasicController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/demos/web/PathVariableController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/demos/web/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/com/alibaba/cloud/demo/sentinel/api/FooService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/ServiceGradeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/ServiceGradeApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/demos/nacosdiscoveryconsumer/EchoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/demos/nacosdiscoveryconsumer/NacosDiscoveryConsumerConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/demos/nacosdiscoveryconsumer/OpenFeignController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/demos/nacosdiscoveryconsumer/RestTemplateController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/demos/nacosdiscoveryprovider/EchoServiceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/demos/sentinel/DemoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/demos/sentinel/DemoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/demos/sentinel/SentinelWebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/demos/web/BasicController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/demos/web/PathVariableController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/demos/web/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/nacosdiscovery/NacosDiscoveryConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/com/alibaba/cloud/demo/sentinel/api/FooService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/servicepage/demos/nacosdiscoveryconsumer/EchoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/servicepage/demos/nacosdiscoveryconsumer/NacosDiscoveryConsumerConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/servicepage/demos/nacosdiscoveryconsumer/OpenFeignController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/servicepage/demos/nacosdiscoveryconsumer/RestTemplateController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/servicepage/demos/nacosdiscoveryprovider/EchoServiceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/servicepage/demos/sentinel/DemoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/servicepage/demos/sentinel/DemoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/servicepage/demos/sentinel/SentinelWebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/servicepage/demos/web/BasicController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/servicepage/demos/web/PathVariableController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/servicepage/demos/web/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/com/alibaba/cloud/demo/sentinel/api/FooService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/ServiceQuestionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/ServiceQuestionApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/demos/nacosdiscoveryconsumer/EchoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/demos/nacosdiscoveryconsumer/NacosDiscoveryConsumerConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/demos/nacosdiscoveryconsumer/OpenFeignController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/demos/nacosdiscoveryconsumer/RestTemplateController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/demos/nacosdiscoveryprovider/EchoServiceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/demos/sentinel/DemoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/demos/sentinel/DemoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/demos/sentinel/SentinelWebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/demos/web/BasicController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/demos/web/PathVariableController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/demos/web/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/nacosdiscovery/NacosDiscoveryConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/resources/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/serviceuser/demos/nacosdiscoveryconsumer/EchoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/serviceuser/demos/nacosdiscoveryconsumer/NacosDiscoveryConsumerConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/serviceuser/demos/nacosdiscoveryconsumer/OpenFeignController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/serviceuser/demos/nacosdiscoveryconsumer/RestTemplateController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/serviceuser/demos/nacosdiscoveryprovider/EchoServiceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/serviceuser/demos/sentinel/DemoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/serviceuser/demos/sentinel/DemoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/serviceuser/demos/sentinel/SentinelWebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/serviceuser/demos/web/BasicController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/serviceuser/demos/web/PathVariableController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/serviceuser/demos/web/User.java" beforeDir="false" />
-    </list>
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="initial commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -277,7 +207,7 @@
       <workItem from="1713779419018" duration="3157000" />
       <workItem from="1713831698958" duration="42000" />
       <workItem from="1713831774119" duration="128000" />
-      <workItem from="1713833078476" duration="4133000" />
+      <workItem from="1713833078476" duration="4635000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -295,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713834001303</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1713837795853</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713837795853</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
