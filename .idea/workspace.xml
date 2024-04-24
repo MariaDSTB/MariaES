@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="feat(service-question): add curd">
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/io/hansan/common/data/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/io/hansan/common/exception/UnauthorizedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/io/hansan/common/exception/UserNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GitCommitMessageStorage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GitCommitMessageStorage.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="feat: add global exception">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-question/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/controller/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/database/repository/QuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/database/repository/QuestionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/service/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/service/QuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +66,12 @@
                 <item name="MariaES" type="f1a62948:ProjectNode" />
                 <item name="service-question" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MariaES" type="f1a62948:ProjectNode" />
+                <item name="service-question" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
             </expand>
             <select />
@@ -332,7 +329,7 @@
       <workItem from="1713872650839" duration="9625000" />
       <workItem from="1713882398260" duration="80000" />
       <workItem from="1713940103850" duration="4179000" />
-      <workItem from="1713945478746" duration="4092000" />
+      <workItem from="1713945478746" duration="5385000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -374,7 +371,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713882339315</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: add global exception">
+      <option name="closed" value="true" />
+      <created>1713949952927</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713949952927</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,7 +399,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="feat(service-question): add curd" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(service-question): add curd" />
+    <MESSAGE value="feat: add global exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add global exception" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

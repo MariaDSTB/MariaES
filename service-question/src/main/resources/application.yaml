@@ -36,3 +36,7 @@ spring:
     hibernate:
       ddl-auto: update
       show-sql: true
+
+  mvc: #不配置swagger启动类会报错空指针
+    pathmatch:
+      matching-strategy: ant_path_matcher

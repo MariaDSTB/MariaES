@@ -1,0 +1,7 @@
+plugins {
+    id 'java'
+}
+
+group = 'io.hansan'
+version = '1.0-SNAPSHOT'
+
