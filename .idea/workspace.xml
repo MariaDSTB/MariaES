@@ -4,27 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/controller/QuestionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/data/bo/QuestionCreationBo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/data/vo/QuestionVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/database/entity/QuestionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/database/repository/QuestionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/service/QuestionService.java" afterDir="false" />
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="feat(service-question): add curd">
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/io/hansan/common/data/ErrorMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/io/hansan/common/exception/UnauthorizedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/io/hansan/common/exception/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GitCommitMessageStorage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GitCommitMessageStorage.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/ServiceExamApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/ServiceExamApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/nacosdiscovery/NacosDiscoveryConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-question/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/test/java/io/hansan/servicequestion/ServiceQuestionApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/test/java/io/hansan/servicequestion/ServiceQuestionApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/controller/QuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/database/repository/QuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/database/repository/QuestionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/service/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/service/QuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,13 +74,7 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MariaES" type="f1a62948:ProjectNode" />
                 <item name="service-question" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="service-question" type="2d1252cf:ModuleNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
             </expand>
             <select />
@@ -120,14 +106,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build MariaES.executor": "Run",
     "Gradle.MariaES:service-question [bootRun].executor": "Run",
     "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldCallService.executor": "Run",
     "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldReturnBadRequest_WhenRequestBodyIsInvalid.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ServiceQuestionApplication.executor": "Run",
     "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "1.8",
+    "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Java/MariaES",
     "node.js.detected.package.eslint": "true",
@@ -136,7 +128,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.24177071",
     "run.configurations.included.in.services": "true",
@@ -337,7 +329,10 @@
       <workItem from="1713831698958" duration="42000" />
       <workItem from="1713831774119" duration="128000" />
       <workItem from="1713833078476" duration="6263000" />
-      <workItem from="1713872650839" duration="9022000" />
+      <workItem from="1713872650839" duration="9625000" />
+      <workItem from="1713882398260" duration="80000" />
+      <workItem from="1713940103850" duration="4179000" />
+      <workItem from="1713945478746" duration="4092000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -371,7 +366,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713838437771</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat(service-question): add curd">
+      <option name="closed" value="true" />
+      <created>1713882339315</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713882339315</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +393,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="feat(service-question): add curd" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(service-question): add curd" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
