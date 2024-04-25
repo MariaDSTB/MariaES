@@ -4,10 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="feat: add global exception">
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="fix: knife4j UI no data">
+      <change afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/Controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/Service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/data/vo/UserVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/database/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/database/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/io/hansan/common/data/ErrorMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/io/hansan/mariaes/common/data/ErrorMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/io/hansan/common/exception/UnauthorizedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/io/hansan/mariaes/common/exception/UnauthorizedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/io/hansan/common/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/io/hansan/mariaes/common/exception/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/ServiceQuestionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/ServiceQuestionApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/controller/QuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/data/bo/QuestionCreationBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/data/bo/QuestionCreationBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/data/vo/QuestionVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/data/vo/QuestionVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/database/entity/QuestionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/database/entity/QuestionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/database/repository/QuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/database/repository/QuestionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/servicequestion/service/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/service/QuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/test/java/io/hansan/servicequestion/ServiceQuestionApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/test/java/io/hansan/mariaes/question/ServiceQuestionApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/serviceuser/ServiceUserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/ServiceUserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/serviceuser/nacosdiscovery/NacosDiscoveryConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/resources/static/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +69,9 @@
         <task path="$PROJECT_DIR$/service-question">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/service-user">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -59,19 +82,20 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="service-question" type="2d1252cf:ModuleNode" />
+                <item name="service-user" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="service-question" type="2d1252cf:ModuleNode" />
+                <item name="service-user" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="service-question" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="service-user" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -105,6 +129,7 @@
   "keyToString": {
     "Gradle.Build MariaES.executor": "Run",
     "Gradle.MariaES:service-question [bootRun].executor": "Run",
+    "Gradle.MariaES:service-user [bootRun].executor": "Run",
     "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldCallService.executor": "Run",
     "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldReturnBadRequest_WhenRequestBodyIsInvalid.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
@@ -143,11 +168,33 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.MariaES:service-question [bootRun]">
+  <component name="RunManager" selected="Gradle.MariaES:service-user [bootRun]">
     <configuration name="MariaES:service-question [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/service-question" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MariaES:service-user [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/service-user" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -277,6 +324,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServiceQuestionApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MariaES.service-question.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.question.ServiceQuestionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServiceQuestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="MariaES.service-question.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.servicequestion.ServiceQuestionApplication" />
@@ -291,6 +345,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServiceUserApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MariaES.service-user.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.user.ServiceUserApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServiceUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="MariaES.service-user.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.serviceuser.ServiceUserApplication" />
@@ -300,6 +361,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MariaES:service-user [bootRun]" />
         <item itemvalue="Gradle.MariaES:service-question [bootRun]" />
         <item itemvalue="Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldCallService" />
         <item itemvalue="Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldReturnBadRequest_WhenRequestBodyIsInvalid" />
@@ -329,7 +391,8 @@
       <workItem from="1713872650839" duration="9625000" />
       <workItem from="1713882398260" duration="80000" />
       <workItem from="1713940103850" duration="4179000" />
-      <workItem from="1713945478746" duration="5385000" />
+      <workItem from="1713945478746" duration="5488000" />
+      <workItem from="1714039983565" duration="4020000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -379,7 +442,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713949952927</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix: knife4j UI no data">
+      <option name="closed" value="true" />
+      <created>1713950960315</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713950960315</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +471,8 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="feat(service-question): add curd" />
     <MESSAGE value="feat: add global exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add global exception" />
+    <MESSAGE value="fix: knife4j UI no data" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: knife4j UI no data" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
