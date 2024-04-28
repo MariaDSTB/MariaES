@@ -1,7 +1,7 @@
 package io.hansan.mariaes.user.grpc;
-import io.hansan.mariaes.lib.proto.user.proto.GetUserRequest;
-import io.hansan.mariaes.lib.proto.user.proto.GetUserResponse;
-import io.hansan.mariaes.lib.proto.user.proto.UserInfoGrpc;
+import io.hansan.mariaes.lib.proto.user.GetUserRequest;
+import io.hansan.mariaes.lib.proto.user.GetUserResponse;
+import io.hansan.mariaes.lib.proto.user.UserInfoGrpc;
 import io.grpc.stub.StreamObserver;
 import io.hansan.mariaes.user.data.vo.UserVo;
 import net.devh.boot.grpc.server.service.GrpcService;
@@ -13,11 +13,11 @@ public class GrpcUserInfoService extends UserInfoGrpc.UserInfoImplBase {
     public void getUser(GetUserRequest request, StreamObserver<GetUserResponse> responseObserver) {
         // 这里实现获取用户的逻辑
         // 假设我们有一个方法可以根据request获取用户信息
-        UserVo user = getUserFromDatabase(request.getUserId());
+        UserVo user = getUserFromDatabase(Long.parseLong(request.getUserId()));
 
         // 创建响应
         GetUserResponse response = GetUserResponse.newBuilder()
-                .setUserId(String.valueOf(user.studentid()))
+                .setUserId(user.studentid())
                 .setUserName(user.name())
             .build();
 
@@ -26,7 +26,7 @@ public class GrpcUserInfoService extends UserInfoGrpc.UserInfoImplBase {
         responseObserver.onCompleted();
     }
 
-    private UserVo getUserFromDatabase(Long userId) {
+    public UserVo getUserFromDatabase(Long userId) {
         // 这里实现从数据库获取用户的逻辑
         // 这只是一个示例，实际情况可能会有所不同
         return new UserVo(userId, "testName", "testEmail");
