@@ -6,4 +6,5 @@ include('service-question')
 include('service-page')
 include('service-grade')
 include 'common'
+include 'lib-grpc'
 

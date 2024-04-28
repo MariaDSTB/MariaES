@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.hansan.mariaes.lib.proto.user";
+option java_outer_classname = "UserServiceProto";
+
+package user_service;
+
+service UserInfo {
+    rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
+}
+
+message GetUserRequest {
+    string userId = 1;
+}
+
+message GetUserResponse {
+    int64 userId = 1;
+    string userName = 2;
+    string userAge = 3;
+}
