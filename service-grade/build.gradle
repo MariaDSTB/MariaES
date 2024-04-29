@@ -6,7 +6,7 @@ plugins {
 
 group = 'io.hansan'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '17'
 
 repositories {
     mavenCentral()
@@ -17,6 +17,13 @@ ext {
 }
 
 dependencies {
+    implementation project(':lib-grpc')
+    implementation 'com.github.xiaoymin:knife4j-spring-boot-starter:3.0.2'
+    implementation project(':common')
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+    implementation 'com.zaxxer:HikariCP:4.0.3'
+
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'

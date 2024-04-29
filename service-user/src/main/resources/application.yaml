@@ -1,0 +1,24 @@
+server:
+  port: 7002
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mariaes?createDatabaseIfNotExist=true
+    username: root
+    password: 123456
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 5
+      idle-timeout: 30000
+      pool-name: SpringBootHikariCP
+      max-lifetime: 60000
+      connection-timeout: 30000
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+
+  mvc: #不配置swagger启动类会报错空指针
+    pathmatch:
+      matching-strategy: ant_path_matcher
