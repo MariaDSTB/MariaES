@@ -1,4 +1,4 @@
-package io.hansan.servicepage;
+package io.hansan.mariaes.page;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

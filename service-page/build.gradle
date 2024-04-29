@@ -17,6 +17,14 @@ ext {
 }
 
 dependencies {
+    implementation 'cn.hutool:hutool-all:5.7.16'
+    implementation project(':lib-grpc')
+    implementation 'com.github.xiaoymin:knife4j-spring-boot-starter:3.0.2'
+    implementation project(':common')
+    implementation project(':service-question')
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+    implementation 'com.zaxxer:HikariCP:4.0.3'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
