@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/B1lly.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/assets/CSS/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/router/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/views/HomePage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/views/Main.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/src/views/RecordQuestionBank.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="创建了前端题库上传部分内容and首页，以及路由分配">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +78,6 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
@@ -109,7 +94,8 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.24177071&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Java\\Tools\\DevelopmentTools\\IDEA2023\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\NMU_Billy\\Desktop\\MariaES\\front\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -228,7 +214,7 @@
       <workItem from="1713831774119" duration="128000" />
       <workItem from="1713833078476" duration="4635000" />
       <workItem from="1713866157080" duration="83000" />
-      <workItem from="1714354477837" duration="232000" />
+      <workItem from="1714354477837" duration="2461000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -254,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713837795853</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="创建了前端题库上传部分内容and首页，以及路由分配">
+      <option name="closed" value="true" />
+      <created>1714354888741</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714354888741</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +267,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="创建了前端题库上传部分内容and首页，以及路由分配" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建了前端题库上传部分内容and首页，以及路由分配" />
   </component>
 </project>
