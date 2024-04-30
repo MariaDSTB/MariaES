@@ -27,7 +27,7 @@ public class UserController {
     @ApiOperation("获取用户信息")
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public UserVo getUserById(Long id){
+    public UserVo getUserById(@PathVariable Long id){
         return userService.getUserById(id);
     }
 
@@ -41,7 +41,9 @@ public class UserController {
     @ApiOperation("获取所有用户信息")
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
-    public List<UserVo> getAllUsers(int page, int size){
-        return userService.getAllUsers(page, size);
+    public List<UserVo> getAllUsers(@RequestParam(value = "page", defaultValue = "0") int page,
+                                @RequestParam(value = "size", defaultValue = "10") int size) {
+        List<UserVo> users = userService.getAllUsers(page, size);
+    return userService.getAllUsers(page, size);
     }
 }
