@@ -41,11 +41,11 @@ public class UserEntity {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false, name = "create_at",updatable = false)
-    private Date CreatedAt;
+    private Date createdAt;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false, name = "update_at")
-    private Date UpdatedAt;
+    private Date updatedAt;
 
     @ColumnDefault("false")
     @Column(nullable = false, name = "is_deleted")
@@ -53,11 +53,11 @@ public class UserEntity {
 
     @PrePersist
     protected void onCreate() {
-        CreatedAt = new Date();
-        UpdatedAt = new Date();
+        createdAt = new Date();
+        updatedAt = new Date();
     }
     @PreUpdate
     protected void onUpdate() {
-        UpdatedAt = new Date();
+        updatedAt = new Date();
     }
 }

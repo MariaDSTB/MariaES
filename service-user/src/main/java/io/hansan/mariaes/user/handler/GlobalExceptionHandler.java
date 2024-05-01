@@ -27,6 +27,7 @@ public class GlobalExceptionHandler {
     public ErrorMessage notFountException() {
         return new ErrorMessage("The resource you requested id not found");
     }
+
     @ExceptionHandler(value = {MethodArgumentNotValidException.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ErrorMessage badRequestException() {
