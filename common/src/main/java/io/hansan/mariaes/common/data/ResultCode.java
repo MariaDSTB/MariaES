@@ -1,11 +1,11 @@
 package io.hansan.mariaes.common.data;
 
 public enum ResultCode implements IErrorCode{
-    SUCCESS(200, "操作成功"),
-    FAILED(200, "操作失败"),
-    UNAUTHORIZED(401, "暂未登录或token已过期"),
-    FORBIDDEN(403, "没有相关权限"),
-    VALIDATE_FAILED(404, "参数校验失败");
+    SUCCESS(200, "Operation Success"),
+    FAILED(200, "Operation Failed"),
+    UNAUTHORIZED(401, "Not logged in or your token has expired"),
+    FORBIDDEN(403, "There are no relevant permissions"),
+    VALIDATE_FAILED(404, "Parameter verification failed");
     private long  code;
     private String message;
     private ResultCode(long code, String message) {

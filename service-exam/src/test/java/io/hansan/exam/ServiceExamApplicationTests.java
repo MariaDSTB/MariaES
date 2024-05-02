@@ -1,10 +1,10 @@
-package io.hansan.servicegrade;
+package io.hansan.exam;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ServiceGradeApplicationTests {
+class ServiceExamApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,4 +1,4 @@
-package io.hansan.mariaes.user.handler;
+package io.hansan.mariaes.page.handler;
 
 import io.hansan.mariaes.common.data.ErrorMessage;
 import io.hansan.mariaes.common.exception.UnauthorizedException;
@@ -12,8 +12,8 @@ import java.util.NoSuchElementException;
 
 /**
  * @author ：何汉叁
- * @date ：2024/4/29 8:13
- * @description：异常处理
+ * @date ：2024/5/2 22:47
+ * @description：TODO
  */
 @RestControllerAdvice
 public class GlobalExceptionHandler {

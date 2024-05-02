@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="style: work a little">
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/io/hansan/mariaes/common/data/CommonResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/io/hansan/mariaes/common/data/IErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/io/hansan/mariaes/common/data/ResultCode.java" afterDir="false" />
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="refactor(common): Abstract out and put back the result">
+      <change afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/database/entity/ExamEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/handler/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/Service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/database/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/database/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/io/hansan/mariaes/common/data/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/io/hansan/mariaes/common/data/ResultCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/serviceexam/ServiceExamApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/ServiceExamApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-exam/src/test/java/io/hansan/serviceexam/ServiceExamApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/test/java/io/hansan/exam/ServiceExamApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/servicegrade/ServiceGradeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/ServiceGradeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-grade/src/test/java/io/hansan/servicegrade/ServiceGradeApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/test/java/io/hansan/grade/ServiceGradeApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/controller/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/service/PageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/service/PageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,8 +88,7 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MariaES" type="f1a62948:ProjectNode" />
                 <item name="service-user" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -146,7 +147,6 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ServiceQuestionApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
@@ -162,7 +162,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.24177071",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "File.Encoding",
     "ts.external.directory.path": "D:\\Java\\Tools\\DevelopmentTools\\IDEA2023\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -314,7 +314,14 @@
     </configuration>
     <configuration name="ServiceExamApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="MariaES.service-exam.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.serviceexam.ServiceExamApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.exam.ServiceExamApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceExamApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MariaES.service-exam.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.exam.ServiceExamApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -328,7 +335,14 @@
     </configuration>
     <configuration name="ServiceGradeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="MariaES.service-grade.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.servicegrade.ServiceGradeApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.grade.ServiceGradeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceGradeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MariaES.service-grade.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.grade.ServiceGradeApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -438,7 +452,8 @@
       <workItem from="1714309903063" duration="1697000" />
       <workItem from="1714349509007" duration="5904000" />
       <workItem from="1714485829387" duration="4230000" />
-      <workItem from="1714552082169" duration="25135000" />
+      <workItem from="1714552082169" duration="25399000" />
+      <workItem from="1714659675470" duration="2360000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -536,7 +551,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714491317525</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="refactor(common): Abstract out and put back the result">
+      <option name="closed" value="true" />
+      <created>1714577495698</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1714577495698</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -577,7 +600,8 @@
     <MESSAGE value="build: add mockito test frame&#10;&#10;test grpc service" />
     <MESSAGE value="feat(service-page): add crud" />
     <MESSAGE value="style: work a little" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: work a little" />
+    <MESSAGE value="refactor(common): Abstract out and put back the result" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(common): Abstract out and put back the result" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,6 +1,7 @@
 package io.hansan.mariaes.page.service;
 
 import io.hansan.mariaes.page.data.vo.PageVo;
+import io.hansan.mariaes.page.database.entity.PageEntity;
 import io.hansan.mariaes.page.database.repository.PageRepository;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -32,5 +33,9 @@ public class PageService {
 
     public void deletePage(Long id) {
         pageRepository.deleteById(id);
+    }
+
+    public void addPage(PageEntity pageEntity) {
+        pageRepository.save(pageEntity);
     }
 }
