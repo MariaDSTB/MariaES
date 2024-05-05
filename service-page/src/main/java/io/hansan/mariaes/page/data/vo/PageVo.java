@@ -1,6 +1,7 @@
 package io.hansan.mariaes.page.data.vo;
 import com.sun.istack.NotNull;
 import io.hansan.mariaes.page.database.entity.PageEntity;
+import io.hansan.mariaes.page.database.entity.QuestionPageEntity;
 import io.hansan.mariaes.question.data.vo.QuestionVo;
 
 import java.util.Date;
@@ -14,9 +15,9 @@ import java.util.List;
 public record PageVo(
         String title,
         Date createTime,
-        List<QuestionVo> questions
+        List<QuestionPageEntity> QuestionPageEntity
 ){
-    public static PageVo FromQuestion(@NotNull PageEntity pageEntity) {
-        return new PageVo(pageEntity.getTitle(), pageEntity.getCreateAt(), List.of());
+    public static PageVo FromQuestionPage(@NotNull PageEntity pageEntity, List<QuestionPageEntity> questionPageEntities) {
+        return new PageVo(pageEntity.getTitle(), pageEntity.getCreateAt(), questionPageEntities);
     }
 }
