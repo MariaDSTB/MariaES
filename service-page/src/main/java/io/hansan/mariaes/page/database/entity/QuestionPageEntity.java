@@ -1,17 +1,23 @@
 package io.hansan.mariaes.page.database.entity;
 
+import io.hansan.mariaes.page.data.bo.QuestionPageCreateBo;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author ：何汉叁
  * @date ：2024/5/4 23:01
  * @description：TODO
  */
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
 @Entity
 @Table(name = "question_pages")
@@ -33,4 +39,9 @@ public class QuestionPageEntity {
 
     @ColumnDefault("false")
     private boolean deleted;
+
+    @NotNull
+    public static QuestionPageEntity fromCreateBo(QuestionPageCreateBo questionPageCreateBo) {
+        return new QuestionPageEntity(-1L, questionPageCreateBo.pageId(), questionPageCreateBo.questionId(), "", false);
+    }
 }

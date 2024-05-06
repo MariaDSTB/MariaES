@@ -1,5 +1,8 @@
 package io.hansan.mariaes.page.service;
 
+import io.hansan.mariaes.page.data.bo.PageCreateBo;
+import io.hansan.mariaes.page.data.bo.QuestionPageCreateBo;
+import io.hansan.mariaes.page.data.dto.PageCreateDto;
 import io.hansan.mariaes.page.data.vo.PageVo;
 import io.hansan.mariaes.page.database.entity.PageEntity;
 import io.hansan.mariaes.page.database.entity.QuestionPageEntity;
@@ -11,8 +14,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author ：何汉叁
@@ -46,7 +51,27 @@ public class PageService {
         pageRepository.deleteById(id);
     }
 
-    public void addPage(PageEntity pageEntity) {
-        pageRepository.save(pageEntity);
+    /**
+     * 1. 分离出PageCreateDto中的问题id，创建PageEntity和QuestionPageEntity
+     * 2. 通过Bo和Entity进行转换春初导数据库
+     * 3. 创建stream流，将问题id转换为QuestionPageEntity
+     * @param pageCreateDto
+     */
+    @Transactional
+    public void addPage(PageCreateDto pageCreateDto) {
+        PageCreateBo pageCreateBo = PageCreateBo.fromCreateDto(pageCreateDto);
+        PageEntity pageEntity = PageEntity.fromCreateBo(pageCreateBo);
+        PageEntity savePageEntity = pageRepository.save(pageEntity);
+        Long pageId = savePageEntity.getId();
+        List<Long> questionIds = pageCreateDto.questionIds();
+        List<QuestionPageEntity> questionPageEntities = questionIds
+                .stream()
+                .map(
+                        questionId -> {
+                            QuestionPageCreateBo questionPageCreateBo = new QuestionPageCreateBo(pageId, questionId);
+                            return QuestionPageEntity.fromCreateBo(questionPageCreateBo);
+                        })
+                .toList();
+        questionPageRepository.saveAll(questionPageEntities);
     }
 }

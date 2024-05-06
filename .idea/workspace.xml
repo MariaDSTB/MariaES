@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="feat: Add a cascading query between page and question">
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="refactor(service-page): Improve the cascading query function">
+      <change afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/dto/PageCreateDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/vo/PageVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/vo/PageVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/controller/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/bo/PageBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/bo/PageCreateBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/bo/QuestionPageBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/bo/QuestionPageCreateBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/entity/PageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/entity/PageEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/entity/QuestionPageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/entity/QuestionPageEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/repository/QuestionPageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/repository/QuestionPageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/service/PageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/service/PageService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,9 +99,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Record" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -449,7 +456,8 @@
       <workItem from="1714747556930" duration="1626000" />
       <workItem from="1714808215642" duration="142000" />
       <workItem from="1714833062882" duration="3507000" />
-      <workItem from="1714920387979" duration="643000" />
+      <workItem from="1714920387979" duration="2160000" />
+      <workItem from="1714953768703" duration="4699000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -571,7 +579,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714836557888</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: Decouple page from create page&#10;&#10;Decouple the test paper from the creation time data layer">
+      <option name="closed" value="true" />
+      <created>1714922539159</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1714922539160</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,7 +631,9 @@
     <MESSAGE value="refactor(common): Abstract out and put back the result" />
     <MESSAGE value="feat: add exam and grade base service" />
     <MESSAGE value="feat: Add a cascading query between page and question" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add a cascading query between page and question" />
+    <MESSAGE value="feat: Decouple page from create page&#10;&#10;Decouple the test paper from the creation time data layer" />
+    <MESSAGE value="refactor(service-page): Improve the cascading query function" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(service-page): Improve the cascading query function" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

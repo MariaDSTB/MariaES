@@ -1,6 +1,7 @@
 package io.hansan.mariaes.page.controller;
 
 import io.hansan.mariaes.common.data.CommonResult;
+import io.hansan.mariaes.page.data.dto.PageCreateDto;
 import io.hansan.mariaes.page.data.vo.PageVo;
 import io.hansan.mariaes.page.database.entity.PageEntity;
 import io.hansan.mariaes.page.service.PageService;
@@ -30,8 +31,8 @@ public class PageController {
     }
 
     @PostMapping("/add")
-    public CommonResult addPage(@RequestBody PageEntity pageEntity) {
-        pageService.addPage(pageEntity);
+    public CommonResult addPage(@RequestBody PageCreateDto pageCreateDto) {
+        pageService.addPage(pageCreateDto);
         return CommonResult.success();
     }
 

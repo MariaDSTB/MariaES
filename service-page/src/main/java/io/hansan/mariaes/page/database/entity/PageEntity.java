@@ -1,13 +1,14 @@
 package io.hansan.mariaes.page.database.entity;
 
-import lombok.Builder;
-import lombok.Data;
+import io.hansan.mariaes.page.data.bo.PageCreateBo;
+import lombok.*;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.time.Instant;
 import java.util.Date;
 import java.util.List;
 import io.hansan.mariaes.question.database.entity.QuestionEntity;
@@ -16,6 +17,8 @@ import io.hansan.mariaes.question.database.entity.QuestionEntity;
  * @date ：2024/4/29 8:56
  * @description：TODO
  */
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Data
 @Table(name = "pages")
@@ -28,9 +31,6 @@ public class PageEntity {
 
     @Column(nullable = false)
     private String title;
-
-    @OneToMany
-    private List<QuestionEntity> questions;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "create_at",nullable = false, updatable = false)
@@ -51,5 +51,10 @@ public class PageEntity {
     @PreUpdate
     protected void onUpdate() {
         updateAi = new Date();
+    }
+
+    @NotNull
+    public static PageEntity fromCreateBo(PageCreateBo pageCreateBo) {
+        return new PageEntity(-1L ,pageCreateBo.title(), Date.from(Instant.now()), Date.from(Instant.now()), false);
     }
 }
