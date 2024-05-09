@@ -1,8 +1,11 @@
 package io.hansan.grade.database.Entity;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 /**
@@ -13,6 +16,8 @@ import java.util.Date;
 @Entity
 @Data
 @Table(name = "grades")
+@NoArgsConstructor
+@RequiredArgsConstructor
 public class GradeEntity {
         @Id
         @GeneratedValue

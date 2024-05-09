@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="refactor(service-page): Improve the cascading query function">
-      <change afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/dto/PageCreateDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/handler/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/controller/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/bo/PageBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/bo/PageCreateBo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/bo/QuestionPageBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/bo/QuestionPageCreateBo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/entity/PageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/entity/PageEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/entity/QuestionPageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/entity/QuestionPageEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/repository/QuestionPageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/repository/QuestionPageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/service/PageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/service/PageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/Controller/ExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/Controller/ExamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/data/vo/ExamVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/data/vo/ExamVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/service/ExamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/service/ExamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/data/vo/GradeVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/data/vo/GradeVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/database/Entity/GradeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/database/Entity/GradeEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +148,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Java/MariaES&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java/MariaES/service-exam/src/main/java/io/hansan/exam&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -166,6 +164,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java\MariaES\service-exam\src\main\java\io\hansan\exam" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -457,7 +460,14 @@
       <workItem from="1714808215642" duration="142000" />
       <workItem from="1714833062882" duration="3507000" />
       <workItem from="1714920387979" duration="2160000" />
-      <workItem from="1714953768703" duration="4699000" />
+      <workItem from="1714953768703" duration="4787000" />
+      <workItem from="1714976430440" duration="858000" />
+      <workItem from="1714981287566" duration="904000" />
+      <workItem from="1714989944209" duration="1057000" />
+      <workItem from="1715161686600" duration="3291000" />
+      <workItem from="1715264634562" duration="638000" />
+      <workItem from="1715265445577" duration="587000" />
+      <workItem from="1715266060993" duration="1885000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -587,7 +597,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714922539160</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="refactor(service-page): Improve the cascading query function">
+      <option name="closed" value="true" />
+      <created>1714958490411</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714958490411</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
