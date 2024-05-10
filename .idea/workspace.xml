@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="refactor(service-page): Improve the cascading query function">
-      <change afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/handler/GlobalExceptionHandler.java" afterDir="false" />
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="feat: refine grade and exam moudle">
+      <change afterPath="$PROJECT_DIR$/lib-grpc/src/main/proto/ExamService.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/Controller/ExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/Controller/ExamController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/data/vo/ExamVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/data/vo/ExamVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/service/ExamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/service/ExamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/data/vo/GradeVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/data/vo/GradeVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/database/Entity/GradeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/database/Entity/GradeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib-grpc/src/main/proto/UserService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/lib-grpc/src/main/proto/UserService.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/database/entity/ExamEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/database/entity/ExamEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/database/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/database/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/grpc/GrpcUserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/grpc/GrpcUserInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/test/java/GrpcUserInfoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/test/java/GrpcUserInfoServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +159,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.24177071&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
     &quot;ts.external.directory.path&quot;: &quot;D:\\Java\\Tools\\DevelopmentTools\\IDEA2023\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -178,7 +178,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.MariaES:service-user [bootRun]">
+  <component name="RunManager" selected="Gradle.MariaES:lib-grpc [generateProto]">
     <configuration name="GrpcUserInfoServiceTest.getUserReturnsCorrectResponse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -414,9 +414,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MariaES:lib-grpc [generateProto]" />
         <item itemvalue="Gradle.MariaES:service-user [bootRun]" />
         <item itemvalue="Gradle.GrpcUserInfoServiceTest.returnsCorrectResponseWhenUserExists" />
-        <item itemvalue="Gradle.MariaES:lib-grpc [generateProto]" />
         <item itemvalue="Gradle.MariaES:lib-grpc [clean]" />
         <item itemvalue="Gradle.GrpcUserInfoServiceTest.getUserReturnsCorrectResponse" />
       </list>
@@ -467,7 +467,14 @@
       <workItem from="1715161686600" duration="3291000" />
       <workItem from="1715264634562" duration="638000" />
       <workItem from="1715265445577" duration="587000" />
-      <workItem from="1715266060993" duration="1885000" />
+      <workItem from="1715266060993" duration="2589000" />
+      <workItem from="1715307401391" duration="89000" />
+      <workItem from="1715310569734" duration="12000" />
+      <workItem from="1715326450217" duration="101000" />
+      <workItem from="1715337517295" duration="1686000" />
+      <workItem from="1715339842796" duration="59000" />
+      <workItem from="1715339918995" duration="28000" />
+      <workItem from="1715351942281" duration="2794000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -605,7 +612,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714958490411</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feat: refine grade and exam moudle">
+      <option name="closed" value="true" />
+      <created>1715268576162</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1715268576162</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -651,7 +666,8 @@
     <MESSAGE value="feat: Add a cascading query between page and question" />
     <MESSAGE value="feat: Decouple page from create page&#10;&#10;Decouple the test paper from the creation time data layer" />
     <MESSAGE value="refactor(service-page): Improve the cascading query function" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(service-page): Improve the cascading query function" />
+    <MESSAGE value="feat: refine grade and exam moudle" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: refine grade and exam moudle" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

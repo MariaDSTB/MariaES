@@ -33,10 +33,10 @@ public class UserEntity {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false)
+    @Column
     private Long classId;
 
-    @Column(nullable = false)
+    @Column
     private String classname;
 
     @Temporal(TemporalType.TIMESTAMP)

@@ -27,7 +27,7 @@ public class ExamEntity {
     /**
      * 班级
      */
-    @Column(nullable = false)
+    @Column
     private Long classId;
 
     /**
