@@ -11,7 +11,7 @@ service UserInfo {
 }
 
 message GetUserRequest {
-    string userId = 1;
+    int64 userId = 1;
 }
 
 message GetUserResponse {

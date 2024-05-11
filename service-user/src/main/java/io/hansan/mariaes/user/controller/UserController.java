@@ -1,4 +1,4 @@
-package io.hansan.mariaes.user.Controller;
+package io.hansan.mariaes.user.controller;
 
 import io.hansan.mariaes.common.data.CommonResult;
 import io.hansan.mariaes.user.Service.UserService;
@@ -9,8 +9,6 @@ import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 /**
  * @author ：何汉叁

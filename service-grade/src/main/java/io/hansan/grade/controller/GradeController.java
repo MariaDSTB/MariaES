@@ -1,4 +1,4 @@
-package io.hansan.grade.Controller;
+package io.hansan.grade.controller;
 
 import io.hansan.mariaes.common.data.CommonResult;
 import lombok.RequiredArgsConstructor;

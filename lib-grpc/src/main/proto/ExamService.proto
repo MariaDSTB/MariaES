@@ -16,8 +16,8 @@ message ExamRequest {
 }
 
 message ExamResponse {
-    int64 examId = 1;
+    int64 pageId = 1;
     string examName = 2;
     string examDesc = 3;
-    int64 examTime = 4;
+    string examTime = 4;
 }
