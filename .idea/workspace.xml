@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="build: add mockito test frame&#10;&#10;test grpc service">
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="1.增加题库的显示以及挂载数据&#10;2.添加不同类型的题目动态显示题目答案输入框">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +162,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.24177071&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\NMU_Billy\\Desktop\\MariaES\\front\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -442,6 +442,8 @@
       <workItem from="1714349509007" duration="5527000" />
       <workItem from="1715312768681" duration="205000" />
       <workItem from="1715337450830" duration="56000" />
+      <workItem from="1715485597753" duration="213000" />
+      <workItem from="1715493897107" duration="1418000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -547,7 +549,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715312927960</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="build: add mockito test frame&#10;&#10;test grpc service">
+      <option name="closed" value="true" />
+      <created>1715485626410</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1715485626410</updated>
+    </task>
+    <task id="LOCAL-00015" summary="1.增加题库的显示以及挂载数据&#10;2.添加不同类型的题目动态显示题目答案输入框">
+      <option name="closed" value="true" />
+      <created>1715485767390</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715485767390</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +604,8 @@
     <MESSAGE value="feat(service-user):" />
     <MESSAGE value="feat(lib-grpc): add .proto file" />
     <MESSAGE value="build: add mockito test frame&#10;&#10;test grpc service" />
-    <option name="LAST_COMMIT_MESSAGE" value="build: add mockito test frame&#10;&#10;test grpc service" />
+    <MESSAGE value="1.增加题库的显示以及挂载数据&#10;2.添加不同类型的题目动态显示题目答案输入框" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.增加题库的显示以及挂载数据&#10;2.添加不同类型的题目动态显示题目答案输入框" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
