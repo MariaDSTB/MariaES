@@ -200,7 +200,7 @@
       v-model="dialogVisible"
       width="70%"
   >
-    <div class="selectQuestion" v-for="(question, index) in jsonArray" :key="index">
+    <div class="selectQuestion" v-for="(question, index) in questions" :key="index">
       <p>题目编号</p>
       <el-input
           v-model="question.selectQuestionId"
@@ -212,7 +212,7 @@
       />
       <p>题头</p>
       <el-input
-          v-model="question.selectQuestionTitle"
+          v-model="question.selectQuestionId"
           style="width: 140px;display: inline-block;vertical-align: top"
           :autosize="{ minRows: 2, maxRows: 4 }"
           type="textarea"
@@ -221,7 +221,7 @@
       />
       <p>难易程度</p>
       <el-input
-          v-model="question.selectQuestionDifficulty"
+          v-model="question.selectQuestionId"
           style="width: 140px;display: inline-block;vertical-align: top"
           :autosize="{ minRows: 2, maxRows: 4 }"
           type="textarea"
@@ -230,7 +230,7 @@
       />
       <p>题目科目</p>
       <el-input
-          v-model="question.selectQuestionSubject"
+          v-model="question.selectQuestionId"
           style="width: 140px;display: inline-block;vertical-align: top"
           :autosize="{ minRows: 2, maxRows: 4 }"
           type="textarea"
@@ -249,7 +249,7 @@
   </el-dialog>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
+import {ref, onMounted} from 'vue'
 import axios from 'axios'
 const value1 = ref('')
 const value2 = ref('')
@@ -261,7 +261,7 @@ const optionC = ref('')
 const optionD = ref('')
 const clozeAnswer = ref('')
 const essayQuestion = ref('')
-const showSingleChoice = ref(false) // 控制单选题选项显示的响应式变量
+const showSingleChoice = ref(false)
 const showMultipleChoice = ref(false)
 const showClozeAnswer = ref(false)
 const showEssayQuestion = ref(false)
@@ -270,19 +270,21 @@ const selectQuestionId = ref(0)
 const selectQuestionTitle = ref('')
 const selectQuestionDifficulty = ref('')
 const selectQuestionSubject = ref('')
+const questions = ref<Array<{ selectQuestionId: number; selectQuestionTitle: string; selectQuestionDifficulty: string; selectQuestionSubject: string; }>>([]); // 定义一个响应式数组来存储问题
 // 使用axios获取数据
 const fetchQuestions = async () => {
   try {
-    const response = await axios.get('/RecordQuestionBank/selectQuestion')
-    const questions = response.data // 假设这是包含多个对象的数组
-
+    const response = await axios.get('http://127.0.0.1:4523/m1/4462281-4108499-default/RecordQuestionBank/selectQuestion')
+    questions.value = response.data // 假设这是包含多个对象的数组
+    console.log(response.data)
     // 假设 questions 是一个数组，且至少包含一个对象
-    if (questions.length > 0) {
-      selectQuestionId.value = questions[0].selectQuestionId
-      selectQuestionTitle.value = questions[0].selectQuestionTitle
-      selectQuestionDifficulty.value = questions[0].selectQuestionDifficulty
-      selectQuestionSubject.value = questions[0].selectQuestionSubject
+    if (questions.value.length > 0) {
+      selectQuestionId.value = questions.value[0].selectQuestionId
+      selectQuestionTitle.value = questions.value[0].selectQuestionTitle
+      selectQuestionDifficulty.value = questions.value[0].selectQuestionDifficulty
+      selectQuestionSubject.value = questions.value[0].selectQuestionSubject
     }
+    console.log(questions.value[0].selectQuestionId)
   } catch (error) {
     console.error('Error fetching questions:', error)
   }
@@ -367,4 +369,7 @@ const handleTypeChange = (value: any) => {
     showEssayQuestion.value = false
   }
 }
+onMounted(async () => {
+  await fetchQuestions(); // 等待数据加载
+});
 </script>
