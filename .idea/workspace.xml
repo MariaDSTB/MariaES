@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="feat: Add GRPC communication for grades and exams">
-      <change afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/grpc/GrpcExamInfoService.java" afterDir="false" />
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="feat: use grpc with grade">
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/AuthorizeFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-grpc/src/main/proto/ExamService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/lib-grpc/src/main/proto/ExamService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-grpc/src/main/proto/UserService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/lib-grpc/src/main/proto/UserService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/Controller/GradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/controller/GradeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/service/GradeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/service/GradeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/GatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-exam/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-exam/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-grade/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-grade/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -477,7 +478,11 @@
       <workItem from="1715339842796" duration="59000" />
       <workItem from="1715339918995" duration="28000" />
       <workItem from="1715351942281" duration="2952000" />
-      <workItem from="1715436900017" duration="4038000" />
+      <workItem from="1715436900017" duration="4140000" />
+      <workItem from="1715475891434" duration="1144000" />
+      <workItem from="1715478446595" duration="1253000" />
+      <workItem from="1715494299209" duration="770000" />
+      <workItem from="1715522197498" duration="2805000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -631,7 +636,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715354883945</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="feat: use grpc with grade">
+      <option name="closed" value="true" />
+      <created>1715441038065</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1715441038065</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +692,8 @@
     <MESSAGE value="refactor(service-page): Improve the cascading query function" />
     <MESSAGE value="feat: refine grade and exam moudle" />
     <MESSAGE value="feat: Add GRPC communication for grades and exams" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add GRPC communication for grades and exams" />
+    <MESSAGE value="feat: use grpc with grade" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: use grpc with grade" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
