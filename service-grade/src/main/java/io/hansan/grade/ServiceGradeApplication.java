@@ -1,4 +1,4 @@
-package io.hansan.servicegrade;
+package io.hansan.grade;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

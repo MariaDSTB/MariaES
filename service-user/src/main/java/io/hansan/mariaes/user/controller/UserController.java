@@ -1,16 +1,14 @@
-package io.hansan.mariaes.user.Controller;
+package io.hansan.mariaes.user.controller;
 
+import io.hansan.mariaes.common.data.CommonResult;
 import io.hansan.mariaes.user.Service.UserService;
 import io.hansan.mariaes.user.data.vo.UserVo;
 import io.hansan.mariaes.user.database.entity.UserEntity;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 /**
  * @author ：何汉叁
@@ -27,21 +25,23 @@ public class UserController {
     @ApiOperation("获取用户信息")
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public UserVo getUserById(Long id){
+    public UserVo getUserById(@PathVariable Long id){
         return userService.getUserById(id);
     }
 
     @ApiOperation("注册用户")
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
-    public void register(@RequestBody UserEntity userEntity){
+    public CommonResult register(@RequestBody UserEntity userEntity){
         userService.addUser(userEntity);
+        return CommonResult.success();
     }
 
     @ApiOperation("获取所有用户信息")
     @GetMapping("/all")
     @ResponseStatus(HttpStatus.OK)
-    public List<UserVo> getAllUsers(int page, int size){
-        return userService.getAllUsers(page, size);
+    public CommonResult getAllUsers(@RequestParam(value = "page", defaultValue = "0") int page,
+                                @RequestParam(value = "size", defaultValue = "10") int size) {
+    return CommonResult.success(userService.getAllUsers(page, size));
     }
 }

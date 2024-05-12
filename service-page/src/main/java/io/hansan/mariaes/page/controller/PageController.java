@@ -1,12 +1,14 @@
 package io.hansan.mariaes.page.controller;
 
+import io.hansan.mariaes.common.data.CommonResult;
+import io.hansan.mariaes.page.data.dto.PageCreateDto;
 import io.hansan.mariaes.page.data.vo.PageVo;
+import io.hansan.mariaes.page.database.entity.PageEntity;
 import io.hansan.mariaes.page.service.PageService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @author ：何汉叁
@@ -21,5 +23,22 @@ public class PageController {
     @GetMapping("/{id}")
     public PageVo getPage(@RequestParam Long id) {
         return pageService.getPage(id);
+    }
+
+    @GetMapping("/all")
+    public CommonResult getAllPages(@RequestParam int page, @RequestParam int size) {
+        return CommonResult.success(pageService.getAllPages(page, size));
+    }
+
+    @PostMapping("/add")
+    public CommonResult addPage(@RequestBody PageCreateDto pageCreateDto) {
+        pageService.addPage(pageCreateDto);
+        return CommonResult.success();
+    }
+
+    @DeleteMapping("/{id}")
+    public CommonResult deletePage(@RequestParam Long id) {
+        pageService.deletePage(id);
+        return CommonResult.success();
     }
 }

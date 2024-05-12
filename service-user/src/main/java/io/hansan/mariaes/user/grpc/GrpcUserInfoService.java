@@ -3,12 +3,17 @@ import io.hansan.mariaes.lib.proto.user.GetUserRequest;
 import io.hansan.mariaes.lib.proto.user.GetUserResponse;
 import io.hansan.mariaes.lib.proto.user.UserInfoGrpc;
 import io.grpc.stub.StreamObserver;
+import io.hansan.mariaes.user.Service.UserService;
 import io.hansan.mariaes.user.data.vo.UserVo;
+import lombok.RequiredArgsConstructor;
 import net.devh.boot.grpc.server.service.GrpcService;
+import org.springframework.validation.annotation.Validated;
 
 @GrpcService
+@RequiredArgsConstructor
+@Validated
 public class GrpcUserInfoService extends UserInfoGrpc.UserInfoImplBase {
-
+    private final UserService userService;
     @Override
     public void getUser(GetUserRequest request, StreamObserver<GetUserResponse> responseObserver) {
         // 这里实现获取用户的逻辑
@@ -18,7 +23,7 @@ public class GrpcUserInfoService extends UserInfoGrpc.UserInfoImplBase {
         // 创建响应
         GetUserResponse response = GetUserResponse.newBuilder()
                 .setUserId(user.studentid())
-                .setUserName(user.name())
+                .setName(user.name())
             .build();
 
         // 发送响应
@@ -27,8 +32,6 @@ public class GrpcUserInfoService extends UserInfoGrpc.UserInfoImplBase {
     }
 
     public UserVo getUserFromDatabase(Long userId) {
-        // 这里实现从数据库获取用户的逻辑
-        // 这只是一个示例，实际情况可能会有所不同
-        return new UserVo(userId, "testName", "testEmail");
+        return userService.getUserById(userId);
     }
 }

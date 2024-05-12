@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+
+option java_multiple_files = true;
+option java_package = "io.hansan.mariaes.lib.proto.exam";
+option java_outer_classname = "ExamServiceProto";
+
+package exam_service;
+
+service ExamInfo {
+    rpc GetExamInfo(ExamRequest) returns (ExamResponse);
+}
+
+message ExamRequest {
+    int64 examId = 1;
+}
+
+message ExamResponse {
+    int64 pageId = 1;
+    string examName = 2;
+    string examDesc = 3;
+    string examTime = 4;
+}

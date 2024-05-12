@@ -28,7 +28,7 @@ public class UserService {
     }
 
     public List<UserVo> getAllUsers(int page, int size){
-        return userRepository.findAll(PageRequest.of(page, size, Sort.by("create_at").descending())).stream()
+        return userRepository.findAll(PageRequest.of(page, size, Sort.by("createdAt").descending())).stream()
                 .map(UserVo::fromUserEntity)
                 .toList();
     }

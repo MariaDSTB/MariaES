@@ -11,11 +11,11 @@ service UserInfo {
 }
 
 message GetUserRequest {
-    string userId = 1;
+    int64 userId = 1;
 }
 
 message GetUserResponse {
     int64 userId = 1;
-    string userName = 2;
-    string userAge = 3;
+    string name = 2;
+    string password = 3;
 }

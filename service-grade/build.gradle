@@ -17,6 +17,8 @@ ext {
 }
 
 dependencies {
+    implementation 'io.grpc:grpc-stub:1.42.1'
+    implementation 'net.devh:grpc-spring-boot-starter:3.0.0.RELEASE'
     implementation project(':lib-grpc')
     implementation 'com.github.xiaoymin:knife4j-spring-boot-starter:3.0.2'
     implementation project(':common')
