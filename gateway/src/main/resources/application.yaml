@@ -1,0 +1,51 @@
+server:
+  port: 7006
+
+spring:
+  application:
+    name: gateway
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+
+    gateway:
+      routes:
+        - id: service-user
+          uri: lb://service-user
+          predicates:
+            - Path=/user/**
+          filters:
+            - Authorize=true
+
+        - id: service-page
+          uri: lb://service-page
+          predicates:
+            - Path=/page/**
+          filters:
+            - Authorize=true
+
+        - id: service-exam
+          uri: lb://service-exam
+          predicates:
+            - Path=/exam/**
+          filters:
+            - Authorize=true
+
+        - id: service-question
+          uri: lb://service-question
+          predicates:
+            - Path=/question/**
+          filters:
+            - Authorize=true
+
+        - id: service-grade
+          uri: lb://service-grade
+          predicates:
+            - Path=/grade/**
+          filters:
+            - Authorize=true

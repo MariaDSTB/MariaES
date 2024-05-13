@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="feat: use grpc with grade">
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/AuthorizeFilter.java" afterDir="false" />
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="feat: fix some bug">
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/GatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-exam/src/main/resources/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/resources/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/io/hansan/mariaes/common/data/CommonResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/io/hansan/mariaes/common/data/CommonResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/AuthorizeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/AuthorizeFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,6 +298,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GatewayApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MariaES.gateway.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="MariaES.gateway.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.gateway.GatewayApplication" />
@@ -482,7 +484,8 @@
       <workItem from="1715475891434" duration="1144000" />
       <workItem from="1715478446595" duration="1253000" />
       <workItem from="1715494299209" duration="770000" />
-      <workItem from="1715522197498" duration="2805000" />
+      <workItem from="1715522197498" duration="3687000" />
+      <workItem from="1715558889160" duration="3324000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -644,7 +647,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715441038065</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat: fix some bug">
+      <option name="closed" value="true" />
+      <created>1715526686638</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1715526686638</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -693,7 +704,8 @@
     <MESSAGE value="feat: refine grade and exam moudle" />
     <MESSAGE value="feat: Add GRPC communication for grades and exams" />
     <MESSAGE value="feat: use grpc with grade" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: use grpc with grade" />
+    <MESSAGE value="feat: fix some bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: fix some bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
