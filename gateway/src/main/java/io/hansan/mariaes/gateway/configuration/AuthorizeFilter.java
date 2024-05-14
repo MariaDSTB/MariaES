@@ -6,5 +6,5 @@ package io.hansan.mariaes.gateway.configuration;
  * @description：TODO
  */
 
-public class AuthorizeFilter {
-}
+//public class AuthorizeFilter {
+//}

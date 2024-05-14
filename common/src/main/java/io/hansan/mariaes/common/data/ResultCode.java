@@ -5,7 +5,8 @@ public enum ResultCode implements IErrorCode{
     FAILED(200, "Operation Failed"),
     UNAUTHORIZED(401, "Not logged in or your token has expired"),
     FORBIDDEN(403, "There are no relevant permissions"),
-    VALIDATE_FAILED(404, "Parameter verification failed");
+    VALIDATE_FAILED(404, "Parameter verification failed"),
+    INTERNAL_SERVER_ERROR(500, "Internal server error or unable find instance");
     private long  code;
     private String message;
     private ResultCode(long code, String message) {

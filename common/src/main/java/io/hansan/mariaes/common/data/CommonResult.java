@@ -110,6 +110,18 @@ public class CommonResult<T> {
     public static <T> CommonResult<T> unauthorized(T data, String message) {
         return new CommonResult<>(ResultCode.UNAUTHORIZED.getCode(), message, data);}
 
+    /**
+     * 找不到服务或服务下现
+     * @return
+     * @param <T>
+     */
+    public static <T> CommonResult<T> internalServerError() {
+        return new CommonResult<>(ResultCode.INTERNAL_SERVER_ERROR.getCode(), ResultCode.INTERNAL_SERVER_ERROR.getMessage(), null);
+    }
+    public static <T> CommonResult<T> internalServerError(String message) {
+        return new CommonResult<>(ResultCode.INTERNAL_SERVER_ERROR.getCode(), message, null);
+    }
+
     public long getCode() {
         return code;
     }
