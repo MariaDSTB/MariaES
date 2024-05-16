@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/gateway" />
             <option value="$PROJECT_DIR$/lib-grpc" />
+            <option value="$PROJECT_DIR$/service-auth" />
             <option value="$PROJECT_DIR$/service-exam" />
             <option value="$PROJECT_DIR$/service-grade" />
             <option value="$PROJECT_DIR$/service-page" />

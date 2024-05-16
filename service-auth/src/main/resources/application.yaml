@@ -1,0 +1,12 @@
+server:
+  port: 7010
+
+spring:
+    application:
+        name: service-auth
+    cloud:
+        nacos:
+          discovery:
+            server-addr: localhost:8848
+
+
