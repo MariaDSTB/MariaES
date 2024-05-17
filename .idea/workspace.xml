@@ -4,15 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="feat: Custom global exception handler on gateway">
-      <change afterPath="$PROJECT_DIR$/service-auth/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/ServiceAuthApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-auth/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-auth/src/test/java/io/hansan/mariaes/auth/ServiceAuthApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="feat: decoupled authentication and authorization">
+      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/configuration/AuthorizationServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/configuration/JwtAuthenticationLoginFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/configuration/JwtAuthenticationSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/configuration/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/database/Entity/UserDetailEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/database/repository/UserDetailRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/handler/EntryPointAuthenticationHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/handler/LoginAuthenticationFailureHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/handler/LoginAuthenticationSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/handler/RequestAccessDeniedHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/utils/JwtTokenUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/utils/ResponseUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-auth/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/configuration/JwtTokenUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/service/JwtTokenUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-auth/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +81,24 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MariaES" type="f1a62948:ProjectNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MariaES" type="f1a62948:ProjectNode" />
+                <item name="service-auth" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MariaES" type="f1a62948:ProjectNode" />
+                <item name="service-auth" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MariaES" type="f1a62948:ProjectNode" />
+                <item name="service-auth" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -84,8 +110,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -498,7 +524,8 @@
       <workItem from="1715653609970" duration="14318000" />
       <workItem from="1715869735882" duration="266000" />
       <workItem from="1715870205621" duration="1159000" />
-      <workItem from="1715871448602" duration="961000" />
+      <workItem from="1715871448602" duration="1478000" />
+      <workItem from="1715913036671" duration="20450000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -684,7 +711,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715699356150</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="feat: decoupled authentication and authorization">
+      <option name="closed" value="true" />
+      <created>1715872912055</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1715872912055</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -736,7 +771,8 @@
     <MESSAGE value="feat: fix some bug" />
     <MESSAGE value="feat: build gateway service" />
     <MESSAGE value="feat: Custom global exception handler on gateway" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Custom global exception handler on gateway" />
+    <MESSAGE value="feat: decoupled authentication and authorization" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: decoupled authentication and authorization" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -6,7 +6,7 @@ plugins {
 
 group = 'io.hansan'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '17'
 
 repositories {
     mavenCentral()
@@ -14,11 +14,20 @@ repositories {
 
 ext {
     set('springCloudAlibabaVersion', "2021.0.5.0")
+    set('springCloudVersion', "Greenwich.SR6")
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
-    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+    implementation project(':common')
+    implementation project(':lib-grpc')
+    implementation 'io.grpc:grpc-stub:1.42.1'
+    implementation 'net.devh:grpc-spring-boot-starter:3.0.0.RELEASE'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    implementation 'org.springframework.cloud:spring-cloud-starter-oauth2'
+//    implementation 'org.springframework.cloud:spring-cloud-starter-security'
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
@@ -26,6 +35,7 @@ dependencies {
 dependencyManagement {
     imports {
         mavenBom "com.alibaba.cloud:spring-cloud-alibaba-dependencies:${springCloudAlibabaVersion}"
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
     }
 }
 
