@@ -4,34 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="test: make some bug but i don't care">
-      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/controller/BaseAuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/data/dto/UserSignInDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/exception/UserInfoMissMacthException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/service/AuthorizationValidationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/exception/UserInfoMissMatchException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/grpc/GrpcUserAuthenticationService.java" afterDir="false" />
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="fix: deal with some bug">
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/SaTokenConfigure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-grpc/src/main/proto/UserService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/lib-grpc/src/main/proto/UserService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/configuration/AuthorizationServerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/configuration/JwtAuthenticationLoginFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/configuration/JwtAuthenticationSecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/configuration/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/database/Entity/UserDetailEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/database/repository/UserDetailRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/handler/EntryPointAuthenticationHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/handler/LoginAuthenticationFailureHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/handler/LoginAuthenticationSuccessHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/handler/RequestAccessDeniedHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/service/JwtTokenUserDetailsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/utils/JwtTokenUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/utils/ResponseUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/data/vo/UserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/data/vo/UserVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/database/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/database/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/grpc/GrpcUserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/grpc/GrpcUserInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/AuthorizeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/AuthorizeFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/GlobalErrorExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/handler/GlobalErrorExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/controller/BaseAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/controller/BaseAuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/grpc/GrpcUserAuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/grpc/GrpcUserAuthenticationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,41 +72,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MariaES" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="lib-grpc" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="lib-grpc" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="lib-grpc" type="2d1252cf:ModuleNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="service-auth" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="service-auth" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="service-auth" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -179,47 +124,47 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Gradle.Build MariaES.executor": "Run",
-    "Gradle.GrpcUserInfoServiceTest.getUserReturnsCorrectResponse.executor": "Run",
-    "Gradle.GrpcUserInfoServiceTest.returnsCorrectResponseWhenUserExists.executor": "Run",
-    "Gradle.MariaES:gateway [bootRun].executor": "Run",
-    "Gradle.MariaES:gateway [clean].executor": "Run",
-    "Gradle.MariaES:lib-grpc [clean].executor": "Run",
-    "Gradle.MariaES:lib-grpc [generateProto].executor": "Run",
-    "Gradle.MariaES:service-question [bootRun].executor": "Run",
-    "Gradle.MariaES:service-user [bootRun].executor": "Run",
-    "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldCallService.executor": "Run",
-    "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldReturnBadRequest_WhenRequestBodyIsInvalid.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.ServiceAuthApplication.executor": "Run",
-    "Spring Boot.ServiceQuestionApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Java/MariaES/service-auth/src/main/java/io/hansan/mariaes/auth",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.24177071",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "D:\\Java\\Tools\\DevelopmentTools\\IDEA2023\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.Build MariaES.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrpcUserInfoServiceTest.getUserReturnsCorrectResponse.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrpcUserInfoServiceTest.returnsCorrectResponseWhenUserExists.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:gateway [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:lib-grpc [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:lib-grpc [generateProto].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:service-question [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:service-user [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldCallService.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldReturnBadRequest_WhenRequestBodyIsInvalid.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ServiceAuthApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceQuestionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java/MariaES/service-auth/src/main/java/io/hansan/mariaes/auth&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.24177071&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Java\\Tools\\DevelopmentTools\\IDEA2023\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Java\MariaES\service-auth\src\main\java\io\hansan\mariaes\auth" />
@@ -521,7 +466,8 @@
       <workItem from="1715870205621" duration="1159000" />
       <workItem from="1715871448602" duration="1478000" />
       <workItem from="1715913036671" duration="20728000" />
-      <workItem from="1715999350577" duration="8665000" />
+      <workItem from="1715999350577" duration="9026000" />
+      <workItem from="1716043115207" duration="2450000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -723,7 +669,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715954441939</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="fix: deal with some bug">
+      <option name="closed" value="true" />
+      <created>1716025166139</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1716025166139</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -777,7 +731,8 @@
     <MESSAGE value="feat: Custom global exception handler on gateway" />
     <MESSAGE value="feat: decoupled authentication and authorization" />
     <MESSAGE value="test: make some bug but i don't care" />
-    <option name="LAST_COMMIT_MESSAGE" value="test: make some bug but i don't care" />
+    <MESSAGE value="fix: deal with some bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: deal with some bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

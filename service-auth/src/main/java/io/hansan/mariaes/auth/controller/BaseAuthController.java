@@ -23,7 +23,7 @@ public class BaseAuthController {
     public CommonResult signIn(@RequestBody UserSignInDto userSignInDto) {
         Long userId = authorizationValidationService.validateUser(userSignInDto);
         StpUtil.login(userId);
-        return CommonResult.success();
+        return CommonResult.success("登录成功");
     }
     @RequestMapping("/signOut")
     public CommonResult signOut() {

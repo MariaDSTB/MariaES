@@ -8,7 +8,6 @@ import io.hansan.mariaes.user.database.entity.UserEntity;
 import io.hansan.mariaes.user.database.repository.UserRepository;
 import io.hansan.mariaes.user.exception.UserInfoMissMatchException;
 import lombok.RequiredArgsConstructor;
-import lombok.var;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.validation.annotation.Validated;
 
