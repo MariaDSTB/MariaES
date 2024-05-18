@@ -18,11 +18,11 @@ public class GrpcUserInfoService extends UserInfoGrpc.UserInfoImplBase {
     public void getUser(GetUserRequest request, StreamObserver<GetUserResponse> responseObserver) {
         // 这里实现获取用户的逻辑
         // 假设我们有一个方法可以根据request获取用户信息
-        UserVo user = getUserFromDatabase(Long.parseLong(request.getUserId()));
+        UserVo user = getUserFromDatabase(request.getUserId());
 
         // 创建响应
         GetUserResponse response = GetUserResponse.newBuilder()
-                .setUserId(user.studentid())
+                .setUserId(user.studentId())
                 .setName(user.name())
             .build();
 

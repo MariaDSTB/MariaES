@@ -10,6 +10,20 @@ service UserInfo {
     rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
 }
 
+service UserAuthentication {
+    rpc CheckPassword(CheckPasswordRequest) returns (CheckPasswordResponse) {}
+}
+
+message CheckPasswordRequest {
+    string name = 1;
+    string password = 2;
+}
+
+message CheckPasswordResponse {
+    int64 userId = 1;
+    bool isCorrect = 2;
+}
+
 message GetUserRequest {
     int64 userId = 1;
 }

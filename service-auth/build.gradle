@@ -14,10 +14,11 @@ repositories {
 
 ext {
     set('springCloudAlibabaVersion', "2021.0.5.0")
-    set('springCloudVersion', "Greenwich.SR6")
+    set('springCloudVersion', "2021.0.5")
 }
 
 dependencies {
+    implementation 'cn.dev33:sa-token-spring-boot-starter:1.38.0'
     implementation project(':common')
     implementation project(':lib-grpc')
     implementation 'io.grpc:grpc-stub:1.42.1'
@@ -26,9 +27,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok:1.18.20'
-    implementation 'org.springframework.cloud:spring-cloud-starter-oauth2'
-//    implementation 'org.springframework.cloud:spring-cloud-starter-security'
-    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
+//    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

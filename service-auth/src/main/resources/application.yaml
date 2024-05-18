@@ -21,13 +21,14 @@ spring:
       hibernate:
         ddl-auto: update
       show-sql: true
-    cloud:
-        nacos:
-          discovery:
-            server-addr: localhost:8848
+#    cloud:
+#        nacos:
+#          discovery:
+#            server-addr: localhost:8848
 grpc:
-  server:
-    port: 6566
   client:
-    GLOBAL:
+    service-user:
       address: discovery://default/service-user
+
+sa-token:
+  token-name: mariaES
