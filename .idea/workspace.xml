@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="feat: complete authentication service">
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/StpInterfaceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib-grpc/src/main/proto/PasskeyAuthorizationService.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/data/dto/UserBaseSignUpDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/service/BaseRegistrationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/Service/UserRegistrationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/data/vo/UserRegistrationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/grpc/GrpcUserRegistrationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib-grpc/src/main/proto/UserService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/lib-grpc/src/main/proto/UserService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/controller/BaseAuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/controller/BaseAuthorizationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/data/dto/UserSignInDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/data/dto/UserBaseSignInDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/service/AuthorizationValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/service/AuthorizationValidationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/database/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/database/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/AuthorizeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/AuthorizeFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/SaTokenConfigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/SaTokenConfigure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/StpInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/StpInterfaceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -486,7 +476,8 @@
       <workItem from="1715913036671" duration="20728000" />
       <workItem from="1715999350577" duration="9026000" />
       <workItem from="1716043115207" duration="2776000" />
-      <workItem from="1716083762950" duration="5972000" />
+      <workItem from="1716083762950" duration="6644000" />
+      <workItem from="1716126006833" duration="5939000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -704,7 +695,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716045815374</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="feat: complete authentication service">
+      <option name="closed" value="true" />
+      <created>1716092345847</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1716092345848</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

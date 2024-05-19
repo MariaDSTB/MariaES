@@ -1,5 +1,6 @@
 package io.hansan.mariaes.gateway.configuration;
 
+import cn.dev33.satoken.same.SaSameUtil;
 import cn.dev33.satoken.stp.StpUtil;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
@@ -21,6 +22,7 @@ public class AuthorizeFilter implements GatewayFilter {
                 .getRequest()
                 .mutate()
                 .header(BizConstants.USER_ID_HEADER, StpUtil.getLoginId(BizConstants.USER_ID_UNAUTHORIZED).toString())
+//                .header(SaSameUtil.SAME_TOKEN, SaSameUtil.getToken())
                 .build();
         ServerWebExchange newExchange = exchange.mutate().request(request).build();
         return chain.filter(newExchange);
