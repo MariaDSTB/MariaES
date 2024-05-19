@@ -1,6 +1,6 @@
 package io.hansan.mariaes.auth.data.dto;
 
-public record UserSignInDto(
+public record UserBaseSignInDto(
         String username,
         String password
 ) {
