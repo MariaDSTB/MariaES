@@ -14,6 +14,18 @@ service UserAuthentication {
     rpc CheckPassword(CheckPasswordRequest) returns (CheckPasswordResponse) {}
 }
 
+service UserRegistration {
+    rpc RegisterUser(RegisterUserRequest) returns (RegisterUserResponse) {}
+}
+
+message RegisterUserRequest {
+    string name = 1;
+    string password = 2;
+}
+message RegisterUserResponse {
+    int64 userId = 1;
+}
+
 message CheckPasswordRequest {
     string name = 1;
     string password = 2;

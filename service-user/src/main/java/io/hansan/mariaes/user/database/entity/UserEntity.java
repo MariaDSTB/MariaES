@@ -1,6 +1,6 @@
 package io.hansan.mariaes.user.database.entity;
 
-import com.sun.istack.NotNull;
+import io.hansan.mariaes.user.data.vo.UserRegistrationDto;
 import lombok.Data;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.SQLDelete;
@@ -59,5 +59,12 @@ public class UserEntity {
     @PreUpdate
     protected void onUpdate() {
         updatedAt = new Date();
+    }
+
+    public UserEntity fromBaseUserRegistrationDto(UserRegistrationDto baseUserRegistrationDto) {
+        UserEntity userEntity = new UserEntity();
+        userEntity.setName(baseUserRegistrationDto.name());
+        userEntity.setPassword(baseUserRegistrationDto.password());
+        return userEntity;
     }
 }

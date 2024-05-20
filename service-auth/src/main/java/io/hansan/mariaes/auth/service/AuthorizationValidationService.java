@@ -1,8 +1,7 @@
 package io.hansan.mariaes.auth.service;
 
-import io.hansan.mariaes.auth.data.dto.UserSignInDto;
+import io.hansan.mariaes.auth.data.dto.UserBaseSignInDto;
 import io.hansan.mariaes.lib.proto.user.CheckPasswordRequest;
-import io.hansan.mariaes.lib.proto.user.CheckPasswordResponse;
 import io.hansan.mariaes.lib.proto.user.UserAuthenticationGrpc;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.stereotype.Service;
@@ -19,7 +18,7 @@ public class AuthorizationValidationService {
     @GrpcClient("service-user")
     private UserAuthenticationGrpc.UserAuthenticationBlockingStub userAuthenticationBlockingStub;
 
-    public Long validateUser(UserSignInDto userSignInDto) {
+    public Long validateUser(UserBaseSignInDto userSignInDto) {
         var checkPasswordResponse = userAuthenticationBlockingStub.checkPassword(CheckPasswordRequest.newBuilder()
                 .setName(userSignInDto.username())
                 .setPassword(userSignInDto.password())

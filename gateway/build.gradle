@@ -19,6 +19,9 @@ ext {
 
 dependencies {
     implementation 'cn.dev33:sa-token-reactor-spring-boot-starter:1.38.0'
+    implementation 'cn.dev33:sa-token-redis-jackson:1.38.0'
+    implementation 'org.apache.commons:commons-pool2'
+    implementation 'cn.dev33:sa-token-reactor-spring-boot-starter:1.38.0'
     implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:4.0.1'
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
