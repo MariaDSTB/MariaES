@@ -9,12 +9,11 @@ import io.hansan.mariaes.user.database.entity.UserEntity;
  * @description：TODO
  */
 public record UserVo (
-        Long studentId,
-        String name,
-        String classname
+        Long userId,
+        String name
 ){
     @NotNull
     public static UserVo fromUserEntity(UserEntity userEntity){
-        return new UserVo(userEntity.getStudentId(), userEntity.getName(), userEntity.getClassname());
+        return new UserVo(userEntity.getId(), userEntity.getName());
     }
 }

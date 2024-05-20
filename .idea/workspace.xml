@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="feat: complete authentication service">
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="fix: fix some bug">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2024_5_20_8_16___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/_2024_5_20_8_16___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/AuthorizeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/AuthorizeFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/SaTokenConfigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/SaTokenConfigure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/StpInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/StpInterfaceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/GatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/RoutesConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/RoutesConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-auth/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/ServiceAuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/ServiceAuthApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/controller/BaseAuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/controller/BaseAuthorizationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/data/dto/UserBaseSignInDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/data/dto/UserBaseSignInDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/data/dto/UserBaseSignUpDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/data/dto/UserBaseSignUpDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-auth/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/ServiceUserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/ServiceUserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/data/vo/UserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/data/vo/UserVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/database/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/database/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/database/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/database/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/grpc/GrpcUserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/grpc/GrpcUserInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,13 +86,28 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="lib-grpc" type="2d1252cf:ModuleNode" />
+                <item name="service-auth" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="lib-grpc" type="2d1252cf:ModuleNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+                <item name="service-auth" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MariaES" type="f1a62948:ProjectNode" />
+                <item name="service-auth" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MariaES" type="f1a62948:ProjectNode" />
+                <item name="service-auth" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+                <item name="net.devh:grpc-client-spring-boot-starter:2.12.0.RELEASE" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
               </path>
             </expand>
             <select />
@@ -132,47 +161,56 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.Build MariaES.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GrpcUserInfoServiceTest.getUserReturnsCorrectResponse.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GrpcUserInfoServiceTest.returnsCorrectResponseWhenUserExists.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MariaES:gateway [bootRun].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MariaES:gateway [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MariaES:lib-grpc [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MariaES:lib-grpc [generateProto].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MariaES:service-question [bootRun].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MariaES:service-user [bootRun].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldCallService.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldReturnBadRequest_WhenRequestBodyIsInvalid.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ServiceAuthApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ServiceQuestionApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Java/MariaES/service-auth/src/main/java/io/hansan/mariaes/auth&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.24177071&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Java\\Tools\\DevelopmentTools\\IDEA2023\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.Build MariaES.executor": "Run",
+    "Gradle.GrpcUserInfoServiceTest.getUserReturnsCorrectResponse.executor": "Run",
+    "Gradle.GrpcUserInfoServiceTest.returnsCorrectResponseWhenUserExists.executor": "Run",
+    "Gradle.MariaES:gateway [bootRun].executor": "Run",
+    "Gradle.MariaES:gateway [clean].executor": "Run",
+    "Gradle.MariaES:lib-grpc [clean].executor": "Run",
+    "Gradle.MariaES:lib-grpc [generateProto].executor": "Run",
+    "Gradle.MariaES:service-question [bootRun].executor": "Run",
+    "Gradle.MariaES:service-user [bootRun].executor": "Run",
+    "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldCallService.executor": "Run",
+    "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldReturnBadRequest_WhenRequestBodyIsInvalid.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Authorization-Service.executor": "Run",
+    "Spring Boot.GatewayApplication.executor": "Run",
+    "Spring Boot.ServiceAuthApplication.executor": "Run",
+    "Spring Boot.ServiceQuestionApplication.executor": "Run",
+    "Spring Boot.ServiceUserApplication (1).executor": "Run",
+    "Spring Boot.ServiceUserApplication.executor": "Run",
+    "Spring Boot.User-Service.executor": "Run",
+    "Spring Boot.gateway.executor": "Run",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Java/MariaES/service-auth/src/main/java/io/hansan/mariaes/auth",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.24177071",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "D:\\Java\\Tools\\DevelopmentTools\\IDEA2023\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Java\MariaES\service-auth\src\main\java\io\hansan\mariaes\auth" />
@@ -187,32 +225,19 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="hiddenConfigurations">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <set>
+              <option value="Authorization-Service" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="RunManager" selected="Gradle.MariaES:lib-grpc [generateProto]">
-    <configuration name="GrpcUserInfoServiceTest.returnsCorrectResponseWhenUserExists" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":service-user:test" />
-            <option value="--tests" />
-            <option value="&quot;GrpcUserInfoServiceTest.returnsCorrectResponseWhenUserExists&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.Authorization-Service">
     <configuration name="MariaES:gateway [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -225,28 +250,6 @@
         <option name="taskNames">
           <list>
             <option value="bootRun" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="MariaES:gateway [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/gateway" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -279,133 +282,62 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MariaES:service-user [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/service-user" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="bootRun" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="GatewayApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MariaES.gateway.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.gateway.GatewayApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MariaES.gateway.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.gateway.GatewayApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceAuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="Authorization-Service" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="MariaES.service-auth.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.auth.ServiceAuthApplication" />
+      <option name="VM_PARAMETERS" value="-Dserver.port=7010" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.hansan.mariaes.auth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceExamApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MariaES.service-exam.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.exam.ServiceExamApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceExamApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MariaES.service-exam.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.exam.ServiceExamApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceGradeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MariaES.service-grade.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.grade.ServiceGradeApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceGradeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MariaES.service-grade.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.grade.ServiceGradeApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServicePageApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MariaES.service-page.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.page.ServicePageApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServicePageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MariaES.service-page.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.page.ServicePageApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServicePageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MariaES.service-page.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.page.ServicePageApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceQuestionApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MariaES.service-question.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.question.ServiceQuestionApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceQuestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MariaES.service-question.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.servicequestion.ServiceQuestionApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceUserApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="User-Service" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="MariaES.service-user.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.user.ServiceUserApplication" />
+      <option name="VM_PARAMETERS" value="-Dserver.port=7002" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.hansan.mariaes.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="MariaES.service-user.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.serviceuser.ServiceUserApplication" />
+    <configuration name="gateway" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="MariaES.gateway.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.gateway.GatewayApplication" />
+      <option name="VM_PARAMETERS" value="-Dserver.port=7006" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.hansan.mariaes.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.MariaES:gateway [bootRun]" />
+      <item itemvalue="Gradle.MariaES:lib-grpc [generateProto]" />
+      <item itemvalue="Spring Boot.User-Service" />
+      <item itemvalue="Spring Boot.Authorization-Service" />
+      <item itemvalue="Spring Boot.gateway" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.User-Service" />
+        <item itemvalue="Spring Boot.Authorization-Service" />
+        <item itemvalue="Spring Boot.gateway" />
         <item itemvalue="Gradle.MariaES:lib-grpc [generateProto]" />
         <item itemvalue="Gradle.MariaES:gateway [bootRun]" />
-        <item itemvalue="Gradle.MariaES:gateway [clean]" />
-        <item itemvalue="Gradle.MariaES:service-user [bootRun]" />
-        <item itemvalue="Gradle.GrpcUserInfoServiceTest.returnsCorrectResponseWhenUserExists" />
       </list>
     </recent_temporary>
   </component>
@@ -478,6 +410,7 @@
       <workItem from="1716043115207" duration="2776000" />
       <workItem from="1716083762950" duration="6644000" />
       <workItem from="1716126006833" duration="5939000" />
+      <workItem from="1716172905976" duration="13063000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
