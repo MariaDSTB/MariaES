@@ -1,8 +1,8 @@
 server:
   port: 7001
 spring:
-#  application:
-#    name: service-question
+  application:
+    name: service-question
 #  cloud:
 ##    nacos服务注册
 #    nacos:
@@ -32,6 +32,18 @@ spring:
       pool-name: SpringBootHikariCP
       max-lifetime: 60000
       connection-timeout: 30000
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+grpc:
+  server:
+    port: 6566
+  client:
+    GLOBAL:
+      address: discovery://default/service-question
+
   jpa:
     hibernate:
       ddl-auto: update

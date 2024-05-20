@@ -1,0 +1,20 @@
+syntax = 'proto3';
+
+option java_multiple_files = true;
+option java_package = "io.hansan.mariaes.lib.proto.passkeyAuthorization";
+option java_outer_classname = "PasskeyAuthorizationServiceProto";
+
+package passkeyAuthorization;
+
+service PasskeyAuthorizationService {
+    rpc authorizePasskey (AuthorizePasskeyRequest) returns (AuthorizePasskeyResponse) {}
+}
+
+message AuthorizePasskeyRequest {
+    string name = 1;
+    string password = 2;
+}
+
+message AuthorizePasskeyResponse {
+    int64 userId = 1;
+}

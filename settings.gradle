@@ -5,6 +5,7 @@ include('service-exam')
 include('service-question')
 include('service-page')
 include('service-grade')
-include 'common'
-include 'lib-grpc'
+include ('common')
+include ('lib-grpc')
+include ('service-auth')
 

@@ -9,7 +9,7 @@ import io.hansan.mariaes.user.database.entity.UserEntity;
  * @description：TODO
  */
 public record UserVo (
-        Long studentid,
+        Long studentId,
         String name,
         String classname
 ){

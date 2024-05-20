@@ -2,7 +2,10 @@ package io.hansan.mariaes.user.database.repository;
 
 import io.hansan.mariaes.user.database.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
 
 /**
  * @author ：何汉叁
@@ -11,4 +14,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, Long>{
+    @Query("select u from users u where u.name = :name")
+    Optional<UserEntity> findByName(String name);
 }

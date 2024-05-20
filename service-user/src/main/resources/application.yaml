@@ -1,6 +1,10 @@
 server:
   port: 7002
+
+
 spring:
+  application:
+    name: service-user
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/mariaes?createDatabaseIfNotExist=true
@@ -22,6 +26,17 @@ spring:
   mvc: #不配置swagger启动类会报错空指针
     pathmatch:
       matching-strategy: ant_path_matcher
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+grpc:
+  server:
+    port: 6565
+  client:
+    GLOBAL:
+      address: discovery://default/service-user
 
 logging:
   level:
@@ -32,3 +47,6 @@ logging:
           descriptor:
             sql:
               BasicBinder: TRACE
+
+
+

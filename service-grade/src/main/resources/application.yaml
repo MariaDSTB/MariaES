@@ -1,9 +1,10 @@
 server:
-  port: 7003
+  port: 7004
+
+
 spring:
   application:
-    name: service-page
-
+    name: service-garde
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/mariaes?createDatabaseIfNotExist=true
@@ -20,14 +21,33 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-      show-sql: true
+    show-sql: true
 
+  mvc: #不配置swagger启动类会报错空指针
+    pathmatch:
+      matching-strategy: ant_path_matcher
   cloud:
     nacos:
       discovery:
         server-addr: localhost:8848
 
+grpc:
+  server:
+    port: 6565
+  client:
+    GLOBAL:
+      address: discovery://default/service-garde
 
-  mvc: #不配置swagger启动类会报错空指针
-    pathmatch:
-      matching-strategy: ant_path_matcher
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+
+
+
+
