@@ -3,6 +3,7 @@ package io.hansan.mariaes.gateway.configuration;
 import cn.dev33.satoken.stp.StpInterface;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,13 +14,22 @@ import java.util.List;
 @Component
 public class StpInterfaceImpl implements StpInterface {
 
+    /**
+     * 稍后再从具体业务逻辑中获取权限列表
+     */
     @Override
     public List<String> getPermissionList(Object o, String s) {
-        return List.of();
+       List<String> permissions = new ArrayList<String>();
+        permissions.add("question.*");
+        permissions.add("page.*");
+        return permissions;
     }
 
     @Override
     public List<String> getRoleList(Object o, String s) {
-        return List.of();
+        List<String> roles = new ArrayList<String>();
+        roles.add("admin");
+        roles.add("user");
+        return roles;
     }
 }

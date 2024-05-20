@@ -25,7 +25,9 @@ public class SaTokenConfigure {
                 .addInclude("/**")
                 .addExclude("/authorization/**")
                 .setAuth(obj -> {
-                    SaRouter.match("/authorization/**", r -> StpUtil.checkLogin());
+                    SaRouter.match("/**","/authorization/**", r -> StpUtil.checkLogin());
+                    SaRouter.match("/questions/**", r -> StpUtil.checkRole("admin"));
+                    SaRouter.match("/pages/**", r -> StpUtil.checkPermission("page.*"));
                 })
                 .setError(e -> {
                     if (e instanceof NotLoginException) {
