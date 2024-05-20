@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="refactor: satoken authorization">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/StpInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/StpInterfaceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/resources/application.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="fix: fix some bug" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -479,7 +473,7 @@
       <workItem from="1716043115207" duration="2776000" />
       <workItem from="1716083762950" duration="6644000" />
       <workItem from="1716126006833" duration="6287000" />
-      <workItem from="1716163917829" duration="3265000" />
+      <workItem from="1716163917829" duration="3673000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -713,7 +707,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716132352047</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fix: fix some bug">
+      <option name="closed" value="true" />
+      <created>1716168114577</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1716168114577</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -744,7 +746,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat(service-question): add curd" />
     <MESSAGE value="feat: add global exception" />
     <MESSAGE value="fix: knife4j UI no data" />
     <MESSAGE value="feat(service-user): &#10;&#10;add crud" />
@@ -769,7 +770,8 @@
     <MESSAGE value="fix: deal with some bug" />
     <MESSAGE value="feat: complete authentication service" />
     <MESSAGE value="refactor: satoken authorization" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: satoken authorization" />
+    <MESSAGE value="fix: fix some bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fix some bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
