@@ -4,15 +4,16 @@ server:
 spring:
   application:
     name: gateway
-#  config:
-#    import: nacos://
+
   cloud:
     nacos:
       discovery:
         server-addr: 192.168.207.8:8848
-#      config:
-#        server-addr: http://120.48.101.178:8848
-#        file-extension: yaml
+
+  redis:
+    port: 6379
+    host: localhost
+    database: 1
 
 mariaes:
   front:

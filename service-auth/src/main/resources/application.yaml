@@ -2,9 +2,10 @@ server:
   port: 7010
 
 spring:
-    application:
+  application:
         name: service-auth
-    datasource:
+
+  datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/mariaes?createDatabaseIfNotExist=true
       username: root
@@ -17,10 +18,17 @@ spring:
         pool-name: SpringBootHikariCP
         max-lifetime: 60000
         connection-timeout: 30000
-    jpa:
+
+  jpa:
       hibernate:
         ddl-auto: update
       show-sql: true
+
+  redis:
+    port: 6379
+    host: localhost
+    database: 1
+
 #    cloud:
 #        nacos:
 #          discovery:
