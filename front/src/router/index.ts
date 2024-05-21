@@ -2,12 +2,13 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../views/HomePage.vue';
 import Main from '../views/Main.vue';
 import RecordQuestionBank from "../views/RecordQuestionBank.vue";
+import Page from "../views/Page.vue";
 const routes = [
     {
         path: '/',
         name: 'Main',
         component: Main,
-        redirect:"/HomePage",
+        redirect: "/HomePage",
         children: [
             {
                 path: '/HomePage',
@@ -19,6 +20,12 @@ const routes = [
                 path: '/RecordQuestionBank',
                 name: 'RecordQuestionBank',
                 component: RecordQuestionBank,
+                meta: { requiresAuth: true, roles: ['admin', 'user'] }
+            },
+            {
+                path: '/Page',
+                name: 'Page',
+                component: Page,
                 meta: { requiresAuth: true, roles: ['admin', 'user'] }
             }
         ]
