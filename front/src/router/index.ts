@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../views/HomePage.vue';
 import Main from '../views/Main.vue';
 import RecordQuestionBank from "../views/RecordQuestionBank.vue";
-import Page from "../views/Page.vue";
+
 const routes = [
     {
         path: '/',
@@ -25,7 +25,7 @@ const routes = [
             {
                 path: '/Page',
                 name: 'Page',
-                component: Page,
+                component: () => import('@/views/Page.vue'),
                 meta: { requiresAuth: true, roles: ['admin', 'user'] }
             }
         ]
