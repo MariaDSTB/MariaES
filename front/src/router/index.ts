@@ -23,10 +23,22 @@ const routes = [
                 meta: { requiresAuth: true, roles: ['admin', 'user'] }
             },
             {
-                path: '/Page',
+                path: '/page',
                 name: 'Page',
                 component: () => import('@/views/Page.vue'),
                 meta: { requiresAuth: true, roles: ['admin', 'user'] }
+            },
+            {
+                path: '/exam',
+                name: 'Exam',
+                component: () => import("@/views/Exam.vue"),
+                meta: { requiresAuth: true, roles: ['admin', 'user'] }
+            },
+            {
+                path: '/login',
+                name: 'Signin',
+                component: () => import('@/views/Signin.vue'),
+                meta: { needLogin: false }
             }
         ]
     }
