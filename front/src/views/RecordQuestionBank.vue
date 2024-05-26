@@ -63,6 +63,15 @@
   display: inline-block;
   vertical-align: top;
 }
+.searchForQuestions * {
+  display: inline-block; /* 将所有子元素设置为内联块级元素 */
+  vertical-align: middle; /* 垂直居中对齐 */
+}
+.searchForQuestionBtn{
+  position: absolute;
+  top: 150px;
+  left: 450px;
+}
 </style>
 
 <template>
@@ -70,13 +79,16 @@
   <el-button type="primary" class="operateQuestionBtn" @click="dialogVisible = true,fetchQuestions">
     操作题库
   </el-button>
+  <el-button type="primary" class="searchForQuestionBtn" @click="dialogVisible1 = true">
+    题目查找
+  </el-button>
   <div class="question">
     <p>题目类型</p>
     <el-cascader v-model="QuestionType" :options="options1" @change="handleTypeChange"/>
   </div>
   <div class="type">
     <p>题目科目</p>
-    <el-cascader v-model="QuestionTitle" :options="options2"/>
+    <el-cascader v-model="QuestionSubject" :options="options2"/>
   </div>
   <div class="difficuity">
     <p>题目难易</p>
@@ -85,7 +97,7 @@
   <div>
     <p>题头</p>
     <el-input
-        v-model="title"
+        v-model="QuestionTitle"
         class="title"
         placeholder="请输入"
         :autosize="{ minRows: 2, maxRows: 4 }"
@@ -94,8 +106,7 @@
     />
   </div>
   <transition-group name="fade">
-    <div class="single-choice" v-if="showSingleChoice">
-      <!-- ...选项A、B、C、D... -->
+    <div class="single-choice" v-if="showSingleChoice && QuestionType === 'SCQ'">
       <div class="single-options">
         <p>选项A</p>
         <el-input
@@ -132,16 +143,14 @@
       </div>
       <p>单选题答案</p>
       <el-input
-          v-model="optionD"
+          v-model="QuestionAnswer"
           style="width: 240px"
           :autosize="{ minRows: 2, maxRows: 4 }"
           type="textarea"
-          placeholder="请输入"
+          placeholder="请输入单选题答案"
       />
     </div>
-
-    <div class="multiple-choice" v-if="showMultipleChoice">
-      <!-- ...选项A、B、C、D... -->
+    <div class="multiple-choice" v-if="showMultipleChoice && QuestionType === 'MCQ'">
       <div class="multiple-options">
         <p>选项A</p>
         <el-input
@@ -176,20 +185,20 @@
             placeholder="请输入"
         />
       </div>
-      <p>单选题答案</p>
+      <p>多选题答案</p>
       <el-input
-          v-model="optionD"
+          v-model="QuestionAnswer"
           style="width: 240px"
           :autosize="{ minRows: 2, maxRows: 4 }"
           type="textarea"
-          placeholder="请输入"
+          placeholder="请输入多选题答案"
       />
     </div>
 
-    <div class="cloze-answer" v-if="showClozeAnswer">
+    <div class="cloze-answer" v-if="showClozeAnswer && QuestionType === 'CQ'">
       <p>填空题答案</p>
       <el-input
-          v-model="clozeAnswer"
+          v-model="QuestionAnswer"
           style="width: 240px"
           :autosize="{ minRows: 2, maxRows: 4 }"
           type="textarea"
@@ -197,14 +206,14 @@
       />
     </div>
 
-    <div class="essay-question" v-if="showEssayQuestion">
+    <div class="essay-question" v-if="showEssayQuestion && QuestionType === 'EQ'">
       <p>解答题答案</p>
       <el-input
-          v-model="essayAnswer"
+          v-model="QuestionAnswer"
           style="width: 500px"
           :autosize="{ minRows: 2, maxRows: 4 }"
           type="textarea"
-          placeholder="请输入填空题答案"
+          placeholder="请输入解答题答案"
       />
     </div>
   </transition-group>
@@ -228,7 +237,7 @@
       />
       <p>题头</p>
       <el-input
-          v-model="question.selectQuestionId"
+          v-model="question.selectQuestionTitle"
           style="width: 140px;display: inline-block;vertical-align: top"
           :autosize="{ minRows: 2, maxRows: 4 }"
           type="textarea"
@@ -237,7 +246,7 @@
       />
       <p>难易程度</p>
       <el-input
-          v-model="question.selectQuestionId"
+          v-model="question.selectQuestionDifficulty"
           style="width: 140px;display: inline-block;vertical-align: top"
           :autosize="{ minRows: 2, maxRows: 4 }"
           type="textarea"
@@ -246,16 +255,52 @@
       />
       <p>题目科目</p>
       <el-input
-          v-model="question.selectQuestionId"
+          v-model="question.selectQuestionSubject"
           style="width: 140px;display: inline-block;vertical-align: top"
           :autosize="{ minRows: 2, maxRows: 4 }"
           type="textarea"
           placeholder=""
           disabled
       />
-    </div>
-    <div class="searchForQuestions">
-
+      <el-dialog
+          title="题目更改"
+          v-model="dialogVisible2"
+          width="70%"
+      >
+        <p>题目编号</p>
+        <el-input
+            v-model="selectQuestionId"
+            style="width: 140px;display: inline-block;vertical-align: top"
+            :autosize="{ minRows: 2, maxRows: 4 }"
+            type="textarea"
+            placeholder=""
+            disabled
+        />
+        <p>题头</p>
+        <el-input
+            v-model="selectQuestionTitle"
+            style="width: 140px;display: inline-block;vertical-align: top"
+            :autosize="{ minRows: 2, maxRows: 4 }"
+            type="textarea"
+            placeholder=""
+        />
+        <p>难易程度</p>
+        <el-cascader v-model="selectQuestionDifficulty" :options="options3" @change="handleTypeChange"/>
+        <p>题目科目</p>
+        <el-cascader v-model="selectQuestionSubject" :options="options2" @change="handleTypeChange"/>
+        <p>题目答案</p>
+        <el-input
+            v-model="selectQuestionAnswer"
+            style="width: 140px;display: inline-block;vertical-align: top"
+            :autosize="{ minRows: 2, maxRows: 4 }"
+            type="textarea"
+            placeholder=""
+        />
+        <el-button type="primary" @click="updateQuestion">保存</el-button>
+        <el-button type="danger" @click="dialogVisible2=false">取消</el-button>
+      </el-dialog>
+      <el-button type="warning" @click="editQuestion(index)">更改</el-button>
+      <el-button type="danger" @click="deleteQuestion(index)">删除</el-button>
     </div>
     <template #footer>
     <span class="dialog-footer">
@@ -263,15 +308,34 @@
     </span>
     </template>
   </el-dialog>
+  <el-dialog
+      title="题目查找"
+      v-model="dialogVisible1"
+      width="70%"
+  >
+    <div class="searchForQuestions">
+      <p>题目编号：</p>
+      <el-input
+          v-model="searchForQuestionId"
+          style="width: 140px;display: inline-block;vertical-align: top"
+          :autosize="{ minRows: 2, maxRows: 4 }"
+          type="textarea"
+          placeholder=""
+      />
+      <el-button type="primary" style="margin: 30px" @click="searchForQuestions"> 查找 </el-button>
+    </div>
+    <span class="dialog-footer1">
+      <el-button type="primary" @click="dialogVisible1 = false">确 定</el-button>
+    </span>
+  </el-dialog>
 </template>
 <script setup lang="ts">
-import {ref, onMounted} from 'vue'
+import {ref, onMounted, computed} from 'vue'
 import axios from 'axios'
 const QuestionType = ref('');
 const QuestionSubject = ref('');
 const QuestionDifficulty = ref('');
 const QuestionTitle = ref('')
-const title = ref('')
 const optionA = ref('')
 const optionB = ref('')
 const optionC = ref('')
@@ -285,11 +349,54 @@ const showMultipleChoice = ref(false)
 const showClozeAnswer = ref(false)
 const showEssayQuestion = ref(false)
 const dialogVisible = ref(false)
+const dialogVisible1 = ref(false)
+const dialogVisible2 = ref(false)
 const selectQuestionId = ref(0)
 const selectQuestionTitle = ref('')
 const selectQuestionDifficulty = ref('')
 const selectQuestionSubject = ref('')
-const questions = ref<Array<{ selectQuestionId: number; selectQuestionTitle: string; selectQuestionDifficulty: string; selectQuestionSubject: string; }>>([]); // 定义一个响应式数组来存储问题
+const selectQuestionAnswer = ref('')
+const questions = ref<Array<{ selectQuestionId: number; selectQuestionTitle: string; selectQuestionDifficulty: string; selectQuestionSubject: string; selectQuestionAnswer: string }>>([]); // 定义一个响应式数组来存储问题
+const searchForQuestionId = ref(0);
+const QuestionAnswer = computed({
+  get: () => {
+    switch (QuestionType.value) {
+      case 'SCQ':
+        return singleChoiceAnswer.value;
+      case 'MCQ':
+        return multipleChoiceAnswer.value;
+      case 'CQ':
+        return clozeAnswer.value;
+      case 'EQ':
+        return essayAnswer.value;
+      default:
+        return '';
+    }
+  },
+  set: (value) => {
+    switch (QuestionType.value) {
+      case 'SCQ':
+        singleChoiceAnswer.value = value;
+        break;
+      case 'MCQ':
+        multipleChoiceAnswer.value = value;
+        break;
+      case 'CQ':
+        clozeAnswer.value = value;
+        break;
+      case 'EQ':
+        essayAnswer.value = value;
+        break;
+    }
+  }
+});
+interface Question {
+  QuestionType: string;
+  QuestionSubject: string;
+  QuestionDifficulty: string;
+  QuestionTitle: string;
+  QuestionAnswer:string;
+}
 const options1 = [
   {
     value: 'SCQ',
@@ -346,36 +453,38 @@ const handleTypeChange = (value: any) => {
     showMultipleChoice.value = false
     showClozeAnswer.value = false
     showEssayQuestion.value = false
+    QuestionType.value = 'SCQ'
   } else if (value[0] === 'CQ') {
     showSingleChoice.value = false
     showMultipleChoice.value = false
     showClozeAnswer.value = true
     showEssayQuestion.value = false
-  }else if(value[0] === 'MCQ'){
+    QuestionType.value = 'CQ'
+  } else if (value[0] === 'MCQ') {
     showSingleChoice.value = false
     showMultipleChoice.value = true
     showClozeAnswer.value = false
     showEssayQuestion.value = false
-  }
-  else if(value[0] === 'EQ'){
+    QuestionType.value = 'MCQ'
+  } else if (value[0] === 'EQ') {
     showSingleChoice.value = false
     showMultipleChoice.value = false
     showClozeAnswer.value = false
     showEssayQuestion.value = true
-  }
-  else {
+    QuestionType.value = 'EQ'
+  } else {
     showSingleChoice.value = false
     showMultipleChoice.value = false
     showClozeAnswer.value = false
     showEssayQuestion.value = false
+    QuestionType.value = ''
   }
 }
-// 使用axios获取数据
+
 const fetchQuestions = async () => {
   try {
-    const response = await axios.get('http://127.0.0.1:4523/m1/4462281-4108499-default/RecordQuestionBank/selectQuestion')
+    const response = await axios.get('http://127.0.0.1:4523/m1/4462281-4108499-default/RecordQuestionBank/displayQuestion')
     questions.value = response.data // 假设这是包含多个对象的数组
-    console.log(response.data)
     // 假设 questions 是一个数组，且至少包含一个对象
     if (questions.value.length > 0) {
       selectQuestionId.value = questions.value[0].selectQuestionId
@@ -388,50 +497,28 @@ const fetchQuestions = async () => {
     console.error('Error fetching questions:', error)
   }
 }
-
-interface Question {
-  QuestionType: string;
-  QuestionSubject: string;
-  QuestionDifficulty: string;
-  QuestionTitle: string;
-  singleChoiceAnswer?: string;
-  multipleChoiceAnswer?: string;
-  clozeAnswer?: string;
-  essayAnswer?: string;
-}
 const addQuestions = async () => {
   try {
     // 创建Question对象
     const addQuestion: Question = {
       QuestionType: QuestionType.value,
-      QuestionSubject: QuestionSubject.value,
-      QuestionDifficulty: QuestionDifficulty.value,
+      QuestionSubject: QuestionSubject.value[0],
+      QuestionDifficulty: QuestionDifficulty.value[0],
       QuestionTitle: QuestionTitle.value,
+      // 根据题目类型添加答案属性
+      QuestionAnswer: QuestionAnswer.value
     };
     // 检查所有必要的属性是否已被设置
     if (
-        QuestionType.value &&
-        QuestionSubject.value &&
-        QuestionDifficulty.value &&
+        QuestionType.value[0] &&
+        QuestionSubject.value[0] &&
+        QuestionDifficulty.value[0] &&
         QuestionTitle.value &&
-        (QuestionType.value === 'SCQ' ? singleChoiceAnswer.value : '') &&
-        (QuestionType.value === 'MCQ' ? multipleChoiceAnswer.value : '') &&
-        (QuestionType.value === 'CQ' ? clozeAnswer.value : '') &&
-        (QuestionType.value === 'EQ' ? essayAnswer.value : '')
+        QuestionAnswer.value
     ) {
-      // 根据QuestionType添加答案属性
-      if (QuestionType.value === 'SCQ') {
-        addQuestion.singleChoiceAnswer = singleChoiceAnswer.value;
-      } else if (QuestionType.value === 'MCQ') {
-        addQuestion.multipleChoiceAnswer = multipleChoiceAnswer.value;
-      } else if (QuestionType.value === 'CQ') {
-        addQuestion.clozeAnswer = clozeAnswer.value;
-      } else if (QuestionType.value === 'EQ') {
-        addQuestion.essayAnswer = essayAnswer.value;
-      }
       // 发送请求到服务器
       try {
-        const response = await axios.put('http://127.0.0.1:4523/m1/4462281-4108499-default/RecordQuestionBank/addQuestion', addQuestion);
+        const response = await axios.post('http://127.0.0.1:4523/m1/4462281-4108499-default/RecordQuestionBank/addQuestion', addQuestion);
         if (response.status === 200) {
           alert('添加成功');
         } else {
@@ -450,6 +537,108 @@ const addQuestions = async () => {
     alert('添加失败，请检查输入并重试');
   }
 };
+const searchForQuestions = async () => {
+  try {
+    const response = await axios.get(`http://127.0.0.1:4523/m1/4462281-4108499-default/RecordQuestionBank/searchQuestion`, {
+      params: {
+        id: searchForQuestionId.value
+      }
+    });
+    const questionVo = response.data;
+    // 更新UI，例如显示找到的QuestionVo对象的属性
+    selectQuestionId.value = questionVo.selectQuestionId;
+    selectQuestionTitle.value = questionVo.selectQuestionTitle;
+    selectQuestionDifficulty.value = questionVo.selectQuestionDifficulty;
+    selectQuestionSubject.value = questionVo.selectQuestionSubject;
+  } catch (error) {
+    console.error('Error searching for question:', error);
+    // 处理错误，例如弹出错误消息
+    alert('查找失败，请检查网络连接或服务器状态');
+  }
+};
+
+const deleteQuestion = async (index: number) => {
+  try {
+    const questionId = questions.value[index].selectQuestionId;
+    const response = await axios.delete(`http://127.0.0.1:4523/m1/4462281-4108499-default/RecordQuestionBank/deleteQuestion/${questionId}`);
+    if (response.status === 200) {
+      // 从前端数组中移除题目
+      questions.value.splice(index, 1);
+      alert('删除成功');
+    } else {
+      alert('删除失败');
+    }
+  } catch (error) {
+    console.error('Error deleting question:', error);
+    alert('删除失败，请检查网络连接或服务器状态');
+  }
+};
+const editQuestion = (index: number) => {
+  // 获取当前索引的question对象
+  const question = questions.value[index];
+
+  // 打开对话框，显示question的详细信息
+  dialogVisible2.value = true;
+  selectQuestionId.value = question.selectQuestionId;
+  selectQuestionTitle.value = question.selectQuestionTitle;
+  selectQuestionDifficulty.value = question.selectQuestionDifficulty;
+  selectQuestionSubject.value = question.selectQuestionSubject;
+  QuestionAnswer.value = question.selectQuestionAnswer;
+};
+
+// 假设有一个updateQuestion方法，用于更新题目
+// 假设有一个updateQuestion方法，用于更新题目
+const updateQuestion = async () => {
+  // 创建一个新的question对象，包含所有属性
+  const updatedQuestion = {
+    selectQuestionId: selectQuestionId.value,
+    selectQuestionTitle: selectQuestionTitle.value,
+    selectQuestionDifficulty: selectQuestionDifficulty.value,
+    selectQuestionSubject: selectQuestionSubject.value,
+    selectQuestionAnswer: QuestionAnswer.value
+  };
+
+  // 检查是否有属性发生变化
+  const originalQuestion = questions.value.find(
+      q => q.selectQuestionId === selectQuestionId.value
+  );
+
+  // 如果originalQuestion存在，并且有任何属性不同，则更新question
+  if (originalQuestion &&
+      (originalQuestion.selectQuestionTitle !== updatedQuestion.selectQuestionTitle ||
+          originalQuestion.selectQuestionDifficulty !== updatedQuestion.selectQuestionDifficulty ||
+          originalQuestion.selectQuestionSubject !== updatedQuestion.selectQuestionSubject ||
+          originalQuestion.selectQuestionAnswer !== updatedQuestion.selectQuestionAnswer)) {
+
+    try {
+      // 发送请求到服务器，更新题目
+      const response = await axios.put(
+          `http://127.0.0.1:4523/m1/4462281-4108499-default/RecordQuestionBank/updateQuestion`,
+          updatedQuestion
+      );
+
+      if (response.status === 200) {
+        // 更新成功，更新前端数组中的对象
+        const index = questions.value.findIndex(
+            q => q.selectQuestionId === selectQuestionId.value
+        );
+        if (index !== -1) {
+          questions.value[index] = updatedQuestion;
+        }
+        alert('更新成功');
+      } else {
+        alert('更新失败');
+      }
+    } catch (error) {
+      console.error('Error updating question:', error);
+      alert('更新失败，请检查网络连接或服务器状态');
+    }
+  } else {
+    // 如果没有变化，则不发送请求
+    alert('没有变化，不需要更新');
+  }
+};
+
 
 onMounted(async () => {
   await fetchQuestions(); // 等待数据加载
