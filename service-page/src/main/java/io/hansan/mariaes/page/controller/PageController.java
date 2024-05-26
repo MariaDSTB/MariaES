@@ -17,26 +17,30 @@ import java.util.List;
  */
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/page")
+@RequestMapping("/api/page")
 public class PageController {
     private final PageService pageService;
     @GetMapping("/{id}")
+    @CrossOrigin
     public PageVo getPage(@RequestParam Long id) {
         return pageService.getPage(id);
     }
 
     @GetMapping("/all")
+    @CrossOrigin
     public CommonResult getAllPages(@RequestParam int page, @RequestParam int size) {
         return CommonResult.success(pageService.getAllPages(page, size));
     }
 
     @PostMapping("/add")
+    @CrossOrigin
     public CommonResult addPage(@RequestBody PageCreateDto pageCreateDto) {
         pageService.addPage(pageCreateDto);
         return CommonResult.success();
     }
 
     @DeleteMapping("/{id}")
+    @CrossOrigin
     public CommonResult deletePage(@RequestParam Long id) {
         pageService.deletePage(id);
         return CommonResult.success();

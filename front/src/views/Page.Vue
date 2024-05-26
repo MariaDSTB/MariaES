@@ -20,9 +20,9 @@
 <script lang="ts" setup>
 import { ref, reactive, onMounted } from 'vue'
 import axios from 'axios'
-
+import { ElMessage } from 'element-plus'
 const page = ref({
-    name: '',
+    title: '',
     content: '',
     answer: ''
 });
@@ -32,17 +32,23 @@ const questions = reactive({
 });
 
 const getQuestion = async () => {
-    const res = await axios.get('http://127.0.0.1:4523/m1/4389540-0-default/questions/all');
+    const res = await axios.get('http://localhost:7001/api/question/all');
     questions.data = res.data;
 };
 
 onMounted(getQuestion);
 
-const submitForm = () => {
-    console.log("page(ref):");
-    console.log(page.value);
-    console.log("question(reactive)");
-    console.log(questions);
+const submitForm = async () => {
+    await axios.post('http://localhost:7003/api/page/add', page.value)
+        .then(() => {
+            ElMessage({
+                message: '添加成功',
+                type: 'success',
+            })
+        })
+        .catch(() => {
+            ElMessage('error', '添加失败');
+        });
 };
 
 
@@ -58,4 +64,4 @@ const submitForm = () => {
     display: flex;
     align-items: center;
 }
-</style>, onMountedimport { ContainerWithChildren } from 'postcss/lib/container';
+</style>

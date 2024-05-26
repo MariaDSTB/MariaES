@@ -13,11 +13,12 @@ import java.util.List;
  * @description：TODO
  */
 public record PageVo(
+        Long id,
         String title,
-        Date createTime,
-        List<QuestionPageEntity> QuestionPageEntity
+        String content,
+        String answer
 ){
-    public static PageVo FromQuestionPage(@NotNull PageEntity pageEntity, List<QuestionPageEntity> questionPageEntities) {
-        return new PageVo(pageEntity.getTitle(), pageEntity.getCreateAt(), questionPageEntities);
+    public static PageVo FromQuestionPage(@NotNull PageEntity pageEntity) {
+        return new PageVo(pageEntity.getId(), pageEntity.getTitle(), pageEntity.getContent(), pageEntity.getAnswer());
     }
 }

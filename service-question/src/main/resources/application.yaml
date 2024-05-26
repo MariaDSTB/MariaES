@@ -3,20 +3,7 @@ server:
 spring:
   application:
     name: service-question
-#  cloud:
-##    nacos服务注册
-#    nacos:
-#      discovery:
-#        username: mariaes
-#        password: mariaes
-#        server-addr:
-##    sentinel配置
-#    sentinel:
-#      transport:
-#        dashboard: localhost:8080
-#        port: 8719
-#        clientIp:
-#      eager: true
+
 
 #    数据源配置
   datasource:
@@ -36,13 +23,14 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
-grpc:
-  server:
-    port: 6566
-  client:
-    GLOBAL:
-      address: discovery://default/service-question
+        server-addr: 192.168.207.8:8848
+
+#grpc:
+#  server:
+#    port: 6566
+#  client:
+#    GLOBAL:
+#      address: discovery://default/service-question
 
   jpa:
     hibernate:

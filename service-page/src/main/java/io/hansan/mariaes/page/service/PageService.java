@@ -30,19 +30,33 @@ public class PageService {
     private final PageRepository pageRepository;
     private QuestionPageRepository questionPageRepository;
 
+//    public PageVo getPage(Long id) {
+//        return pageRepository.findById(id).map(pageEntity -> {
+//            List<QuestionPageEntity> questionPageEntities = questionPageRepository.findAllByPageId(id);
+//            return PageVo.FromQuestionPage(pageEntity, questionPageEntities);
+//        }).orElse(null);
+//    }
+
     public PageVo getPage(Long id) {
         return pageRepository.findById(id).map(pageEntity -> {
-            List<QuestionPageEntity> questionPageEntities = questionPageRepository.findAllByPageId(id);
-            return PageVo.FromQuestionPage(pageEntity, questionPageEntities);
+            return PageVo.FromQuestionPage(pageEntity);
         }).orElse(null);
     }
+//    public List<PageVo> getAllPages(int page, int size) {
+//        return pageRepository.findAll(PageRequest.of(page, size, Sort.by("create_at").descending()))
+//                .stream()
+//                .map(PageEntity -> {
+//                    List<QuestionPageEntity> questionPageEntities = questionPageRepository.findAllByPageId(PageEntity.getId());
+//                    return PageVo.FromQuestionPage(PageEntity, questionPageEntities);
+//                })
+//                .toList();
+//    }
 
     public List<PageVo> getAllPages(int page, int size) {
         return pageRepository.findAll(PageRequest.of(page, size, Sort.by("create_at").descending()))
                 .stream()
                 .map(PageEntity -> {
-                    List<QuestionPageEntity> questionPageEntities = questionPageRepository.findAllByPageId(PageEntity.getId());
-                    return PageVo.FromQuestionPage(PageEntity, questionPageEntities);
+                    return PageVo.FromQuestionPage(PageEntity);
                 })
                 .toList();
     }
@@ -58,20 +72,25 @@ public class PageService {
      * @param pageCreateDto
      */
     @Transactional
+//    public void addPage(PageCreateDto pageCreateDto) {
+//        PageCreateBo pageCreateBo = PageCreateBo.fromCreateDto(pageCreateDto);
+//        PageEntity pageEntity = PageEntity.fromCreateBo(pageCreateBo);
+//        PageEntity savePageEntity = pageRepository.save(pageEntity);
+//        Long pageId = savePageEntity.getId();
+//        List<Long> questionIds = pageCreateDto.questionIds();
+//        List<QuestionPageEntity> questionPageEntities = questionIds
+//                .stream()
+//                .map(
+//                        questionId -> {
+//                            QuestionPageCreateBo questionPageCreateBo = new QuestionPageCreateBo(pageId, questionId);
+//                            return QuestionPageEntity.fromCreateBo(questionPageCreateBo);
+//                        })
+//                .toList();
+//        questionPageRepository.saveAll(questionPageEntities);
+//    }
     public void addPage(PageCreateDto pageCreateDto) {
         PageCreateBo pageCreateBo = PageCreateBo.fromCreateDto(pageCreateDto);
         PageEntity pageEntity = PageEntity.fromCreateBo(pageCreateBo);
-        PageEntity savePageEntity = pageRepository.save(pageEntity);
-        Long pageId = savePageEntity.getId();
-        List<Long> questionIds = pageCreateDto.questionIds();
-        List<QuestionPageEntity> questionPageEntities = questionIds
-                .stream()
-                .map(
-                        questionId -> {
-                            QuestionPageCreateBo questionPageCreateBo = new QuestionPageCreateBo(pageId, questionId);
-                            return QuestionPageEntity.fromCreateBo(questionPageCreateBo);
-                        })
-                .toList();
-        questionPageRepository.saveAll(questionPageEntities);
+        pageRepository.save(pageEntity);
     }
 }

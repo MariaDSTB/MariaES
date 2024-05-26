@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/exam")
+@RequestMapping("/api/exam")
 public class ExamController {
     private final ExamService examService;
     @GetMapping("/{id}")

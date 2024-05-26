@@ -27,7 +27,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class QuestionEntity {
     @Id
-    @Generated
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(nullable = false)
@@ -42,6 +42,9 @@ public class QuestionEntity {
     @Column(nullable = false)
     private String difficulty;
 
+    @Column(nullable = false)
+    private String subject;
+
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_at", nullable = false, updatable = false)
     private Date createdAt;
@@ -53,4 +56,15 @@ public class QuestionEntity {
     @ColumnDefault("false")
     @Column(name = "is_deleted", nullable = false)
     private boolean idDeleted;
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = new Date();
+        updatedAt = new Date();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = new Date();
+    }
 }

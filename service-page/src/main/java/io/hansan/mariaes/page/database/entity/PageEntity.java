@@ -32,6 +32,12 @@ public class PageEntity {
     @Column(nullable = false)
     private String title;
 
+    @Column
+    private String content;
+
+    @Column
+    private String answer;
+
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "create_at",nullable = false, updatable = false)
     private Date createAt;
@@ -55,6 +61,9 @@ public class PageEntity {
 
     @NotNull
     public static PageEntity fromCreateBo(PageCreateBo pageCreateBo) {
-        return new PageEntity(-1L ,pageCreateBo.title(), Date.from(Instant.now()), Date.from(Instant.now()), false);
+        return new PageEntity(-1L ,pageCreateBo.title(),
+                pageCreateBo.content(),
+                pageCreateBo.answer(),
+                Date.from(Instant.now()), Date.from(Instant.now()), false);
     }
 }

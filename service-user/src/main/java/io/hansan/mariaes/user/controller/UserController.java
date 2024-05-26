@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
  * @description：TODO
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 @RequiredArgsConstructor
 @Api(tags = "用户管理")
 public class UserController {

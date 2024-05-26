@@ -25,7 +25,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: 192.168.207.8:8848
 
 
   mvc: #不配置swagger启动类会报错空指针

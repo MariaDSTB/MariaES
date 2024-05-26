@@ -11,11 +11,12 @@ public record QuestionCreationBo(
         String answer,
         String type,
         String content,
-        String difficulty
+        String difficulty,
+        String subject
 
 ) {
     @NotNull
-    public static QuestionCreationBo fromRequest(String answer, String type, String content, String difficulty) {
-        return new QuestionCreationBo(answer, type, content, difficulty);
+    public static QuestionCreationBo fromRequest(String answer, String type, String content, String difficulty, String subject) {
+        return new QuestionCreationBo(answer, type, content, difficulty, subject);
     }
 }

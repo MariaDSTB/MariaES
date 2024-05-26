@@ -9,7 +9,7 @@
       <el-form label-width="0px" class="login_form">
         <!-- 用户名 -->
         <el-form-item>
-          <el-input v-model="user.username"placeholder="Username"></el-input>
+          <el-input v-model="user.username" placeholder="Username"></el-input>
         </el-form-item>
         <!-- 密码 -->
         <el-form-item>
@@ -25,8 +25,10 @@
       </el-form>
     </div>
   </div>
+
+
 </template>
- 
+
 <script lang="ts" setup>
 import axios from 'axios';
 import { ref } from 'vue';
@@ -54,12 +56,13 @@ const signup = async () => {
     });
 };
 </script>
- 
+
 <style scoped>
 .login_container {
   background-color: #2b4b6b;
   height: 100vh;
 }
+
 .login_box {
   width: 450px;
   height: 300px;
@@ -69,6 +72,7 @@ const signup = async () => {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
   .avatar_box {
     height: 130px;
     width: 130px;
@@ -80,6 +84,7 @@ const signup = async () => {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
+
     img {
       width: 100%;
       height: 100%;
@@ -88,6 +93,7 @@ const signup = async () => {
     }
   }
 }
+
 .login_form {
   position: absolute;
   bottom: 0;
@@ -95,6 +101,7 @@ const signup = async () => {
   padding: 0 20px;
   box-sizing: border-box;
 }
+
 .login_btn {
   justify-content: flex-end;
 }

@@ -15,13 +15,16 @@ public record QuestionVo (
         String type,
         String content,
         String difficulty,
-        String createdAt){
+        String subject
+) {
     @NotNull
     public static QuestionVo fromEntity(@NotNull QuestionEntity entity) {
         return new QuestionVo(
                 entity.getId(),
-                entity.getAnswer(), entity.getType(),
-                entity.getContent(), entity.getDifficulty(),
-                entity.getCreatedAt().toString());
+                entity.getAnswer(),
+                entity.getType(),
+                entity.getContent(),
+                entity.getDifficulty(),
+                entity.getSubject());
     }
 }

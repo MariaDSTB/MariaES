@@ -11,6 +11,8 @@ import io.hansan.mariaes.lib.proto.user.GetUserResponse;
 import io.hansan.mariaes.lib.proto.user.UserInfoGrpc;
 import lombok.RequiredArgsConstructor;
 import net.devh.boot.grpc.client.inject.GrpcClient;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -47,4 +49,11 @@ public class GradeService {
         }else
             return null;
     }
+
+//    public Page<GradeVo> listGrade(Long page, Long size, Long userId) {
+//        Page<GradeEntity> gradeEntities = gradeRepository.findAllByStudentId(userId, PageRequest.of(page.intValue(), size.intValue()));
+//        return gradeEntities.map(gradeEntity -> {
+//            return GradeVo.fromEntity(gradeEntity);
+//        }
+//    }
 }

@@ -14,11 +14,16 @@ import io.hansan.grade.service.GradeService;
  */
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/grade")
+@RequestMapping("/api/grade")
 public class GradeController {
     public final GradeService gradeService;
     @GetMapping("/{id}")
     public CommonResult getGrade(@RequestParam Long id) {
         return CommonResult.success(gradeService.getGrade(id));
+    }
+
+    @GetMapping("/all/{userId}")
+    public CommonResult listGrade(@RequestParam(defaultValue = "0") Long page, @RequestParam(defaultValue = "10") Long size, @RequestParam Long userId ) {
+        return CommonResult.success(gradeService.listGrade(page, size, userId));
     }
 }

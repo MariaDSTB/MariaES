@@ -20,7 +20,7 @@ import java.util.List;
 public class QuestionService {
     private final QuestionRepository questionRepository;
     public List<QuestionVo> getAllQuestions(int page, int size) {
-        return questionRepository.findAll(PageRequest.of(page, size, Sort.by("created_at").descending())).stream()
+        return questionRepository.findAll(PageRequest.of(page, size, Sort.by("createdAt").descending())).stream()
                 .map(QuestionVo::fromEntity)
                 .toList();
     }

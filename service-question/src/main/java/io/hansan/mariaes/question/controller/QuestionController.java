@@ -18,18 +18,20 @@ import java.util.List;
  */
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/questions")
+@RequestMapping("/api/question")
 @Api(tags = "Question")
 public class QuestionController {
     private final QuestionService questionService;
     @ApiOperation(value = "获取所有题库")
     @GetMapping("/all")
-    public List<QuestionVo> getAllQuestions(@RequestParam int page, @RequestParam int size) {
+    @CrossOrigin
+    public List<QuestionVo> getAllQuestions(@RequestParam(defaultValue = "0") int page , @RequestParam(defaultValue = "10") int size) {
         return questionService.getAllQuestions(page, size);
     }
 
     @ApiOperation( value = "删除题目")
     @DeleteMapping("/{id}")
+    @CrossOrigin
     @ResponseStatus(HttpStatus.OK) // 200 (OK) or 204 (NO CONTENT) or 202 (ACCEPTED) or 201 (CREATED) or 200 (OK
     public void deleteQuestion(@PathVariable Long id) {
         questionService.deleteQuestion(id);
@@ -37,12 +39,14 @@ public class QuestionController {
 
     @ApiOperation(value = "获取题目")
     @GetMapping("{id}")
+    @CrossOrigin
     public QuestionVo getQuestion(@PathVariable Long id) {
         return questionService.getQuestion(id);
     }
 
     @ApiOperation(value = "添加题目")
     @PostMapping("/add")
+    @CrossOrigin
     @ResponseStatus(HttpStatus.CREATED)
     public void addQuestion(@RequestBody QuestionEntity questionEntity) {
         questionService.addQuestion(questionEntity);

@@ -4,7 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="fix: fix some bug" />
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="fix: fix some bug">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/RecordQuestionBank.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/RecordQuestionBank.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/Signin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/Signin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/vite-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/vite-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/Controller/ExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/Controller/ExamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/controller/GradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/controller/GradeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/database/repository/GradeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/database/repository/GradeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/service/GradeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/service/GradeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-grade/src/test/java/io/hansan/grade/ServiceGradeApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/controller/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/bo/PageCreateBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/bo/PageCreateBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/dto/PageCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/dto/PageCreateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/vo/PageVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/vo/PageVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/entity/PageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/entity/PageEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/repository/QuestionPageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/repository/QuestionPageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/service/PageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/service/PageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/test/java/io/hansan/page/ServicePageApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/controller/QuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/data/bo/QuestionCreationBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/data/bo/QuestionCreationBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/data/vo/QuestionVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/data/vo/QuestionVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/database/entity/QuestionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/database/entity/QuestionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/service/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/service/QuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-question/src/test/java/io/hansan/mariaes/question/ServiceQuestionApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/controller/UserController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,6 +86,9 @@
         <task path="$PROJECT_DIR$/service-grade">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/service-page">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -67,28 +99,25 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="service-auth" type="2d1252cf:ModuleNode" />
+                <item name="service-page" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="service-auth" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="service-question" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="service-auth" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
+                <item name="service-question" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="service-auth" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-                <item name="net.devh:grpc-client-spring-boot-starter:2.12.0.RELEASE" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
+                <item name="service-question" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -152,6 +181,7 @@
     "Gradle.MariaES:gateway [clean].executor": "Run",
     "Gradle.MariaES:lib-grpc [clean].executor": "Run",
     "Gradle.MariaES:lib-grpc [generateProto].executor": "Run",
+    "Gradle.MariaES:service-page [bootRun].executor": "Run",
     "Gradle.MariaES:service-question [bootRun].executor": "Run",
     "Gradle.MariaES:service-user [bootRun].executor": "Run",
     "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldCallService.executor": "Run",
@@ -165,11 +195,14 @@
     "Spring Boot.Authorization-Service.executor": "Run",
     "Spring Boot.GatewayApplication.executor": "Run",
     "Spring Boot.ServiceAuthApplication.executor": "Run",
+    "Spring Boot.ServicePageApplication.executor": "Run",
     "Spring Boot.ServiceQuestionApplication.executor": "Run",
     "Spring Boot.ServiceUserApplication (1).executor": "Run",
     "Spring Boot.ServiceUserApplication.executor": "Run",
     "Spring Boot.User-Service.executor": "Run",
     "Spring Boot.gateway.executor": "Run",
+    "Spring Boot.page-server.executor": "Run",
+    "Spring Boot.question-server.executor": "Run",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
@@ -206,25 +239,14 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="hiddenConfigurations">
-      <map>
-        <entry key="SpringBootApplicationConfigurationType">
-          <value>
-            <set>
-              <option value="Authorization-Service" />
-            </set>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Authorization-Service">
-    <configuration name="MariaES:gateway [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Spring Boot.question-server">
+    <configuration name="MariaES:service-page [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/gateway" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/service-page" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--info" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -241,10 +263,10 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MariaES:lib-grpc [generateProto]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="MariaES:service-question [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/lib-grpc" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/service-question" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -252,7 +274,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="generateProto" />
+            <option value="bootRun" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -262,20 +284,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>false</RunAsTest>
       <method v="2" />
-    </configuration>
-    <configuration name="Authorization-Service" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
-      <module name="MariaES.service-auth.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.auth.ServiceAuthApplication" />
-      <option name="VM_PARAMETERS" value="-Dserver.port=7010" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.hansan.mariaes.auth.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="User-Service" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="MariaES.service-user.main" />
@@ -291,13 +299,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gateway" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
-      <module name="MariaES.gateway.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.gateway.GatewayApplication" />
-      <option name="VM_PARAMETERS" value="-Dserver.port=7006" />
+    <configuration name="page-server" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="MariaES.service-page.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.page.ServicePageApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.hansan.mariaes.gateway.*" />
+          <option name="PATTERN" value="io.hansan.mariaes.page.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="question-server" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="MariaES.service-question.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.question.ServiceQuestionApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.hansan.mariaes.question.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -306,19 +326,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.MariaES:gateway [bootRun]" />
-      <item itemvalue="Gradle.MariaES:lib-grpc [generateProto]" />
+      <item itemvalue="Gradle.MariaES:service-page [bootRun]" />
+      <item itemvalue="Gradle.MariaES:service-question [bootRun]" />
+      <item itemvalue="Spring Boot.page-server" />
+      <item itemvalue="Spring Boot.question-server" />
       <item itemvalue="Spring Boot.User-Service" />
-      <item itemvalue="Spring Boot.Authorization-Service" />
-      <item itemvalue="Spring Boot.gateway" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.question-server" />
+        <item itemvalue="Spring Boot.page-server" />
+        <item itemvalue="Gradle.MariaES:service-question [bootRun]" />
+        <item itemvalue="Gradle.MariaES:service-page [bootRun]" />
         <item itemvalue="Spring Boot.User-Service" />
-        <item itemvalue="Spring Boot.Authorization-Service" />
-        <item itemvalue="Spring Boot.gateway" />
-        <item itemvalue="Gradle.MariaES:lib-grpc [generateProto]" />
-        <item itemvalue="Gradle.MariaES:gateway [bootRun]" />
       </list>
     </recent_temporary>
   </component>
@@ -392,6 +412,8 @@
       <workItem from="1716083762950" duration="6644000" />
       <workItem from="1716126006833" duration="5939000" />
       <workItem from="1716172905976" duration="13788000" />
+      <workItem from="1716714823815" duration="6414000" />
+      <workItem from="1716724468387" duration="3875000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -682,6 +704,17 @@
     <MESSAGE value="feat: complete authentication service" />
     <MESSAGE value="fix: fix some bug" />
     <option name="LAST_COMMIT_MESSAGE" value="fix: fix some bug" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/service/QuestionService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
