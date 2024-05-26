@@ -20,7 +20,7 @@ const routes = [
                 path: '/RecordQuestionBank',
                 name: 'RecordQuestionBank',
                 component: RecordQuestionBank,
-                meta: { requiresAuth: true, roles: ['admin', 'user'] }
+                meta: { requiresAuth0: true, roles: ['admin', 'user'] }
             },
             {
                 path: '/page',

@@ -27,7 +27,6 @@ public class QuestionController {
     public List<QuestionVo> getAllQuestions(@RequestParam int page, @RequestParam int size) {
         return questionService.getAllQuestions(page, size);
     }
-
     @ApiOperation( value = "删除题目")
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK) // 200 (OK) or 204 (NO CONTENT) or 202 (ACCEPTED) or 201 (CREATED) or 200 (OK
