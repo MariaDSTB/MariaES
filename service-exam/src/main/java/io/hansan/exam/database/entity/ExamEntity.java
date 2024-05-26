@@ -46,7 +46,6 @@ public class ExamEntity {
      */
     @Column(nullable = false)
     private String description;
-
     /**
      * 开始时间
      */
@@ -67,8 +66,6 @@ public class ExamEntity {
     @Column(nullable = false, name = "total_marks")
     @ColumnDefault("100")
     private Integer totalMarks;
-
-
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false, name = "created_at", updatable = false)

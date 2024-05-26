@@ -28,7 +28,6 @@ public class QuestionController {
     public List<QuestionVo> getAllQuestions(@RequestParam(defaultValue = "0") int page , @RequestParam(defaultValue = "10") int size) {
         return questionService.getAllQuestions(page, size);
     }
-
     @ApiOperation( value = "删除题目")
     @DeleteMapping("/{id}")
     @CrossOrigin

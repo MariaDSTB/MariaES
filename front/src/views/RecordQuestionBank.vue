@@ -233,7 +233,6 @@
 </template>
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue'
-import { ElMessage } from 'element-plus'
 import axios from 'axios'
 const QuestionType = ref('');
 const QuestionSubject = ref('');
@@ -394,7 +393,7 @@ const handleTypeChange = (value: any) => {
 
 const fetchQuestions = async () => {
   try {
-    const response = await axios.get('http://localhost:7001/api/question/all')
+    const response = await axios.get('http://127.0.0.1:4523/m1/4462281-4108499-default/RecordQuestionBank/displayQuestion')
     questions.value = response.data // 假设这是包含多个对象的数组
     // 假设 questions 是一个数组，且至少包含一个对象
     if (questions.value.length > 0) {
@@ -427,11 +426,12 @@ const addQuestions = async () => {
     ) {
       // 发送请求到服务器
       try {
-        const response = await axios.post('http://localhost:7001/api/question/add', addQuestion);
-        ElMessage({
-          message: 'Congrats, this is a success message.',
-          type: 'success',
-        })
+        const response = await axios.post('http://127.0.0.1:4523/m1/4462281-4108499-default/RecordQuestionBank/addQuestion', addQuestion);
+        if (response.status === 200) {
+          alert('添加成功');
+        } else {
+          alert('添加失败');
+        }
       } catch (error) {
         console.error('Error sending request:', error);
         alert('添加失败，请检查网络连接或服务器状态');
@@ -467,7 +467,7 @@ const searchForQuestions = async () => {
 const deleteQuestion = async (index: number) => {
   try {
     const id = questions.value[index].id;
-    const response = await axios.delete(`http://localhost:7001/api/question/${id}`);
+    const response = await axios.delete(`http://127.0.0.1:4523/m1/4462281-4108499-default/RecordQuestionBank/deleteQuestion/${id}`);
     if (response.status === 200) {
       // 从前端数组中移除题目
       questions.value.splice(index, 1);
