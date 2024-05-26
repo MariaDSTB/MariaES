@@ -2,9 +2,10 @@ server:
   port: 7010
 
 spring:
-    application:
+  application:
         name: service-auth
-    datasource:
+
+  datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/mariaes?createDatabaseIfNotExist=true
       username: root
@@ -17,18 +18,27 @@ spring:
         pool-name: SpringBootHikariCP
         max-lifetime: 60000
         connection-timeout: 30000
-    jpa:
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.207.8:8848
+
+  jpa:
       hibernate:
         ddl-auto: update
       show-sql: true
-#    cloud:
-#        nacos:
-#          discovery:
-#            server-addr: localhost:8848
+
+  redis:
+    host: localhost
+    port: 6379
+    database: 1
+
+
 grpc:
   client:
     service-user:
-      address: discovery://default/service-user
-
+      address: discovery:///service-user
+      negotiation-type: plaintext
 sa-token:
   token-name: mariaES

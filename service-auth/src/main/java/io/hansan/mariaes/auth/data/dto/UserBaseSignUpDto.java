@@ -1,6 +1,6 @@
 package io.hansan.mariaes.auth.data.dto;
 
-import javax.validation.constraints.NotNull;
+import com.sun.istack.NotNull;
 
 public record UserBaseSignUpDto(
         @NotNull String name,

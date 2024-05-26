@@ -7,6 +7,7 @@ import io.hansan.mariaes.auth.service.AuthorizationValidationService;
 import io.hansan.mariaes.auth.service.BaseRegistrationService;
 import io.hansan.mariaes.common.data.CommonResult;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -14,12 +15,13 @@ import org.springframework.web.bind.annotation.*;
  * @date ：2024/5/18 14:27
  * @description：TODO
  */
-@RequiredArgsConstructor
 @RestController
 @RequestMapping("/authorization")
 public class BaseAuthorizationController {
-    private final AuthorizationValidationService authorizationValidationService;
-    private final BaseRegistrationService baseRegistrationService;
+    @Autowired
+    private  AuthorizationValidationService authorizationValidationService;
+    @Autowired
+    private  BaseRegistrationService baseRegistrationService;
     @PostMapping("/signIn")
     public CommonResult signIn(@RequestBody UserBaseSignInDto userSignInDto) {
         Long userId = authorizationValidationService.validateUser(userSignInDto);

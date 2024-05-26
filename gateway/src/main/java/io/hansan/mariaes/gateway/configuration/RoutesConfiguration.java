@@ -28,7 +28,9 @@ public class RoutesConfiguration {
                         .uri("lb://service-question"))
                 .route("service-grade", r->r.path("/grade/**")
                         .uri("lb://service-grade"))
-                .route("front", r->r.path("/**")
+                .route("service-auth", r->r.path("/authorization/**")
+                        .uri("lb://service-auth"))
+                .route("front", r->r.path("/front/**")
                         .uri(frontUrl))
                 .build();
     }

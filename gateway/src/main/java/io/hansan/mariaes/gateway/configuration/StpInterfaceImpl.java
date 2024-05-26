@@ -17,19 +17,24 @@ public class StpInterfaceImpl implements StpInterface {
     /**
      * 稍后再从具体业务逻辑中获取权限列表
      */
-    @Override
-    public List<String> getPermissionList(Object o, String s) {
-       List<String> permissions = new ArrayList<String>();
+@Override
+public List<String> getPermissionList(Object loginId, String s) {
+    List<String> permissions = new ArrayList<String>();
+    if ("1".equals(loginId.toString())) {
         permissions.add("question.*");
         permissions.add("page.*");
-        return permissions;
     }
+    return permissions;
+}
 
-    @Override
-    public List<String> getRoleList(Object o, String s) {
-        List<String> roles = new ArrayList<String>();
+@Override
+public List<String> getRoleList(Object loginId, String s) {
+    List<String> roles = new ArrayList<String>();
+    if ("1".equals(loginId.toString())) {
         roles.add("admin");
         roles.add("user");
-        return roles;
     }
+    return roles;
+}
+
 }

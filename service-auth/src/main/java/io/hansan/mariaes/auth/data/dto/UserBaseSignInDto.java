@@ -1,7 +1,9 @@
 package io.hansan.mariaes.auth.data.dto;
 
+import com.sun.istack.NotNull;
+
 public record UserBaseSignInDto(
-        String username,
-        String password
+        @NotNull String username,
+        @NotNull String password
 ) {
 }

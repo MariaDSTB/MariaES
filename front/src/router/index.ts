@@ -2,40 +2,43 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../views/HomePage.vue';
 import Main from '../views/Main.vue';
 import RecordQuestionBank from "../views/RecordQuestionBank.vue";
-import displayPage from "../views/displayPage.vue";
-import PageExam from "../views/PageExam.vue";
-import displayGrade from "../views/displayGrade.vue";
+
 const routes = [
     {
         path: '/',
         name: 'Main',
         component: Main,
-        redirect:"/HomePage",
+        redirect: "/HomePage",
         children: [
             {
                 path: '/HomePage',
                 name: 'HomePage',
                 component: HomePage,
+                meta: { requiresAuth: true, roles: ['admin', 'user'] }
             },
             {
                 path: '/RecordQuestionBank',
                 name: 'RecordQuestionBank',
                 component: RecordQuestionBank,
+                meta: { requiresAuth: true, roles: ['admin', 'user'] }
             },
             {
-                path: '/displayPage',
-                name: 'displayPage',
-                component: displayPage,
+                path: '/page',
+                name: 'Page',
+                component: () => import('@/views/Page.vue'),
+                meta: { requiresAuth: true, roles: ['admin', 'user'] }
             },
             {
-                path: '/PageExam',
-                name: 'PageExam',
-                component: PageExam,
+                path: '/exam',
+                name: 'Exam',
+                component: () => import("@/views/Exam.vue"),
+                meta: { requiresAuth: true, roles: ['admin', 'user'] }
             },
             {
-                path: '/displayGrade',
-                name: 'displayGrade',
-                component: displayGrade,
+                path: '/login',
+                name: 'Signin',
+                component: () => import('@/views/Signin.vue'),
+                meta: { needLogin: false }
             }
         ]
     }

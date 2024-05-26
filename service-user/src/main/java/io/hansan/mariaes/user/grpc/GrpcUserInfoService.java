@@ -22,7 +22,7 @@ public class GrpcUserInfoService extends UserInfoGrpc.UserInfoImplBase {
 
         // 创建响应
         GetUserResponse response = GetUserResponse.newBuilder()
-                .setUserId(user.studentId())
+                .setUserId(user.userId())
                 .setName(user.name())
             .build();
 

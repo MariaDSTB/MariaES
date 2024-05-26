@@ -25,19 +25,11 @@ public class UserEntity {
     private Long id;
 
     @Column(nullable = false)
-    private Long studentId;
-
-    @Column(nullable = false)
     private String name;
 
     @Column(nullable = false)
     private String password;
 
-    @Column
-    private Long classId;
-
-    @Column
-    private String classname;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false, name = "create_at",updatable = false)
