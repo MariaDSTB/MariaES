@@ -5,8 +5,10 @@ import App from './App.vue'
 import router from './router'
 import axios from 'axios'
 import "./assets/main.css"
+import { createPinia } from 'pinia'
+
 const app = createApp(App)
-console.log(app);
+app.use(createPinia())
 // 使用axios
 app.config.globalProperties.$axios = axios
 // 使用router

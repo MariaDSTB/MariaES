@@ -1,51 +1,57 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import axios from 'axios';
+const pages = ref<Array<{
+  id: number;
+  title: string;
+  content: string;
+  answer: string;
+}>>([]);
 const pageId = ref('');
 const router = useRouter();
 
 const confirm = async () => {
-  if (pageId.value.trim() === '') {
-    alert('请输入试卷代码');
-    return;
-  }
   try {
-    const response = await axios.get(`/api/page/${pageId.value}`);
-    const response1 = await axios.get(`/api/Exam/${pageId.value}`);
-    // 检查响应状态码是否为200
-    if (response.status === 200 && response1.status === 200) {
-      // 跳转到 PageExam 页面，并将数据作为参数传递
-      await router.push({
-        name: 'PageExam',
-        params: {id: pageId.value},
-        query: {
-          pageData: JSON.stringify(response.data),
-          examData: JSON.stringify(response1.data)
-        } // 将数据转化为字符串通过 query 参数传递
-      });
-    } else {
-      alert('加载页面失败');
-    }
+    const response = await axios.get(`http://127.0.0.1:7003/api/page/all`);
+    console.log(response);
+    pages.value = response.data.data;
   } catch (error) {
-    // 处理请求错误
     alert('加载页面失败');
   }
 };
+const startPage = async () => {
+  const response = await axios.get(`http://127.0.0.1:7003/api/page/all`);
+  await router.push({
+    name: 'startExam',
+    params: { id: pageId.value },
+    query: {
+      pageData: JSON.stringify(response.data),
+    },
+  });
+}
+onMounted(confirm);
 </script>
 
 <template>
-  <p>输入您想要考那套试卷(试卷代码)</p>
-  <el-input
-      v-model="pageId"
-      style="width: 140px;display: inline-block;vertical-align: top"
-      :autosize="{ minRows: 2, maxRows: 4 }"
-      type="textarea"
-      placeholder=""
-  />
-  <el-button type="primary" @click="confirm">确认</el-button>
+  <div class="choosePage" v-for="(page, index) in pages" :key="index">
+    <el-input v-model="page.id" style="width: 140px;display: inline-block;vertical-align: top" autosize type="textarea"
+      placeholder="ID" disabled />
+    <el-input v-model="page.title" style="width: 140px;display: inline-block;vertical-align: top" autosize
+      type="textarea" placeholder="Title" disabled />
+    <el-input v-model="page.content" style="width: 140px;display: inline-block;vertical-align: top" autosize
+      type="textarea" placeholder="Content" disabled />
+    <el-button type="primary" @click="startPage">确认</el-button>
+  </div>
 </template>
 
 <style scoped>
+/* 这里可以添加您的样式 */
+.choosePage {
+  margin: 50px
+}
 
+.choosePage el-input {
+  padding: 50px
+}
 </style>

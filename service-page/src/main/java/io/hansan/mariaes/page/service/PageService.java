@@ -53,11 +53,9 @@ public class PageService {
 //    }
 
     public List<PageVo> getAllPages(int page, int size) {
-        return pageRepository.findAll(PageRequest.of(page, size, Sort.by("create_at").descending()))
+        return pageRepository.findAll(PageRequest.of(page, size, Sort.by("createAt").descending()))
                 .stream()
-                .map(PageEntity -> {
-                    return PageVo.FromQuestionPage(PageEntity);
-                })
+                .map(PageVo::FromQuestionPage)
                 .toList();
     }
 

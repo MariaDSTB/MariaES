@@ -26,7 +26,6 @@
     </div>
   </div>
 
-
 </template>
 
 <script lang="ts" setup>
@@ -45,6 +44,10 @@ const signin = async () => {
   //   }).catch((err: any) => {
   //     console.log(err);
   //   });
+  if (true) {
+    store.isLogin = true;
+    router.push('/HomePage');
+  }
   console.log(user.value);
 };
 const signup = async () => {

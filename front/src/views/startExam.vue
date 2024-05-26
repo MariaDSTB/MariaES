@@ -11,7 +11,7 @@ const globalArray = ref<any[]>([]);
 const score = ref(0);
 const submitExam = async () => {
     try {
-        const response = await axios.post('/洗吧开赛给, answers.value');
+        const response = await axios.get(`http://127.0.0.1/api/page/${answersValue}`);
         globalArray.value = response.data;
         // 比较answers和globalArray数组
         score.value = globalArray.value.length ===
@@ -20,8 +20,7 @@ const submitExam = async () => {
     } catch (error) {
         console.error('提交考试失败:', error);
     }
-    const response1 = await axios.post('/啊你哈塞优', { score: score.value });
-    if (response1.status != 200) alert('score提交系败')
+    const response1 = await axios.post('http://127.0.0.1/add', { score: score.value });
 };
 onMounted(() => {
     if (route.query.data) {

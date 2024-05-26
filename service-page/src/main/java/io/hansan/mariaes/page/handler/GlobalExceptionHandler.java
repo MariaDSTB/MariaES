@@ -33,4 +33,5 @@ public class GlobalExceptionHandler {
     public ErrorMessage badRequestException() {
         return new ErrorMessage("The request in invalid, place check your argument");
     }
+    //添加参数请求异常处理
 }

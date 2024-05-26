@@ -1,5 +1,7 @@
 package io.hansan.grade.database.Entity;
 
+import io.hansan.grade.data.dto.GradeCreateDto;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +20,7 @@ import java.util.Date;
 @Table(name = "grades")
 @NoArgsConstructor
 @RequiredArgsConstructor
+@AllArgsConstructor
 public class GradeEntity {
         @Id
         @GeneratedValue
@@ -30,7 +33,7 @@ public class GradeEntity {
         private Long studentId;
 
         @Column(nullable = false)
-        private Integer score;
+        private Long score;
 
         @Temporal(TemporalType.TIMESTAMP)
         @Column(nullable = false, name = "created_at", updatable = false)
@@ -48,5 +51,15 @@ public class GradeEntity {
         @PreUpdate
         protected void onUpdate() {
             updatedAt = new Date();
+        }
+
+        public static GradeEntity fromGradeDto(GradeCreateDto gradeCreateDto) {
+            return new GradeEntity(
+                    -1L,
+                    1L,
+                    1L,
+                   gradeCreateDto.score(),
+                    new Date(),
+                    new Date());
         }
     }

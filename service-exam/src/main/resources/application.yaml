@@ -29,7 +29,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: 192.168.207.8:8848
 
 grpc:
   server:

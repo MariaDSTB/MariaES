@@ -28,7 +28,7 @@ public class PageController {
 
     @GetMapping("/all")
     @CrossOrigin
-    public CommonResult getAllPages(@RequestParam int page, @RequestParam int size) {
+    public CommonResult getAllPages(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
         return CommonResult.success(pageService.getAllPages(page, size));
     }
 

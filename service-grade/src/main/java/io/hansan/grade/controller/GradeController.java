@@ -1,11 +1,9 @@
 package io.hansan.grade.controller;
 
+import io.hansan.grade.data.dto.GradeCreateDto;
 import io.hansan.mariaes.common.data.CommonResult;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import io.hansan.grade.service.GradeService;
 /**
  * @author ：何汉叁
@@ -23,7 +21,13 @@ public class GradeController {
     }
 
     @GetMapping("/all/{userId}")
-    public CommonResult listGrade(@RequestParam(defaultValue = "0") Long page, @RequestParam(defaultValue = "10") Long size, @RequestParam Long userId ) {
+    public CommonResult listGrade(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size, @RequestParam(defaultValue = "1") Long userId ) {
         return CommonResult.success(gradeService.listGrade(page, size, userId));
+    }
+
+    @PostMapping("/add")
+    public CommonResult addGrade(@RequestBody GradeCreateDto gradeCreateDto) {
+        gradeService.addGrade(gradeCreateDto);
+        return CommonResult.success();
     }
 }

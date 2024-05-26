@@ -26,8 +26,7 @@ public class GrpcExamInfoService extends ExamInfoGrpc.ExamInfoImplBase{
         ExamVo examVo = examService.getExam(request.getExamId());
         ExamResponse response = ExamResponse.newBuilder()
                 .setPageId(examVo.pageId())
-                .setExamName(examVo.name())
-                .setExamDesc(examVo.description())
+                .setExamName(examVo.title())
                 .setExamTime(examVo.startTime())
                 .build();
 

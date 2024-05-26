@@ -1,9 +1,11 @@
 package io.hansan.exam.database.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -25,12 +27,6 @@ public class ExamEntity {
     private Long id;
 
     /**
-     * 班级
-     */
-    @Column
-    private Long classId;
-
-    /**
      * 试卷
      */
     @Column(nullable = false)
@@ -40,12 +36,8 @@ public class ExamEntity {
      * 考试的名称
      */
     @Column(nullable = false)
-    private String name;
-    /**
-     * 描述
-     */
-    @Column(nullable = false)
-    private String description;
+    private String title;
+
     /**
      * 开始时间
      */
@@ -56,16 +48,16 @@ public class ExamEntity {
     /**
      * 结束时间
      */
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(nullable = false, name = "end_time")
-    private Date endTime;
+//    @Temporal(TemporalType.TIMESTAMP)
+//    @Column(nullable = false, name = "end_time")
+//    private Date endTime;
 
     /**
      * 考试的总分
      */
-    @Column(nullable = false, name = "total_marks")
-    @ColumnDefault("100")
-    private Integer totalMarks;
+//    @Column(nullable = false, name = "total_marks")
+//    @ColumnDefault("100")
+//    private Integer totalMarks;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false, name = "created_at", updatable = false)

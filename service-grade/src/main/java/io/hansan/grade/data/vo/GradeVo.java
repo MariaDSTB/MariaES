@@ -9,10 +9,14 @@ import io.hansan.grade.database.Entity.GradeEntity;
  */
 public record GradeVo(
         String name,
-        Integer score,
+        Long score,
         String studentName
 ) {
-    public static GradeVo fromEntity(String name, Integer score, String studentName) {
+    public static GradeVo fromEntity(GradeEntity gradeEntity) {
+        return new GradeVo(gradeEntity.getExamId().toString(), gradeEntity.getScore(), gradeEntity.getStudentId().toString());
+    }
+
+    public static GradeVo fromGrpc (String name,Long score, String studentName) {
         return new GradeVo(name, score, studentName);
     }
 }

@@ -5,34 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="fix: fix some bug">
+      <change afterPath="$PROJECT_DIR$/front/src/views/Grade.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/src/views/startExam.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/data/dto/GradeCreateDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/RecordQuestionBank.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/RecordQuestionBank.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Signin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/Signin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/vite-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/vite-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/Exam.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/Exam.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/Main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/Main.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/PageExam.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/displayGrade.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/displayPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/displayPage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/Controller/ExamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/Controller/ExamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/data/vo/ExamVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/data/vo/ExamVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/database/entity/ExamEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/database/entity/ExamEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/grpc/GrpcExamInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/grpc/GrpcExamInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-exam/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-exam/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-exam/src/test/java/io/hansan/exam/ServiceExamApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/controller/GradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/controller/GradeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/database/repository/GradeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/database/repository/GradeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/handler/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/data/vo/GradeVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/data/vo/GradeVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/database/Entity/GradeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/database/Entity/GradeEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/service/GradeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/service/GradeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/test/java/io/hansan/grade/ServiceGradeApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/controller/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/controller/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/bo/PageCreateBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/bo/PageCreateBo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/dto/PageCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/dto/PageCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/vo/PageVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/data/vo/PageVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/entity/PageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/entity/PageEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/repository/QuestionPageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/database/repository/QuestionPageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/handler/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/handler/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/service/PageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/java/io/hansan/mariaes/page/service/PageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-page/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-page/src/test/java/io/hansan/page/ServicePageApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/controller/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/data/bo/QuestionCreationBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/data/bo/QuestionCreationBo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/data/vo/QuestionVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/data/vo/QuestionVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/database/entity/QuestionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/database/entity/QuestionEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/service/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/service/QuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-question/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-question/src/test/java/io/hansan/mariaes/question/ServiceQuestionApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,8 +126,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -171,57 +166,59 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Gradle.Build MariaES.executor": "Run",
-    "Gradle.GrpcUserInfoServiceTest.getUserReturnsCorrectResponse.executor": "Run",
-    "Gradle.GrpcUserInfoServiceTest.returnsCorrectResponseWhenUserExists.executor": "Run",
-    "Gradle.MariaES:gateway [bootRun].executor": "Run",
-    "Gradle.MariaES:gateway [clean].executor": "Run",
-    "Gradle.MariaES:lib-grpc [clean].executor": "Run",
-    "Gradle.MariaES:lib-grpc [generateProto].executor": "Run",
-    "Gradle.MariaES:service-page [bootRun].executor": "Run",
-    "Gradle.MariaES:service-question [bootRun].executor": "Run",
-    "Gradle.MariaES:service-user [bootRun].executor": "Run",
-    "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldCallService.executor": "Run",
-    "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldReturnBadRequest_WhenRequestBodyIsInvalid.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Authorization-Service.executor": "Run",
-    "Spring Boot.GatewayApplication.executor": "Run",
-    "Spring Boot.ServiceAuthApplication.executor": "Run",
-    "Spring Boot.ServicePageApplication.executor": "Run",
-    "Spring Boot.ServiceQuestionApplication.executor": "Run",
-    "Spring Boot.ServiceUserApplication (1).executor": "Run",
-    "Spring Boot.ServiceUserApplication.executor": "Run",
-    "Spring Boot.User-Service.executor": "Run",
-    "Spring Boot.gateway.executor": "Run",
-    "Spring Boot.page-server.executor": "Run",
-    "Spring Boot.question-server.executor": "Run",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Java/MariaES/service-auth/src/main/java/io/hansan/mariaes/auth",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.24177071",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "D:\\Java\\Tools\\DevelopmentTools\\IDEA2023\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.Build MariaES.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrpcUserInfoServiceTest.getUserReturnsCorrectResponse.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrpcUserInfoServiceTest.returnsCorrectResponseWhenUserExists.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:gateway [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:lib-grpc [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:lib-grpc [generateProto].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:service-page [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:service-question [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:service-user [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldCallService.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldReturnBadRequest_WhenRequestBodyIsInvalid.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Authorization-Service.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceAuthApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceExamApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServicePageApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceQuestionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceUserApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceUserApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.User-Service.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.exam-server.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.gateway.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.page-server.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.question-server.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java/MariaES/service-auth/src/main/java/io/hansan/mariaes/auth&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.24177071&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Java\\Tools\\DevelopmentTools\\IDEA2023\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -234,13 +231,14 @@
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
+        <option value="Application" />
         <option value="MicronautRunConfigurationType" />
         <option value="QuarkusRunConfigurationType" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.question-server">
+  <component name="RunManager" selected="Spring Boot.exam-server">
     <configuration name="MariaES:service-page [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -285,13 +283,12 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="User-Service" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
-      <module name="MariaES.service-user.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.user.ServiceUserApplication" />
-      <option name="VM_PARAMETERS" value="-Dserver.port=7002" />
+    <configuration name="exam-server" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
+      <module name="MariaES.service-exam.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.exam.ServiceExamApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.hansan.mariaes.user.*" />
+          <option name="PATTERN" value="io.hansan.exam.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -328,17 +325,17 @@
     <list>
       <item itemvalue="Gradle.MariaES:service-page [bootRun]" />
       <item itemvalue="Gradle.MariaES:service-question [bootRun]" />
+      <item itemvalue="Spring Boot.exam-server" />
       <item itemvalue="Spring Boot.page-server" />
       <item itemvalue="Spring Boot.question-server" />
-      <item itemvalue="Spring Boot.User-Service" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.question-server" />
+        <item itemvalue="Spring Boot.exam-server" />
         <item itemvalue="Spring Boot.page-server" />
+        <item itemvalue="Spring Boot.question-server" />
         <item itemvalue="Gradle.MariaES:service-question [bootRun]" />
         <item itemvalue="Gradle.MariaES:service-page [bootRun]" />
-        <item itemvalue="Spring Boot.User-Service" />
       </list>
     </recent_temporary>
   </component>
@@ -413,7 +410,8 @@
       <workItem from="1716126006833" duration="5939000" />
       <workItem from="1716172905976" duration="13788000" />
       <workItem from="1716714823815" duration="6414000" />
-      <workItem from="1716724468387" duration="3875000" />
+      <workItem from="1716724468387" duration="12438000" />
+      <workItem from="1716737620864" duration="106000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -709,9 +707,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/service-question/src/main/java/io/hansan/mariaes/question/service/QuestionService.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/service-exam/src/main/java/io/hansan/exam/service/ExamService.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

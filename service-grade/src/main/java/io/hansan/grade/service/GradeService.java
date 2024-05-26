@@ -1,5 +1,6 @@
 package io.hansan.grade.service;
 
+import io.hansan.grade.data.dto.GradeCreateDto;
 import io.hansan.grade.data.vo.GradeVo;
 import io.hansan.grade.database.Entity.GradeEntity;
 import io.hansan.grade.database.repository.GradeRepository;
@@ -13,8 +14,10 @@ import lombok.RequiredArgsConstructor;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -45,15 +48,20 @@ public class GradeService {
              */
             GetUserRequest userRequest = GetUserRequest.newBuilder().setUserId(gradeEntity.getStudentId()).build();
             GetUserResponse user = userInfoBlockingStub.getUser(userRequest);
-            return GradeVo.fromEntity(examInfo.getExamName(), gradeEntity.getScore(), user.getName());
+            return GradeVo.fromGrpc(examInfo.getExamName(), gradeEntity.getScore(), user.getName());
         }else
             return null;
     }
 
-//    public Page<GradeVo> listGrade(Long page, Long size, Long userId) {
-//        Page<GradeEntity> gradeEntities = gradeRepository.findAllByStudentId(userId, PageRequest.of(page.intValue(), size.intValue()));
-//        return gradeEntities.map(gradeEntity -> {
-//            return GradeVo.fromEntity(gradeEntity);
-//        }
-//    }
+    public void addGrade(GradeCreateDto gradeCreateDto) {
+        gradeRepository.save(GradeEntity.fromGradeDto(gradeCreateDto));
+    }
+
+
+    public List<GradeVo> listGrade(int page, int size, Long userId) {
+        return gradeRepository.findAll(PageRequest.of(page, size))
+                .stream()
+                .map(GradeVo::fromEntity)
+                .toList();
+    }
 }

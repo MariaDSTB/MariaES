@@ -2,14 +2,17 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from '../views/HomePage.vue';
 import Main from '../views/Main.vue';
 import RecordQuestionBank from "../views/RecordQuestionBank.vue";
-
+import { userInfoStore } from '../store/user.ts'
 const routes = [
     {
         path: '/',
-        name: 'Main',
-        component: Main,
-        redirect: "/HomePage",
+        redirect: '/login',
         children: [
+            {
+                path: '/Main',
+                name: 'Main',
+                component: Main
+            },
             {
                 path: '/HomePage',
                 name: 'HomePage',
@@ -36,9 +39,30 @@ const routes = [
             },
             {
                 path: '/login',
-                name: 'Signin',
+                name: 'login',
                 component: () => import('@/views/Signin.vue'),
-                meta: { needLogin: false }
+
+            },
+            {
+                path: '/exam',
+                name: 'Exam',
+                component: () => import('@/views/Exam.vue'),
+                meta: { requiresAuth: true, roles: ['admin', 'user'] }
+            },
+            {
+                path: '/grade',
+                name: 'Grade',
+                component: () => import('@/views/Grade.vue'),
+            },
+            {
+                path: '/displayPage',
+                name: 'displayPage',
+                component: () => import('@/views/displayPage.vue'),
+            },
+            {
+                path: '/startExam',
+                name: 'startExam',
+                component: () => import('@/views/startExam.vue'),
             }
         ]
     }
@@ -49,6 +73,20 @@ const router = createRouter({
     routes
 });
 
+//-前置守卫路由:登录校验
+router.beforeEach((to, from, next) => {
+    const store = userInfoStore()
+    //-：获取是否登录的状态
+    let isLogin = store.isLogin
+    //-:访问的请求不是 login，不是reg 也没有登录
+    if (to.name !== 'login' && !isLogin) {
+        next({ name: 'login' })
+    } else if (to.name == 'login' && isLogin) {//-:已经登录了，还在访问登录请求
+        next({ name: 'Main' })
+    } else {//否则，该干啥干啥
+        next()
+    }
+})
 
 // 添加全局前置导航守卫
 // router.beforeEach((to, from, next) => {

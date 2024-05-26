@@ -5,13 +5,14 @@
     <el-menu-item index="/RecordQuestionBank" class="router">录制题库</el-menu-item>
     <el-menu-item index="/Page" class="router">录入题库</el-menu-item>
     <el-menu-item index="/exam" class="router">考试安排</el-menu-item>
+    <el-menu-item index="/grade" class="router">成绩</el-menu-item>
     <el-submenu v-if="user.loggedIn" index="4">
       <template #title>
         <img :src="user.avatar" alt="User avatar" class="w-30px h-30px rounded-full">
       </template>
       <el-menu-item index="logout" @click="logout">Logout</el-menu-item>
     </el-submenu>
-    <el-menu-item v-else index="login" class="router">Login</el-menu-item>
+    <!-- <el-menu-item v-else index="login" class="router">Login</el-menu-item> -->
 
   </el-menu>
   <el-main>
