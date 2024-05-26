@@ -228,7 +228,7 @@
     <div class="selectQuestion" v-for="(question, index) in questions" :key="index">
       <p>题目编号</p>
       <el-input
-          v-model="question.selectQuestionId"
+          v-model="question.id"
           style="width: 140px;display: inline-block;vertical-align: top"
           :autosize="{ minRows: 2, maxRows: 4 }"
           type="textarea"
@@ -237,7 +237,7 @@
       />
       <p>题头</p>
       <el-input
-          v-model="question.selectQuestionTitle"
+          v-model="question.content"
           style="width: 140px;display: inline-block;vertical-align: top"
           :autosize="{ minRows: 2, maxRows: 4 }"
           type="textarea"
@@ -246,7 +246,7 @@
       />
       <p>难易程度</p>
       <el-input
-          v-model="question.selectQuestionDifficulty"
+          v-model="question.difficulty"
           style="width: 140px;display: inline-block;vertical-align: top"
           :autosize="{ minRows: 2, maxRows: 4 }"
           type="textarea"
@@ -255,7 +255,7 @@
       />
       <p>题目科目</p>
       <el-input
-          v-model="question.selectQuestionSubject"
+          v-model="question.type"
           style="width: 140px;display: inline-block;vertical-align: top"
           :autosize="{ minRows: 2, maxRows: 4 }"
           type="textarea"
@@ -285,9 +285,10 @@
             placeholder=""
         />
         <p>难易程度</p>
-        <el-cascader v-model="selectQuestionDifficulty" :options="options3" @change="handleTypeChange"/>
+        <el-cascader v-model="selectQuestionDifficulty" :options="options3"/>
         <p>题目科目</p>
-        <el-cascader v-model="selectQuestionSubject" :options="options2" @change="handleTypeChange"/>
+        <el-cascader v-model="selectQuestionSubject" :options="options2"/>
+        <el-cascader v-model="selectQuestionType" :options="options1"/>
         <p>题目答案</p>
         <el-input
             v-model="selectQuestionAnswer"
@@ -351,12 +352,19 @@ const showEssayQuestion = ref(false)
 const dialogVisible = ref(false)
 const dialogVisible1 = ref(false)
 const dialogVisible2 = ref(false)
+const selectQuestionType = ref('')
 const selectQuestionId = ref(0)
 const selectQuestionTitle = ref('')
 const selectQuestionDifficulty = ref('')
 const selectQuestionSubject = ref('')
 const selectQuestionAnswer = ref('')
-const questions = ref<Array<{ selectQuestionId: number; selectQuestionTitle: string; selectQuestionDifficulty: string; selectQuestionSubject: string; selectQuestionAnswer: string }>>([]); // 定义一个响应式数组来存储问题
+const questions = ref<Array<{
+  subject: string;
+  id: number;
+  content: string;
+  difficulty: string;
+  type: string;
+  answer: string }>>([]);
 const searchForQuestionId = ref(0);
 const QuestionAnswer = computed({
   get: () => {
@@ -390,12 +398,12 @@ const QuestionAnswer = computed({
     }
   }
 });
-interface Question {
-  QuestionType: string;
-  QuestionSubject: string;
-  QuestionDifficulty: string;
-  QuestionTitle: string;
-  QuestionAnswer:string;
+interface question {
+  subject: string;
+  type: string;
+  difficulty: string;
+  content: string;
+  answer:string;
 }
 const options1 = [
   {
@@ -487,30 +495,28 @@ const fetchQuestions = async () => {
     questions.value = response.data // 假设这是包含多个对象的数组
     // 假设 questions 是一个数组，且至少包含一个对象
     if (questions.value.length > 0) {
-      selectQuestionId.value = questions.value[0].selectQuestionId
-      selectQuestionTitle.value = questions.value[0].selectQuestionTitle
-      selectQuestionDifficulty.value = questions.value[0].selectQuestionDifficulty
-      selectQuestionSubject.value = questions.value[0].selectQuestionSubject
+      selectQuestionId.value = questions.value[0].id
+      selectQuestionTitle.value = questions.value[0].content
+      selectQuestionDifficulty.value = questions.value[0].difficulty
+      selectQuestionSubject.value = questions.value[0].subject
     }
-    console.log(questions.value[0].selectQuestionId)
+    console.log(questions.value[0].id)
   } catch (error) {
     console.error('Error fetching questions:', error)
   }
 }
 const addQuestions = async () => {
   try {
-    // 创建Question对象
-    const addQuestion: Question = {
-      QuestionType: QuestionType.value,
-      QuestionSubject: QuestionSubject.value[0],
-      QuestionDifficulty: QuestionDifficulty.value[0],
-      QuestionTitle: QuestionTitle.value,
-      // 根据题目类型添加答案属性
-      QuestionAnswer: QuestionAnswer.value
+    const addQuestion: question = {
+      type: QuestionType.value,
+      subject: QuestionSubject.value[0],
+      difficulty: QuestionDifficulty.value[0],
+      content: QuestionTitle.value,
+      answer: QuestionAnswer.value
     };
     // 检查所有必要的属性是否已被设置
     if (
-        QuestionType.value[0] &&
+        QuestionType.value &&
         QuestionSubject.value[0] &&
         QuestionDifficulty.value[0] &&
         QuestionTitle.value &&
@@ -556,11 +562,10 @@ const searchForQuestions = async () => {
     alert('查找失败，请检查网络连接或服务器状态');
   }
 };
-
 const deleteQuestion = async (index: number) => {
   try {
-    const questionId = questions.value[index].selectQuestionId;
-    const response = await axios.delete(`http://127.0.0.1:4523/m1/4462281-4108499-default/RecordQuestionBank/deleteQuestion/${questionId}`);
+    const id = questions.value[index].id;
+    const response = await axios.delete(`http://127.0.0.1:4523/m1/4462281-4108499-default/RecordQuestionBank/deleteQuestion/${id}`);
     if (response.status === 200) {
       // 从前端数组中移除题目
       questions.value.splice(index, 1);
@@ -579,36 +584,34 @@ const editQuestion = (index: number) => {
 
   // 打开对话框，显示question的详细信息
   dialogVisible2.value = true;
-  selectQuestionId.value = question.selectQuestionId;
-  selectQuestionTitle.value = question.selectQuestionTitle;
-  selectQuestionDifficulty.value = question.selectQuestionDifficulty;
-  selectQuestionSubject.value = question.selectQuestionSubject;
-  QuestionAnswer.value = question.selectQuestionAnswer;
+  selectQuestionId.value = question.id;
+  selectQuestionTitle.value = question.content;
+  selectQuestionDifficulty.value = question.difficulty;
+  selectQuestionSubject.value = question.type;
+  QuestionAnswer.value = question.answer;
 };
-
-// 假设有一个updateQuestion方法，用于更新题目
-// 假设有一个updateQuestion方法，用于更新题目
 const updateQuestion = async () => {
   // 创建一个新的question对象，包含所有属性
   const updatedQuestion = {
-    selectQuestionId: selectQuestionId.value,
-    selectQuestionTitle: selectQuestionTitle.value,
-    selectQuestionDifficulty: selectQuestionDifficulty.value,
-    selectQuestionSubject: selectQuestionSubject.value,
-    selectQuestionAnswer: QuestionAnswer.value
+    type: selectQuestionType.value,
+    id: selectQuestionId.value,
+    content: selectQuestionTitle.value,
+    difficulty: selectQuestionDifficulty.value,
+    subject: selectQuestionSubject.value,
+    answer: QuestionAnswer.value
   };
 
   // 检查是否有属性发生变化
   const originalQuestion = questions.value.find(
-      q => q.selectQuestionId === selectQuestionId.value
+      q => q.id === selectQuestionId.value
   );
 
   // 如果originalQuestion存在，并且有任何属性不同，则更新question
   if (originalQuestion &&
-      (originalQuestion.selectQuestionTitle !== updatedQuestion.selectQuestionTitle ||
-          originalQuestion.selectQuestionDifficulty !== updatedQuestion.selectQuestionDifficulty ||
-          originalQuestion.selectQuestionSubject !== updatedQuestion.selectQuestionSubject ||
-          originalQuestion.selectQuestionAnswer !== updatedQuestion.selectQuestionAnswer)) {
+      (originalQuestion.content !== updatedQuestion.content ||
+          originalQuestion.difficulty !== updatedQuestion.difficulty ||
+          originalQuestion.type !== updatedQuestion.subject ||
+          originalQuestion.answer !== updatedQuestion.answer)) {
 
     try {
       // 发送请求到服务器，更新题目
@@ -616,11 +619,10 @@ const updateQuestion = async () => {
           `http://127.0.0.1:4523/m1/4462281-4108499-default/RecordQuestionBank/updateQuestion`,
           updatedQuestion
       );
-
       if (response.status === 200) {
         // 更新成功，更新前端数组中的对象
         const index = questions.value.findIndex(
-            q => q.selectQuestionId === selectQuestionId.value
+            q => q.id === selectQuestionId.value
         );
         if (index !== -1) {
           questions.value[index] = updatedQuestion;
@@ -638,7 +640,6 @@ const updateQuestion = async () => {
     alert('没有变化，不需要更新');
   }
 };
-
 
 onMounted(async () => {
   await fetchQuestions(); // 等待数据加载
