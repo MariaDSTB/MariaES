@@ -19,7 +19,6 @@ import java.util.Date;
 @Data
 @Table(name = "grades")
 @NoArgsConstructor
-@RequiredArgsConstructor
 @AllArgsConstructor
 public class GradeEntity {
         @Id

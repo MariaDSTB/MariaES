@@ -6,7 +6,6 @@ import io.hansan.mariaes.auth.data.dto.UserBaseSignUpDto;
 import io.hansan.mariaes.auth.service.AuthorizationValidationService;
 import io.hansan.mariaes.auth.service.BaseRegistrationService;
 import io.hansan.mariaes.common.data.CommonResult;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
  * @description：TODO
  */
 @RestController
-@RequestMapping("/authorization")
+@RequestMapping("/api/authorization")
 public class BaseAuthorizationController {
     @Autowired
     private  AuthorizationValidationService authorizationValidationService;

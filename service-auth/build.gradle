@@ -19,6 +19,7 @@ ext {
 
 dependencies {
     implementation 'cn.dev33:sa-token-spring-boot-starter:1.38.0'
+    implementation 'cn.dev33:sa-token-oauth2:1.38.0'
     implementation project(':common')
     implementation project(':lib-grpc')
     implementation 'io.grpc:grpc-stub:1.42.1'
@@ -40,6 +41,3 @@ dependencyManagement {
     }
 }
 
-tasks.named('test') {
-    useJUnitPlatform()
-}

@@ -31,11 +31,13 @@
 <script lang="ts" setup>
 import axios from 'axios';
 import { ref } from 'vue';
-
+import { userInfoStore } from '../store/user.ts';
+import router from '../router/index.ts';
 const user = ref({
   username: '',
   password: ''
 });
+const store = userInfoStore();
 
 const signin = async () => {
   // axios.post('http://localhost:7001/Signin', user.value)
@@ -44,9 +46,12 @@ const signin = async () => {
   //   }).catch((err: any) => {
   //     console.log(err);
   //   });
+
   if (true) {
     store.isLogin = true;
     router.push('/HomePage');
+  } else {
+    alert('登录失败');
   }
   console.log(user.value);
 };

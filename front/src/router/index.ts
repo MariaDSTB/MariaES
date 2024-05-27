@@ -7,12 +7,17 @@ const routes = [
     {
         path: '/',
         redirect: '/login',
+
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: () => import('@/views/Signin.vue'),
+    },
+    {
+        path: '/Main',
+        component: Main,
         children: [
-            {
-                path: '/Main',
-                name: 'Main',
-                component: Main
-            },
             {
                 path: '/HomePage',
                 name: 'HomePage',
@@ -36,12 +41,6 @@ const routes = [
                 name: 'Exam',
                 component: () => import("@/views/Exam.vue"),
                 meta: { requiresAuth: true, roles: ['admin', 'user'] }
-            },
-            {
-                path: '/login',
-                name: 'login',
-                component: () => import('@/views/Signin.vue'),
-
             },
             {
                 path: '/exam',
@@ -73,7 +72,7 @@ const router = createRouter({
     routes
 });
 
-//-前置守卫路由:登录校验
+// -前置守卫路由:登录校验
 router.beforeEach((to, from, next) => {
     const store = userInfoStore()
     //-：获取是否登录的状态
@@ -87,23 +86,17 @@ router.beforeEach((to, from, next) => {
         next()
     }
 })
-
-// 添加全局前置导航守卫
-// router.beforeEach((to, from, next) => {
-//     // 假设您有一个全局方法来检查用户是否已登录和角色
-//     const isAuthenticated = true; // 这里应该是调用一个检查登录状态的方法
-//     const userRole = 'user'; // 这里应该是从状态管理（如Vuex）中获取用户角色
-//
-//     if (to.meta.requiresAuth && !isAuthenticated) {
-//         // 如果用户未登录，重定向到登录页面
-//         return next('/login');
+// -后置守卫路由：权限校验
+// router.afterEach((to, from) => {
+//     const store = userInfoStore()
+//     let isLogin = store.isLogin
+//     let roles = store.userInfo.roles
+//     if (to.meta.requiresAuth && !isLogin) {
+//         next({ name: 'login' })
+//     } else if (to.meta.roles && to.meta.roles.length && !to.meta.roles.some(role => roles.includes(role))) {
+//         next({ name: 'Main' })
+//     } else {
+//         next()
 //     }
-//
-//     if (to.meta.roles && !to.meta.roles.includes(userRole)) {
-//         // 如果用户角色不符合要求，重定向到首页或其他页面
-//         return next({ name: 'Main' });
-//     }
-//     // 如果用户已登录且角色符合要求，继续导航
-//     next();
-// });
+// })
 export default router;

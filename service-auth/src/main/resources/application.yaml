@@ -7,7 +7,7 @@ spring:
 
   datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/mariaes?createDatabaseIfNotExist=true
+      url: jdbc:mysql://localhost/mariaes?createDatabaseIfNotExist=true
       username: root
       password: 123456
       type: com.zaxxer.hikari.HikariDataSource
@@ -40,5 +40,6 @@ grpc:
     service-user:
       address: discovery:///service-user
       negotiation-type: plaintext
+
 sa-token:
   token-name: mariaES

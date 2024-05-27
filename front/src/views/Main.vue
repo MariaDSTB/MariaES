@@ -36,6 +36,13 @@ const logout = () => {
 </script>
 
 <style scoped>
+.el-main {
+  background-image: url(../assets/avatar.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
 .el-menu-demo {
   background-color: dodgerblue;
 }

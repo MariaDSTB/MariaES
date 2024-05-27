@@ -32,14 +32,14 @@ const questions = reactive({
 });
 
 const getQuestion = async () => {
-    const res = await axios.get('http://localhost:7001/api/question/all');
+    const res = await axios.get('http://localhost:7006/api/question/all');
     questions.data = res.data;
 };
 
 onMounted(getQuestion);
 
 const submitForm = async () => {
-    await axios.post('http://localhost:7003/api/page/add', page.value)
+    await axios.post('http://localhost:7006/api/page/add', page.value)
         .then(() => {
             ElMessage({
                 message: '添加成功',

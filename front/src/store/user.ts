@@ -2,12 +2,21 @@ import { defineStore } from 'pinia'
 
 export const userInfoStore = defineStore('userInfo', {
     state: () => ({
-        //-登录状态
         isLogin: false,
-        //-登录用户信息
         userInfo: {
-            userName: null,
-            userPhone: null
+            userId: 'user',
+            roles: ['user'],
+        },
+    }),
+    getters: {
+        hasLogin: (state) => {
+            return state.isLogin;
+        },
+    },
+    actions: {
+        setUserInfo(flag: boolean, userId: string, roles: string[]) {
+            this.isLogin = flag;
+            this.userInfo = { userId, roles }
         }
-    })
+    },
 })
