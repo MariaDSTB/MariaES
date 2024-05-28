@@ -16,16 +16,19 @@ import io.hansan.grade.service.GradeService;
 public class GradeController {
     public final GradeService gradeService;
     @GetMapping("/{id}")
+    @CrossOrigin
     public CommonResult getGrade(@RequestParam Long id) {
         return CommonResult.success(gradeService.getGrade(id));
     }
 
     @GetMapping("/all/{userId}")
+    @CrossOrigin
     public CommonResult listGrade(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size, @RequestParam(defaultValue = "1") Long userId ) {
         return CommonResult.success(gradeService.listGrade(page, size, userId));
     }
 
     @PostMapping("/add")
+    @CrossOrigin
     public CommonResult addGrade(@RequestBody GradeCreateDto gradeCreateDto) {
         gradeService.addGrade(gradeCreateDto);
         return CommonResult.success();

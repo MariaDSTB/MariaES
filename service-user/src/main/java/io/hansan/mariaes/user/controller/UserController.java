@@ -24,14 +24,12 @@ public class UserController {
     private final UserService userService;
     @ApiOperation("获取用户信息")
     @GetMapping("/{id}")
-    @ResponseStatus(HttpStatus.OK)
     public UserVo getUserById(@PathVariable Long id){
         return userService.getUserById(id);
     }
 
     @ApiOperation("注册用户")
     @PostMapping("/register")
-    @ResponseStatus(HttpStatus.CREATED)
     public CommonResult register(@RequestBody UserEntity userEntity){
         userService.addUser(userEntity);
         return CommonResult.success();
@@ -39,7 +37,6 @@ public class UserController {
 
     @ApiOperation("获取所有用户信息")
     @GetMapping("/all")
-    @ResponseStatus(HttpStatus.OK)
     public CommonResult getAllUsers(@RequestParam(value = "page", defaultValue = "0") int page,
                                 @RequestParam(value = "size", defaultValue = "10") int size) {
     return CommonResult.success(userService.getAllUsers(page, size));

@@ -5,6 +5,7 @@ import cn.dev33.satoken.reactor.context.SaReactorSyncHolder;
 import cn.dev33.satoken.reactor.filter.SaReactorFilter;
 import cn.dev33.satoken.router.SaRouter;
 import cn.dev33.satoken.stp.StpUtil;
+import io.hansan.mariaes.common.data.CommonResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,9 +24,9 @@ public class SaTokenConfigure {
     public SaReactorFilter getSaReactorFilter() {
         return new SaReactorFilter()
                 .addInclude("/**")
-                .addExclude("/authorization/**")
+                .addExclude("/api/authorization/**")
                 .setAuth(obj -> {
-                    SaRouter.match("/**","/authorization/**", r -> StpUtil.checkLogin());
+                    SaRouter.match("/**","/api/authorization/**", r -> StpUtil.checkLogin());
                     SaRouter.match("/questions/**", r -> StpUtil.checkRole("admin"));
                     SaRouter.match("/pages/**", r -> StpUtil.checkPermission("page.*"));
                 })
@@ -33,7 +34,7 @@ public class SaTokenConfigure {
                     if (e instanceof NotLoginException) {
                         ServerWebExchange exchange = SaReactorSyncHolder.getContext();
                         exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
-                        return "401 Unauthorized";
+                        return "401 unAuthorized";
                     }
                     log.error("Unhandled error during SaReactorFilter", e);
                     return e.toString();

@@ -9,7 +9,7 @@
       <el-form label-width="0px" class="login_form">
         <!-- 用户名 -->
         <el-form-item>
-          <el-input v-model="user.username" placeholder="Username"></el-input>
+          <el-input v-model="user.name" placeholder="Username"></el-input>
         </el-form-item>
         <!-- 密码 -->
         <el-form-item>
@@ -34,29 +34,27 @@ import { ref } from 'vue';
 import { userInfoStore } from '../store/user.ts';
 import router from '../router/index.ts';
 const user = ref({
-  username: '',
+  name: '',
   password: ''
 });
 const store = userInfoStore();
 
 const signin = async () => {
-  // axios.post('http://localhost:7001/Signin', user.value)
-  //   .then((res: any) => {
-  //     console.log(res);
-  //   }).catch((err: any) => {
-  //     console.log(err);
-  //   });
-
-  if (true) {
-    store.isLogin = true;
-    router.push('/HomePage');
-  } else {
-    alert('登录失败');
-  }
-  console.log(user.value);
+  await axios.post('http://localhost:7006/api/authorization/signIn', user.value)
+    .then((res: any) => {
+      console.log(res.data)
+      if (res.data.code === 200) {
+        store.setIsLogin(true);
+        router.push('/HomePage').catch(err => console.log(err));
+      } else {
+        alert('登录失败');
+      }
+    }).catch((err: any) => {
+      console.log(err);
+    });
 };
 const signup = async () => {
-  axios.post('http://localhost:7001/Signup', user.value)
+  axios.post('http://localhost:7006/api/authorization/signOut', user.value)
     .then((res: any) => {
       console.log(res);
     }).catch((err: any) => {

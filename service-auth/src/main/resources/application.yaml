@@ -43,3 +43,4 @@ grpc:
 
 sa-token:
   token-name: mariaES
+  jwt-secret-key: mariaES

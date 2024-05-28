@@ -16,37 +16,33 @@ const routes = [
     },
     {
         path: '/Main',
+        name: 'Main',
         component: Main,
         children: [
             {
                 path: '/HomePage',
                 name: 'HomePage',
                 component: HomePage,
-                meta: { requiresAuth: true, roles: ['admin', 'user'] }
             },
             {
                 path: '/RecordQuestionBank',
                 name: 'RecordQuestionBank',
                 component: RecordQuestionBank,
-                meta: { requiresAuth0: true, roles: ['admin', 'user'] }
             },
             {
                 path: '/page',
                 name: 'Page',
                 component: () => import('@/views/Page.vue'),
-                meta: { requiresAuth: true, roles: ['admin', 'user'] }
             },
             {
                 path: '/exam',
                 name: 'Exam',
                 component: () => import("@/views/Exam.vue"),
-                meta: { requiresAuth: true, roles: ['admin', 'user'] }
             },
             {
                 path: '/exam',
                 name: 'Exam',
                 component: () => import('@/views/Exam.vue'),
-                meta: { requiresAuth: true, roles: ['admin', 'user'] }
             },
             {
                 path: '/grade',
@@ -75,28 +71,13 @@ const router = createRouter({
 // -前置守卫路由:登录校验
 router.beforeEach((to, from, next) => {
     const store = userInfoStore()
-    //-：获取是否登录的状态
-    let isLogin = store.isLogin
     //-:访问的请求不是 login，不是reg 也没有登录
-    if (to.name !== 'login' && !isLogin) {
+    if (to.name !== 'login' && store.isLoggedIn) {
         next({ name: 'login' })
-    } else if (to.name == 'login' && isLogin) {//-:已经登录了，还在访问登录请求
+    } else if (to.name == 'login' && store.isLoggedIn) {//-:已经登录了，还在访问登录请求
         next({ name: 'Main' })
     } else {//否则，该干啥干啥
         next()
     }
 })
-// -后置守卫路由：权限校验
-// router.afterEach((to, from) => {
-//     const store = userInfoStore()
-//     let isLogin = store.isLogin
-//     let roles = store.userInfo.roles
-//     if (to.meta.requiresAuth && !isLogin) {
-//         next({ name: 'login' })
-//     } else if (to.meta.roles && to.meta.roles.length && !to.meta.roles.some(role => roles.includes(role))) {
-//         next({ name: 'Main' })
-//     } else {
-//         next()
-//     }
-// })
 export default router;

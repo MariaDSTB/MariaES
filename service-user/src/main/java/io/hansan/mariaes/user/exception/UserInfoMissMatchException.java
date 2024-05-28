@@ -6,4 +6,5 @@ package io.hansan.mariaes.user.exception;
  * @description：TODO
  */
 public class UserInfoMissMatchException extends RuntimeException{
+
 }

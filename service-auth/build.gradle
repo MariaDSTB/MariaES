@@ -18,8 +18,9 @@ ext {
 }
 
 dependencies {
+
     implementation 'cn.dev33:sa-token-spring-boot-starter:1.38.0'
-    implementation 'cn.dev33:sa-token-oauth2:1.38.0'
+    implementation 'cn.dev33:sa-token-jwt:1.38.0'
     implementation project(':common')
     implementation project(':lib-grpc')
     implementation 'io.grpc:grpc-stub:1.42.1'
@@ -28,6 +29,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'cn.dev33:sa-token-redis-jackson:1.38.0'

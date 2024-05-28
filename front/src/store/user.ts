@@ -4,19 +4,25 @@ export const userInfoStore = defineStore('userInfo', {
     state: () => ({
         isLogin: false,
         userInfo: {
-            userId: 'user',
-            roles: ['user'],
-        },
+            userId: '',
+            roles: ['']
+        }
     }),
     getters: {
-        hasLogin: (state) => {
+        isLoggedIn: (state) => {
             return state.isLogin;
         },
     },
     actions: {
-        setUserInfo(flag: boolean, userId: string, roles: string[]) {
-            this.isLogin = flag;
-            this.userInfo = { userId, roles }
+        setIsLogin(isLogin: boolean) {
+            this.isLogin = isLogin
+        },
+        setUserInfo(userId: string, roles: string[]) {
+            this.userInfo.userId = userId
+            this.userInfo.roles = roles
+        },
+        cleanLogin() {
+            this.isLogin = false;
         }
-    },
+    }
 })

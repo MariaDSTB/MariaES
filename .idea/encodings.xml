@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$/common/src/main/java/io/hansan/mariaes/common/data/CommonResult.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/src/main/java/io/hansan/mariaes/common/data/ResultCode.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/controller/BaseAuthorizationController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/service/AuthorizationValidationService.java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
