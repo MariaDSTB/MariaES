@@ -5,24 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="fix: fix some bug">
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/WebConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/handler/ConnectExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/store/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/store/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Signin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/Signin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/SaTokenConfigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/io/hansan/mariaes/gateway/configuration/SaTokenConfigure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/configuration/SaOAuth2TemplateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/configuration/SaTokenConfigure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/controller/SaOAuth2ServerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/data/dto/UserBaseSignInDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/data/dto/UserBaseSignInDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/service/AuthorizationValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/java/io/hansan/mariaes/auth/service/AuthorizationValidationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-auth/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-auth/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/controller/GradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-grade/src/main/java/io/hansan/grade/controller/GradeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/exception/UserInfoMissMatchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/exception/UserInfoMissMatchException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/grpc/GrpcUserAuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/java/io/hansan/mariaes/user/grpc/GrpcUserAuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service-user/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/service-user/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,30 +74,15 @@
         <task path="$PROJECT_DIR$/service-auth">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/front">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MariaES" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="service-auth" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="service-auth" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MariaES" type="f1a62948:ProjectNode" />
-                <item name="service-auth" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -121,6 +98,7 @@
         <option value="Interface" />
         <option value="Record" />
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -159,64 +137,64 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Gradle.Build MariaES.executor": "Run",
-    "Gradle.GrpcUserInfoServiceTest.getUserReturnsCorrectResponse.executor": "Run",
-    "Gradle.GrpcUserInfoServiceTest.returnsCorrectResponseWhenUserExists.executor": "Run",
-    "Gradle.MariaES:gateway [bootRun].executor": "Run",
-    "Gradle.MariaES:gateway [clean].executor": "Run",
-    "Gradle.MariaES:lib-grpc [clean].executor": "Run",
-    "Gradle.MariaES:lib-grpc [generateProto].executor": "Run",
-    "Gradle.MariaES:service-page [bootRun].executor": "Run",
-    "Gradle.MariaES:service-question [bootRun].executor": "Run",
-    "Gradle.MariaES:service-user [bootRun].executor": "Run",
-    "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldCallService.executor": "Run",
-    "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldReturnBadRequest_WhenRequestBodyIsInvalid.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Authorization-Service.executor": "Run",
-    "Spring Boot.GatewayApplication.executor": "Run",
-    "Spring Boot.ServiceAuthApplication.executor": "Run",
-    "Spring Boot.ServiceExamApplication.executor": "Run",
-    "Spring Boot.ServiceGradeApplication.executor": "Run",
-    "Spring Boot.ServicePageApplication.executor": "Run",
-    "Spring Boot.ServiceQuestionApplication.executor": "Run",
-    "Spring Boot.ServiceUserApplication (1).executor": "Run",
-    "Spring Boot.ServiceUserApplication.executor": "Run",
-    "Spring Boot.User-Service.executor": "Run",
-    "Spring Boot.auth-server.executor": "Run",
-    "Spring Boot.exam-server.executor": "Run",
-    "Spring Boot.gateway-server.executor": "Run",
-    "Spring Boot.gateway.executor": "Run",
-    "Spring Boot.grade-server.executor": "Run",
-    "Spring Boot.page-server.executor": "Run",
-    "Spring Boot.question-server.executor": "Run",
-    "Spring Boot.user-server.executor": "Run",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Java/MariaES/service-auth/src/main/java/io/hansan/mariaes/auth",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.24177071",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "D:\\Java\\Tools\\DevelopmentTools\\IDEA2023\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.Build MariaES.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrpcUserInfoServiceTest.getUserReturnsCorrectResponse.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrpcUserInfoServiceTest.returnsCorrectResponseWhenUserExists.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:gateway [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:lib-grpc [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:lib-grpc [generateProto].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:service-page [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:service-question [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:service-user [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldCallService.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldReturnBadRequest_WhenRequestBodyIsInvalid.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Authorization-Service.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceAuthApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceExamApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceGradeApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServicePageApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceQuestionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceUserApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceUserApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.User-Service.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.auth-server.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.exam-server.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.gateway-server.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.gateway.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.grade-server.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.page-server.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.question-server.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.user-server.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java/MariaES/service-auth/src/main/java/io/hansan/mariaes/auth&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.24177071&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Java\\MariaES\\front\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -414,7 +392,10 @@
       <workItem from="1716798800205" duration="490000" />
       <workItem from="1716800042556" duration="4364000" />
       <workItem from="1716819603443" duration="2408000" />
-      <workItem from="1716882015640" duration="16920000" />
+      <workItem from="1716882015640" duration="17119000" />
+      <workItem from="1717330971406" duration="79000" />
+      <workItem from="1717331085604" duration="7001000" />
+      <workItem from="1717425427032" duration="698000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />

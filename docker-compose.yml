@@ -1,0 +1,137 @@
+version: '3.4'
+
+services:
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data/redis:/data
+    command: redis-server --appendonly yes
+    networks:
+      - mariaES
+
+  nacos:
+    image: nacos/nacos-server:latest
+    container_name: nacos
+    ports:
+      - "8848:8848"
+    environment:
+      - PREFER_HOST_MODE=hostname
+      - MODE=standalone
+    volumes:
+      - ./data/nacos:/home/nacos/data
+      - ./logs/nacos:/home/nacos/logs
+    networks:
+      - mariaES
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: front
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+      - nacos
+    networks:
+      - mariaES
+
+  service-auth:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: service-auth
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+      - nacos
+    networks:
+      - mariaES
+
+  service-user:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: service-user
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis
+      - nacos
+    networks:
+      - mariaES
+
+  service-exam:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: service-exam
+    ports:
+      - "8082:8082"
+    depends_on:
+      - redis
+      - nacos
+    networks:
+      - mariaES
+
+  service-grade:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: service-grade
+    ports:
+      - "8083:8083"
+    depends_on:
+      - redis
+      - nacos
+    networks:
+      - mariaES
+
+  service-page:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: service-page
+    ports:
+      - "8084:8084"
+    depends_on:
+      - redis
+      - nacos
+    networks:
+      - mariaES
+
+  service-question:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: service-question
+    ports:
+      - "8085:8085"
+    depends_on:
+      - redis
+      - nacos
+    networks:
+      - mariaES
+
+  gateway:
+    build:
+      context: .
+      container_name: "NeraBBS-Gateway"
+      restart: on-failure
+      dockerfile: Dockerfile
+      target: gateway
+    ports:
+      - "80:80"
+    depends_on:
+      - redis
+      - nacos
+    networks:
+      - mariaES
+
+networks:
+  mariaES:
+    driver: bridge

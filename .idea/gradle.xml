@@ -11,6 +11,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/front" />
             <option value="$PROJECT_DIR$/gateway" />
             <option value="$PROJECT_DIR$/lib-grpc" />
             <option value="$PROJECT_DIR$/service-auth" />

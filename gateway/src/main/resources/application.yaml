@@ -1,5 +1,5 @@
 server:
-  port: 7006
+  port: 80
 
 spring:
   application:
@@ -11,10 +11,10 @@ spring:
         server-addr: 192.168.207.8:8848
 
   redis:
+    host: redis
     port: 6379
-    host: localhost
     database: 1
 
 mariaes:
   front:
-    url: http://localhost:7001
+    url: http://front:7001
