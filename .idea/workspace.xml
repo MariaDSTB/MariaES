@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="fix: fix some bug">
-      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/front/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/B1lly.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/B1lly.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Grade.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/Grade.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/startExam.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/startExam.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/Page.Vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/Page.Vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -447,7 +439,7 @@
       <workItem from="1717426371085" duration="278000" />
       <workItem from="1717469551298" duration="150000" />
       <workItem from="1717512154902" duration="2803000" />
-      <workItem from="1717556725823" duration="7453000" />
+      <workItem from="1717556725823" duration="8039000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -681,7 +673,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716197226357</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fix: fix some bug">
+      <option name="closed" value="true" />
+      <created>1717569947490</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1717569947490</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

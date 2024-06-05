@@ -5,7 +5,7 @@ plugins {
 node {
     version = '18.17.0'
     yarnVersion = '1.22.21'
-    download = false
+    download = true
 }
 
 task install(type: YarnTask) {

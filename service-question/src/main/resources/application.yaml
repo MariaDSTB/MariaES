@@ -8,9 +8,9 @@ spring:
 #    数据源配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mariaes?createDatabaseIfNotExist=true
-    username: root
-    password: 123456
+    url: jdbc:mysql://mysql/mariaes?createDatabaseIfNotExist=true
+    username: mariaES
+    password: mariaES@strong
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       maximum-pool-size: 5
@@ -23,7 +23,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.207.8:8848
+        server-addr: nacos:8848
 
 #grpc:
 #  server:

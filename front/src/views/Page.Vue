@@ -2,7 +2,7 @@
     <h1 class="text-3xl mb-5">试卷录入</h1>
     <el-form @submit.native.prevent="submitForm">
         <el-form-item label="试卷名称" class="w-1/2">
-            <el-input v-model="page.name" placeholder="请输入试卷名"></el-input>
+            <el-input v-model="page.title" placeholder="请输入试卷名"></el-input>
         </el-form-item>
         <el-form-item label="题目">
             <el-select v-model="page.content" value-key="id" placeholder="录入试卷" style="width: 240px">

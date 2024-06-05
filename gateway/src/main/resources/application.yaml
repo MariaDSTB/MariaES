@@ -8,7 +8,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.207.8:8848
+        server-addr: nacos:8848
 
   redis:
     host: redis
@@ -17,4 +17,4 @@ spring:
 
 mariaes:
   front:
-    url: http://front:7001
+    url: http://front:3000

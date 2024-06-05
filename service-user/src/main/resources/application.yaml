@@ -9,8 +9,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://mysql/mariaes?createDatabaseIfNotExist=true
-    username: mariaes
-    password: mariaes
+    username: mariaES
+    password: mariaES@strong
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       maximum-pool-size: 5
