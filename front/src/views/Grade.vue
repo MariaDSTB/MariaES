@@ -13,7 +13,7 @@ const gradeId = ref('')
       type="textarea"
       placeholder=""
   />
-  <el-button type="primary" @click="confirm">确认</el-button>
+  <el-button type="primary">确认</el-button>
 </template>
 
 <style scoped>

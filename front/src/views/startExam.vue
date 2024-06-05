@@ -11,7 +11,8 @@ const globalArray = ref<any[]>([]);
 const score = ref(0);
 const submitExam = async () => {
     try {
-        const response = await axios.get(`http://127.0.0.1/api/page/${answersValue}`);
+      let answersValue = 1;
+      const response = await axios.get(`http://127.0.0.1/api/page/${answersValue}`);
         globalArray.value = response.data;
         // 比较answers和globalArray数组
         score.value = globalArray.value.length ===
@@ -26,7 +27,7 @@ onMounted(() => {
     if (route.query.data) {
         pageVo.value = JSON.parse(route.query.data as string);
         // 初始化answers数组，为每个问题提供一个空答案
-        answers.value = pageVo.value.QuestionPageEntity.map(q => '');
+        answers.value = pageVo.value.QuestionPageEntity.map(() => ' ');
     }
 });
 </script>

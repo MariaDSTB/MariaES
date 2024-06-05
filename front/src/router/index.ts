@@ -1,9 +1,9 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import HomePage from '../views/HomePage.vue';
 import Main from '../views/Main.vue';
 import RecordQuestionBank from "../views/RecordQuestionBank.vue";
 import { userInfoStore } from '../store/user.ts'
-const routes = [
+const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
         redirect: '/login',
@@ -12,7 +12,7 @@ const routes = [
     {
         path: '/login',
         name: 'login',
-        component: () => import('@/views/Signin.vue'),
+        component: (): Promise<typeof import("*.vue")> => import('@/views/Signin.vue'),
     },
     {
         path: '/Main',
@@ -32,32 +32,32 @@ const routes = [
             {
                 path: '/page',
                 name: 'Page',
-                component: () => import('@/views/Page.vue'),
+                component: (): Promise<typeof import("*.vue")> => import('@/views/Page.vue'),
             },
             {
                 path: '/exam',
                 name: 'Exam',
-                component: () => import("@/views/Exam.vue"),
+                component: (): Promise<typeof import("*.vue")> => import("@/views/Exam.vue"),
             },
             {
                 path: '/exam',
                 name: 'Exam',
-                component: () => import('@/views/Exam.vue'),
+                component: (): Promise<typeof import("*.vue")> => import('@/views/Exam.vue'),
             },
             {
                 path: '/grade',
                 name: 'Grade',
-                component: () => import('@/views/Grade.vue'),
+                component: (): Promise<typeof import("*.vue")> => import('@/views/Grade.vue'),
             },
             {
                 path: '/displayPage',
                 name: 'displayPage',
-                component: () => import('@/views/displayPage.vue'),
+                component: (): Promise<typeof import("*.vue")> => import('@/views/displayPage.vue'),
             },
             {
                 path: '/startExam',
                 name: 'startExam',
-                component: () => import('@/views/startExam.vue'),
+                component: (): Promise<typeof import("*.vue")> => import('@/views/startExam.vue'),
             }
         ]
     }
@@ -69,7 +69,7 @@ const router = createRouter({
 });
 
 // -前置守卫路由:登录校验
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _, next) => {
     const store = userInfoStore()
     //-:访问的请求不是 login，不是reg 也没有登录
     if (to.name !== 'login' && store.isLoggedIn) {

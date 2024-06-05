@@ -13,9 +13,11 @@ EXPOSE 3000
 
 WORKDIR /app
 
-COPY --from=build /build/front/.output .
+COPY --from=build /build/front/dist .
 
-ENTRYPOINT ["node" ,"src/main.js"]
+COPY /front/package.json .
+
+ENTRYPOINT ["yarn", "start"]
 
 FROM openjdk:17 AS service-auth
 LABEL maintainer="HanSanCoder"

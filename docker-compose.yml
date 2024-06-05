@@ -44,6 +44,8 @@ services:
       context: .
       dockerfile: Dockerfile
       target: service-auth
+    container_name: "MariaES-Auth"
+    restart: on-failure
     ports:
       - "8080:8080"
     depends_on:
@@ -57,8 +59,10 @@ services:
       context: .
       dockerfile: Dockerfile
       target: service-user
+    container_name: "MariaES-User"
+    restart: on-failure
     ports:
-      - "8081:8081"
+      - "8080:8080"
     depends_on:
       - redis
       - nacos
@@ -70,8 +74,10 @@ services:
       context: .
       dockerfile: Dockerfile
       target: service-exam
+    container_name: "MariaES-Exam"
+    restart: on-failure
     ports:
-      - "8082:8082"
+      - "8080:8080"
     depends_on:
       - redis
       - nacos
@@ -83,8 +89,10 @@ services:
       context: .
       dockerfile: Dockerfile
       target: service-grade
+    container_name: "MariaES-Grade"
+    restart: on-failure
     ports:
-      - "8083:8083"
+      - "8080:8080"
     depends_on:
       - redis
       - nacos
@@ -96,8 +104,10 @@ services:
       context: .
       dockerfile: Dockerfile
       target: service-page
+    container_name: "MariaES-Page"
+    restart: on-failure
     ports:
-      - "8084:8084"
+      - "8080:8080"
     depends_on:
       - redis
       - nacos
@@ -109,8 +119,10 @@ services:
       context: .
       dockerfile: Dockerfile
       target: service-question
+    container_name: "MariaES-Question"
+    restart: on-failure
     ports:
-      - "8085:8085"
+      - "8080:8080"
     depends_on:
       - redis
       - nacos
@@ -120,10 +132,10 @@ services:
   gateway:
     build:
       context: .
-      container_name: "NeraBBS-Gateway"
-      restart: on-failure
       dockerfile: Dockerfile
       target: gateway
+    container_name: "MariaES-Gateway"
+    restart: on-failure
     ports:
       - "80:80"
     depends_on:
