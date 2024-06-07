@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   redis:
-    image: redis:latest
+    image: redis:6.2.10
     container_name: redis
     ports:
       - "6379:6379"
@@ -10,10 +10,10 @@ services:
       - ./data/redis:/data
     command: redis-server --appendonly yes
     networks:
-      - mariaES
+      - redis
 
   nacos:
-    image: nacos/nacos-server:latest
+    image: nacos/nacos-server:v2.3.2
     container_name: nacos
     ports:
       - "8848:8848"
@@ -24,9 +24,9 @@ services:
       - ./data/nacos:/home/nacos/data
       - ./logs/nacos:/home/nacos/logs
     networks:
-      - mariaES
+      - nacos
 
-  frontend:
+  front:
     build:
       context: .
       dockerfile: Dockerfile
@@ -61,8 +61,8 @@ services:
       target: service-user
     container_name: "MariaES-User"
     restart: on-failure
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080"
     depends_on:
       - redis
       - nacos
@@ -76,8 +76,8 @@ services:
       target: service-exam
     container_name: "MariaES-Exam"
     restart: on-failure
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080"
     depends_on:
       - redis
       - nacos
@@ -91,8 +91,8 @@ services:
       target: service-grade
     container_name: "MariaES-Grade"
     restart: on-failure
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080"
     depends_on:
       - redis
       - nacos
@@ -106,8 +106,8 @@ services:
       target: service-page
     container_name: "MariaES-Page"
     restart: on-failure
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080"
     depends_on:
       - redis
       - nacos
@@ -121,8 +121,8 @@ services:
       target: service-question
     container_name: "MariaES-Question"
     restart: on-failure
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080"
     depends_on:
       - redis
       - nacos
@@ -146,4 +146,5 @@ services:
 
 networks:
   mariaES:
-    driver: bridge
+  nacos:
+  redis:

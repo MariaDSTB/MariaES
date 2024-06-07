@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="fix: fix some bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Page.Vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/Page.Vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,72 +134,73 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Gradle.Build MariaES.executor": "Run",
-    "Gradle.GrpcUserInfoServiceTest.getUserReturnsCorrectResponse.executor": "Run",
-    "Gradle.GrpcUserInfoServiceTest.returnsCorrectResponseWhenUserExists.executor": "Run",
-    "Gradle.MariaES [build].executor": "Run",
-    "Gradle.MariaES:front [build].executor": "Run",
-    "Gradle.MariaES:front [yarn].executor": "Run",
-    "Gradle.MariaES:gateway [bootRun].executor": "Run",
-    "Gradle.MariaES:gateway [clean].executor": "Run",
-    "Gradle.MariaES:lib-grpc [clean].executor": "Run",
-    "Gradle.MariaES:lib-grpc [generateProto].executor": "Run",
-    "Gradle.MariaES:service-page [bootRun].executor": "Run",
-    "Gradle.MariaES:service-question [bootRun].executor": "Run",
-    "Gradle.MariaES:service-user [bootRun].executor": "Run",
-    "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldCallService.executor": "Run",
-    "Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldReturnBadRequest_WhenRequestBodyIsInvalid.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Authorization-Service.executor": "Run",
-    "Spring Boot.GatewayApplication.executor": "Run",
-    "Spring Boot.ServiceAuthApplication.executor": "Run",
-    "Spring Boot.ServiceExamApplication.executor": "Run",
-    "Spring Boot.ServiceGradeApplication.executor": "Run",
-    "Spring Boot.ServicePageApplication.executor": "Run",
-    "Spring Boot.ServiceQuestionApplication.executor": "Run",
-    "Spring Boot.ServiceUserApplication (1).executor": "Run",
-    "Spring Boot.ServiceUserApplication.executor": "Run",
-    "Spring Boot.User-Service.executor": "Run",
-    "Spring Boot.auth-server.executor": "Run",
-    "Spring Boot.exam-server.executor": "Run",
-    "Spring Boot.gateway-server.executor": "Run",
-    "Spring Boot.gateway.executor": "Run",
-    "Spring Boot.grade-server.executor": "Run",
-    "Spring Boot.page-server.executor": "Run",
-    "Spring Boot.question-server.executor": "Run",
-    "Spring Boot.user-server.executor": "Run",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Java/MariaES/service-auth/src/main/java/io/hansan/mariaes/auth",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.24177071",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "D:\\Java\\MariaES\\front\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.Build MariaES.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrpcUserInfoServiceTest.getUserReturnsCorrectResponse.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GrpcUserInfoServiceTest.returnsCorrectResponseWhenUserExists.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:front [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:front [yarn].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:gateway [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:gateway [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:lib-grpc [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:lib-grpc [generateProto].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:service-page [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:service-question [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MariaES:service-user [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldCallService.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ServiceQuestionApplicationTests.addQuestion_ShouldReturnBadRequest_WhenRequestBodyIsInvalid.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Authorization-Service.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceAuthApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceExamApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceGradeApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServicePageApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceQuestionApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceUserApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ServiceUserApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.User-Service.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.auth-server.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.exam-server.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.gateway-server.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.gateway.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.grade-server.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.page-server.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.question-server.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.user-server.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java/MariaES/service-auth/src/main/java/io/hansan/mariaes/auth&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.24177071&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Java\\MariaES\\front\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -219,7 +220,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.MariaES [build]">
+  <component name="RunManager" selected="npm.build">
     <configuration name="MariaES [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -286,9 +287,30 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="ServiceExamApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MariaES.service-exam.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.exam.ServiceExamApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceGradeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MariaES.service-grade.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.grade.ServiceGradeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServicePageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="MariaES.service-page.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.page.ServicePageApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceQuestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="MariaES.service-question.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.question.ServiceQuestionApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -314,19 +336,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="grade-server" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
-      <module name="MariaES.service-grade.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.grade.ServiceGradeApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.hansan.grade.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="user-server" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="MariaES.service-user.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.hansan.mariaes.user.ServiceUserApplication" />
@@ -334,23 +343,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/front/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Gradle.MariaES:front [build]" />
       <item itemvalue="Gradle.MariaES:front [yarn]" />
       <item itemvalue="Gradle.MariaES [build]" />
+      <item itemvalue="npm.build" />
+      <item itemvalue="Spring Boot.ServiceExamApplication" />
+      <item itemvalue="Spring Boot.ServiceGradeApplication" />
+      <item itemvalue="Spring Boot.ServiceQuestionApplication" />
       <item itemvalue="Spring Boot.ServicePageApplication" />
       <item itemvalue="Spring Boot.user-server" />
       <item itemvalue="Spring Boot.auth-server" />
       <item itemvalue="Spring Boot.gateway-server" />
-      <item itemvalue="Spring Boot.grade-server" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="Gradle.MariaES [build]" />
         <item itemvalue="Gradle.MariaES:front [build]" />
         <item itemvalue="Gradle.MariaES:front [yarn]" />
         <item itemvalue="Spring Boot.gateway-server" />
-        <item itemvalue="Spring Boot.grade-server" />
       </list>
     </recent_temporary>
   </component>
@@ -440,6 +462,9 @@
       <workItem from="1717469551298" duration="150000" />
       <workItem from="1717512154902" duration="2803000" />
       <workItem from="1717556725823" duration="8039000" />
+      <workItem from="1717596190198" duration="4914000" />
+      <workItem from="1717683487582" duration="4027000" />
+      <workItem from="1717725809569" duration="312000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -681,7 +706,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717569947490</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="fix: fix some bug">
+      <option name="closed" value="true" />
+      <created>1717596666709</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1717596666709</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
