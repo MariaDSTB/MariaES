@@ -3,7 +3,7 @@ version: '3.4'
 services:
   redis:
     image: redis:6.2.10
-    container_name: redis
+    container_name: MariaES-Redis
     ports:
       - "6379:6379"
     volumes:
@@ -12,9 +12,23 @@ services:
     networks:
       - redis
 
+  mysql:
+    image: mysql:8.0.27
+    container_name: MariaES-MySQL
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: mariaes
+      MYSQL_USER: mariaES
+      MYSQL_PASSWORD: mariaES@strong
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    networks:
+      - mariaES
+
   nacos:
     image: nacos/nacos-server:v2.3.2
-    container_name: nacos
+    container_name: MariaES-nacos
     ports:
       - "8848:8848"
     environment:
@@ -46,8 +60,8 @@ services:
       target: service-auth
     container_name: "MariaES-Auth"
     restart: on-failure
-    ports:
-      - "8080:8080"
+    expose:
+      - "8080"
     depends_on:
       - redis
       - nacos

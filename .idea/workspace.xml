@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="fix: fix some bug">
+    <list default="true" id="5747cf1a-79da-42af-a42b-964f2c6836d4" name="Changes" comment="chore: changes ports in docker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/RecordQuestionBank.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/RecordQuestionBank.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/views/Signin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/views/Signin.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -464,7 +467,7 @@
       <workItem from="1717556725823" duration="8039000" />
       <workItem from="1717596190198" duration="4914000" />
       <workItem from="1717683487582" duration="4027000" />
-      <workItem from="1717725809569" duration="312000" />
+      <workItem from="1717725809569" duration="4851000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -714,7 +717,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717596666709</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="chore: changes ports in docker">
+      <option name="closed" value="true" />
+      <created>1717726774430</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1717726774430</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -745,7 +756,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat(service-question): add curd" />
     <MESSAGE value="feat: add global exception" />
     <MESSAGE value="fix: knife4j UI no data" />
     <MESSAGE value="feat(service-user): &#10;&#10;add crud" />
@@ -770,7 +780,8 @@
     <MESSAGE value="fix: deal with some bug" />
     <MESSAGE value="feat: complete authentication service" />
     <MESSAGE value="fix: fix some bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fix some bug" />
+    <MESSAGE value="chore: changes ports in docker" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: changes ports in docker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

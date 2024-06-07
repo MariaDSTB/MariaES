@@ -394,7 +394,7 @@ const handleTypeChange = (value: any) => {
 
 const fetchQuestions = async () => {
   try {
-    const response = await axios.get('http://localhost:7001/api/question/all')
+    const response = await axios.get('http://localhost:80/api/question/all')
     questions.value = response.data // 假设这是包含多个对象的数组
     // 假设 questions 是一个数组，且至少包含一个对象
     if (questions.value.length > 0) {
@@ -427,7 +427,7 @@ const addQuestions = async () => {
     ) {
       // 发送请求到服务器
       try {
-        await axios.post('http://localhost:7001/api/question/add', addQuestion)
+        await axios.post('http://localhost:80/api/question/add', addQuestion)
           .then(() => {
             ElMessage({
               message: '添加成功',
@@ -472,7 +472,7 @@ const searchForQuestions = async () => {
 const deleteQuestion = async (index: number) => {
   try {
     const id = questions.value[index].id;
-    const response = await axios.delete(`http://127.0.0.1:7001/api/question/${id}`);
+    const response = await axios.delete(`http://127.0.0.1:80/api/question/${id}`);
     if (response.status === 200) {
       // 从前端数组中移除题目
       questions.value.splice(index, 1);

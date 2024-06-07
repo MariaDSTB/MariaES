@@ -28,7 +28,7 @@ EXPOSE 8080
 
 WORKDIR /app
 
-COPY --from=build /build/$SERVICE_NAME/build/libs/$SERVICE_NAME-*.jar application.jar
+COPY --from=build /build/$SERVICE_NAME/build/libs/$SERVICE_NAME-*SNAPSHOT.jar application.jar
 
 ENTRYPOINT ["java", "-jar", "application.jar"]
 
@@ -41,7 +41,7 @@ EXPOSE 8080
 
 WORKDIR /app
 
-COPY --from=build /build/$SERVICE_NAME/build/libs/$SERVICE_NAME-*.jar application.jar
+COPY --from=build /build/$SERVICE_NAME/build/libs/$SERVICE_NAME-*SNAPSHOT.jar application.jar
 
 ENTRYPOINT ["java", "-jar", "application.jar"]
 
@@ -54,7 +54,7 @@ EXPOSE 8080
 
 WORKDIR /app
 
-COPY --from=build /build/$SERVICE_NAME/build/libs/$SERVICE_NAME-*.jar application.jar
+COPY --from=build /build/$SERVICE_NAME/build/libs/$SERVICE_NAME-*SNAPSHOT.jar application.jar
 
 ENTRYPOINT ["java", "-jar", "application.jar"]
 
@@ -67,7 +67,7 @@ EXPOSE 8080
 
 WORKDIR /app
 
-COPY --from=build /build/$SERVICE_NAME/build/libs/$SERVICE_NAME-*.jar application.jar
+COPY --from=build /build/$SERVICE_NAME/build/libs/$SERVICE_NAME-*SNAPSHOT.jar application.jar
 
 ENTRYPOINT ["java", "-jar", "application.jar"]
 
@@ -80,7 +80,7 @@ EXPOSE 8080
 
 WORKDIR /app
 
-COPY --from=build /build/$SERVICE_NAME/build/libs/$SERVICE_NAME-*.jar application.jar
+COPY --from=build /build/$SERVICE_NAME/build/libs/$SERVICE_NAME-*SNAPSHOT.jar application.jar
 
 ENTRYPOINT ["java", "-jar", "application.jar"]
 
@@ -93,7 +93,7 @@ EXPOSE 8080
 
 WORKDIR /app
 
-COPY --from=build /build/$SERVICE_NAME/build/libs/$SERVICE_NAME-*.jar application.jar
+COPY --from=build /build/$SERVICE_NAME/build/libs/$SERVICE_NAME-*SNAPSHOT.jar application.jar
 
 ENTRYPOINT ["java", "-jar", "application.jar"]
 
@@ -106,6 +106,6 @@ EXPOSE 80
 
 WORKDIR /app
 
-COPY --from=build /build/$SERVICE_NAME/build/libs/$SERVICE_NAME-*.jar application.jar
+COPY --from=build /build/$SERVICE_NAME/build/libs/$SERVICE_NAME-*SNAPSHOT.jar application.jar
 
 ENTRYPOINT ["java", "-jar", "application.jar"]

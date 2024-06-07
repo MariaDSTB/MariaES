@@ -40,7 +40,7 @@ const user = ref({
 const store = userInfoStore();
 
 const signin = async () => {
-  await axios.post('http://localhost:7006/api/authorization/signIn', user.value)
+  await axios.post('http://localhost:80/api/authorization/signIn', user.value)
     .then((res: any) => {
       console.log(res.data)
       if (res.data.code === 200) {
@@ -54,7 +54,7 @@ const signin = async () => {
     });
 };
 const signup = async () => {
-  axios.post('http://localhost:7006/api/authorization/signOut', user.value)
+  axios.post('http://localhost:80/api/authorization/signOut', user.value)
     .then((res: any) => {
       console.log(res);
     }).catch((err: any) => {
