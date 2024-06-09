@@ -29,11 +29,11 @@ const routes: Array<RouteRecordRaw> = [
                 name: 'RecordQuestionBank',
                 component: RecordQuestionBank,
             },
-            {
-                path: '/page',
-                name: 'Page',
-                component: (): Promise<typeof import("*.vue")> => import('@/views/Page.vue'),
-            },
+            // {
+            //     path: '/page',
+            //     name: 'Page',
+            //     component: (): Promise<typeof import("*.vue")> => import('@/views/Page.vue'),
+            // },
             {
                 path: '/exam',
                 name: 'Exam',

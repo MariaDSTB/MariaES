@@ -17,7 +17,11 @@ WORKDIR /app
 
 COPY --from=build /build/$SERVICE_NAME/dist .
 
-COPY /$SERVICE_NAME/package.json .
+COPY /$SERVICE_NAME/*.json .
+
+COPY /$SERVICE_NAME/*.js .
+
+COPY /$SERVICE_NAME/*.ts .
 
 ENTRYPOINT ["yarn", "start"]
 
