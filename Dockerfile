@@ -44,6 +44,7 @@ LABEL maintainer="HanSanCoder"
 ARG SERVICE_NAME=service-user
 
 EXPOSE 8080
+EXPOSE 9002
 
 WORKDIR /app
 
