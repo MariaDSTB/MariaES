@@ -1,5 +1,5 @@
 rootProject.name = 'MariaES'
-include('front')
+include('frontend')
 include('service-user')
 include('gateway')
 include('service-exam')

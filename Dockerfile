@@ -6,14 +6,16 @@ COPY . .
 
 RUN gradle build --no-daemon --parallel
 
-FROM node:18 AS front
+FROM node:18 AS frontend
 LABEL maintainer="HanSanCoder"
+
+ARG SERVICE_NAME=frontend
 
 EXPOSE 3000
 
 WORKDIR /app
 
-COPY --from=build /build/front/dist .
+COPY --from=build /build/$SERVICE_NAME/dist .
 
 COPY /front/package.json .
 

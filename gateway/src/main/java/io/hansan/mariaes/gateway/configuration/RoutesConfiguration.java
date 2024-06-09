@@ -30,7 +30,7 @@ public class RoutesConfiguration {
                         .uri("lb://service-grade"))
                 .route("service-auth", r->r.path("/api/authorization/**")
                         .uri("lb://service-auth"))
-                .route("front", r->r.path("/front/**")
+                .route("frontend", r->r.path("/frontend/**")
                         .uri(frontUrl))
                 .build();
     }

@@ -17,4 +17,4 @@ spring:
 
 mariaes:
   front:
-    url: http://front:3000
+    url: http://frontend:3000

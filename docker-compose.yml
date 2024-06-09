@@ -40,11 +40,11 @@ services:
     networks:
       - nacos
 
-  front:
+  frontend:
     build:
       context: .
       dockerfile: Dockerfile
-      target: front
+      target: frontend
     ports:
       - "3000:3000"
     depends_on:
