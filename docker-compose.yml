@@ -17,7 +17,6 @@ services:
     networks:
       - mysql
       - redis
-      - mariaES
 
   mysql:
     image: mysql:8.0.27
@@ -38,8 +37,6 @@ services:
       - ./data/mysql:/var/lib/mysql
     networks:
       - mysql
-      - redis
-      - mariaES
 
   nacos:
     image: nacos/nacos-server:v2.3.2
@@ -59,7 +56,6 @@ services:
       - ./logs/nacos:/home/nacos/logs
     networks:
       - nacos
-      - mariaES
 
   frontend:
     build:
@@ -119,7 +115,6 @@ services:
     networks:
       - nacos
       - mysql
-      - redis
       - mariaES
     healthcheck:
       test: [ "CMD", "curl", "-f", "--silent", "http://localhost:8848/nacos/v1/console/health/readiness" ]
