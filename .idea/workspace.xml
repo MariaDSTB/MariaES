@@ -461,7 +461,7 @@
       <workItem from="1717596190198" duration="4914000" />
       <workItem from="1717683487582" duration="4027000" />
       <workItem from="1717725809569" duration="5779000" />
-      <workItem from="1717902299055" duration="9416000" />
+      <workItem from="1717902299055" duration="10580000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -743,7 +743,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717910816644</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="chore: changes docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1717914284537</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1717914284537</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
