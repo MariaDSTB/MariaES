@@ -10,7 +10,10 @@ services:
       - ./data/redis:/data
     command: redis-server --appendonly yes
     networks:
+      - nacos
+      - mysql
       - redis
+      - mariaES
 
   mysql:
     image: mysql:8.0.27
@@ -19,11 +22,15 @@ services:
       - "3306:3306"
     environment:
       MYSQL_DATABASE: mariaes
+      MYSQL_ROOT_PASSWORD: mariaES@strong
       MYSQL_USER: mariaES
       MYSQL_PASSWORD: mariaES@strong
     volumes:
       - ./data/mysql:/var/lib/mysql
     networks:
+      - nacos
+      - mysql
+      - redis
       - mariaES
 
   nacos:
@@ -39,18 +46,26 @@ services:
       - ./logs/nacos:/home/nacos/logs
     networks:
       - nacos
+      - mysql
+      - redis
+      - mariaES
 
   frontend:
     build:
       context: .
       dockerfile: Dockerfile
       target: frontend
+    container_name: "MariaES-Frontend"
+    restart: on-failure
     ports:
       - "3000:3000"
     depends_on:
       - redis
       - nacos
     networks:
+      - nacos
+      - mysql
+      - redis
       - mariaES
 
   service-auth:
@@ -66,6 +81,9 @@ services:
       - redis
       - nacos
     networks:
+      - nacos
+      - mysql
+      - redis
       - mariaES
 
   service-user:
@@ -81,6 +99,9 @@ services:
       - redis
       - nacos
     networks:
+      - nacos
+      - mysql
+      - redis
       - mariaES
 
   service-exam:
@@ -96,6 +117,9 @@ services:
       - redis
       - nacos
     networks:
+      - nacos
+      - mysql
+      - redis
       - mariaES
 
   service-grade:
@@ -111,6 +135,9 @@ services:
       - redis
       - nacos
     networks:
+      - nacos
+      - mysql
+      - redis
       - mariaES
 
   service-page:
@@ -126,6 +153,9 @@ services:
       - redis
       - nacos
     networks:
+      - nacos
+      - mysql
+      - redis
       - mariaES
 
   service-question:
@@ -141,6 +171,9 @@ services:
       - redis
       - nacos
     networks:
+      - nacos
+      - mysql
+      - redis
       - mariaES
 
   gateway:
@@ -156,9 +189,13 @@ services:
       - redis
       - nacos
     networks:
+      - nacos
+      - mysql
+      - redis
       - mariaES
 
 networks:
   mariaES:
   nacos:
   redis:
+  mysql:
