@@ -17,7 +17,7 @@ WORKDIR /app
 
 COPY --from=build /build/$SERVICE_NAME/dist .
 
-COPY /front/package.json .
+COPY /$SERVICE_NAME/package.json .
 
 ENTRYPOINT ["yarn", "start"]
 

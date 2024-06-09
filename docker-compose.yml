@@ -8,9 +8,13 @@ services:
       - "6379:6379"
     volumes:
       - ./data/redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
     command: redis-server --appendonly yes
     networks:
-      - nacos
       - mysql
       - redis
       - mariaES
@@ -25,10 +29,14 @@ services:
       MYSQL_ROOT_PASSWORD: mariaES@strong
       MYSQL_USER: mariaES
       MYSQL_PASSWORD: mariaES@strong
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
     volumes:
       - ./data/mysql:/var/lib/mysql
     networks:
-      - nacos
       - mysql
       - redis
       - mariaES
@@ -41,13 +49,16 @@ services:
     environment:
       - PREFER_HOST_MODE=hostname
       - MODE=standalone
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "--silent", "http://localhost:8848/nacos/v1/console/health/readiness" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
     volumes:
       - ./data/nacos:/home/nacos/data
       - ./logs/nacos:/home/nacos/logs
     networks:
       - nacos
-      - mysql
-      - redis
       - mariaES
 
   frontend:
@@ -63,10 +74,12 @@ services:
       - redis
       - nacos
     networks:
-      - nacos
-      - mysql
-      - redis
       - mariaES
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "--silent", "http://localhost:8848/nacos/v1/console/health/readiness" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   service-auth:
     build:
@@ -85,6 +98,11 @@ services:
       - mysql
       - redis
       - mariaES
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "--silent", "http://localhost:8848/nacos/v1/console/health/readiness" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   service-user:
     build:
@@ -103,6 +121,11 @@ services:
       - mysql
       - redis
       - mariaES
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "--silent", "http://localhost:8848/nacos/v1/console/health/readiness" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   service-exam:
     build:
@@ -121,6 +144,11 @@ services:
       - mysql
       - redis
       - mariaES
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "--silent", "http://localhost:8848/nacos/v1/console/health/readiness" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   service-grade:
     build:
@@ -139,6 +167,11 @@ services:
       - mysql
       - redis
       - mariaES
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "--silent", "http://localhost:8848/nacos/v1/console/health/readiness" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   service-page:
     build:
@@ -157,6 +190,11 @@ services:
       - mysql
       - redis
       - mariaES
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "--silent", "http://localhost:8848/nacos/v1/console/health/readiness" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   service-question:
     build:
@@ -175,6 +213,11 @@ services:
       - mysql
       - redis
       - mariaES
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "--silent", "http://localhost:8848/nacos/v1/console/health/readiness" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   gateway:
     build:
@@ -193,6 +236,11 @@ services:
       - mysql
       - redis
       - mariaES
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "--silent", "http://localhost:8848/nacos/v1/console/health/readiness" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
 networks:
   mariaES:
